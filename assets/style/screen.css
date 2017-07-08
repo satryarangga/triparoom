@@ -1,0 +1,165 @@
+@media (max-width: 600px) {
+  .wrapper-inner .main-fill .panel .panel-body {
+    padding-bottom: 15px !important; }
+
+  .wrapper-inner .main-fill .panel .panel-body .tab-content ul li, .main_fill_three .panel .panel-body .tab-content ul li, .index2-fill .panel .panel-body .tab-content ul li {
+    width: 100% !important; }
+
+  .wrapper-index, .wrapper_index_three, .wrapper-index-flight, .wrapper-index-hotels, .wrapper-index-travel {
+    height: 100% !important;
+    padding: 20px 0; } }
+@media (max-width: 480px) {
+  .main_fill_three, .main-fill .nav-tabs > li {
+    width: 100%; }
+
+  .media-v3 {
+    text-align: center;
+    width: 100%;
+    float: left; }
+    .media-v3 .media-left {
+      width: 100%;
+      float: left;
+      margin-bottom: 10px; }
+    .media-v3 .media-body {
+      float: left;
+      width: 100%; }
+
+  .inner-body .wrapper-index .wrapper-inner .main-fill {
+    padding: 0px; }
+
+  .bread-crumb h2 {
+    text-align: center;
+    margin-bottom: 10px !important;
+    width: 100%; }
+
+  .bread-crumb ol {
+    width: 100%; }
+
+  .coming-soon .coming-soon-box .cs-footer .get-email form .email-btn {
+    width: 100%;
+    margin-bottom: 10px; }
+
+  .index2-fill .panel .nav-tabs li a, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:focus, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:hover, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs li a, .coming-soon .coming-soon-box .cs-footer .get-email form input, .error-page .er-message form input {
+    width: 100% !important; }
+
+  .team-object .media-body {
+    float: left;
+    width: 100%; } }
+@media (max-width: 550px) {
+  .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:focus, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:hover, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs li a {
+    width: 100px; } }
+@media (max-width: 768px) {
+  .wrapper-v2, .wrapper_inspiration_index2 {
+    display: block !important; }
+
+  .wrapper-v2 {
+    padding-top: 100px; }
+
+  .img-box-v2 h2 {
+    float: none !important; }
+
+  .popular_hotel_box .img img {
+    width: 100%; }
+
+  .seat-price {
+    margin-top: 15px; }
+
+  .index2-fill .panel .panel-body .tab-content ul li, .main-fill .panel .panel-body .tab-content ul li {
+    width: 50% !important; } }
+@media (max-width: 992px) {
+  #review-carousel #quote-carousel .carousel-indicators, .slick-prev, .slick-next, .mega-dropdown-menu li ul:before, .navbar-inverse .navbar-nav li .dropdown-menu:before, .mega-dropdown-menu li ul .divider {
+    display: none !important; }
+
+  .navbar-brand {
+    padding: 6px 15px !important; }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu {
+    border-bottom: none; }
+
+  .clr-selection img {
+    margin-bottom: 20px; }
+
+  #index-2 .navbar-default .navbar-nav li a {
+    background-color: transparent; }
+    #index-2 .navbar-default .navbar-nav li a i {
+      color: #01B7F2; }
+    #index-2 .navbar-default .navbar-nav li a .caret {
+      color: #01B7F2; }
+
+  #index-2 .navbar-default .navbar-nav li .dropdown-menu li a:hover {
+    transition: .3s;
+    background: transparent;
+    color: #fdb714 !important; }
+    #index-2 .navbar-default .navbar-nav li .dropdown-menu li a:hover i {
+      color: #fdb714; }
+    #index-2 .navbar-default .navbar-nav li .dropdown-menu li a:hover .pull-right {
+      color: #fdb714; }
+
+  #index-2 .navbar-default {
+    position: relative; }
+
+  #index-three .navbar-default {
+    position: relative; }
+
+  .navbar-header {
+    float: none; }
+
+  .navbar-nav, .navbar-left, .navbar-right {
+    float: none !important; }
+
+  .navbar-toggle {
+    display: block; }
+
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px; }
+
+  .navbar-collapse.collapse {
+    display: none !important; }
+
+  .navbar-nav > li {
+    float: none; }
+
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  .collapse.in {
+    display: block !important; }
+
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu li a, .navbar-inverse .navbar-nav li .dropdown-menu li a span {
+    color: #444 !important; }
+
+  #index-three .navbar-default {
+    position: relative !important; }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu li a:hover {
+    background-color: transparent; }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu li a:focus {
+    background-color: transparent; }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu li a, .navbar-inverse .navbar-nav li .dropdown-menu, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    border-bottom: none !important; }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu {
+    padding-left: 15px !important; }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu li a:hover, .navbar-inverse .navbar-nav li a:hover {
+    color: #FF6C26 !important; } }
+
+/*# sourceMappingURL=screen.css.map */

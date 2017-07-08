@@ -1,0 +1,333 @@
+@media (max-width: 600px) {
+  .ui-datepicker-trigger{
+    left: 95%!important;
+  }
+
+  .wrapper-inner .main-fill .panel .panel-body{
+    padding-bottom: 15px!important;
+  }
+  .wrapper-inner .main-fill .panel .panel-body .tab-content ul li,.main_fill_three .panel .panel-body .tab-content ul li, .index2-fill .panel .panel-body .tab-content ul li{
+    width: 100%!important;
+  }
+
+  .wrapper-index,.wrapper_index_three,.wrapper-index-flight,.wrapper-index-hotels,.wrapper-index-travel {
+    height: 100%!important;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .wrapper_inspiration_travel .hri h3{
+    font-size: 23px;
+  }
+  .wrapper_inspiration_travel .hri p{
+    font-size: 14px;
+
+
+  }
+  .index2-fill .panel .nav-tabs li a{
+    padding: 10px 5px;
+
+  }
+  .index2-fill .panel .panel-body .tab-content ul li{
+    width: 100%;
+  }
+
+  .btn_1{
+    display: none;
+  }
+  .ui-datepicker-trigger{
+    left: 92%!important;
+  }
+  .main_fill_three,.main-fill .nav-tabs>li{
+    width: 100%;
+  }
+  .media-v3 {
+    text-align: center;
+    width: 100%;
+    float: left;
+    .media-left{
+      width: 100%;
+      float: left;
+      margin-bottom: 10px;
+    }
+    .media-body {
+      float: left;
+      width: 100%;
+    }
+  }
+  .inner-body .wrapper-index .wrapper-inner .main-fill{
+    padding: 0px;
+  }
+
+  .bread-crumb h2{
+    text-align: center;
+    margin-bottom: 10px!important;
+    width: 100%;
+  }
+  .bread-crumb ol{
+    width: 100%;
+  }
+  .coming-soon .coming-soon-box .cs-footer .get-email form .email-btn {
+    margin-bottom: 10px;
+  }
+  .index2-fill .panel .nav-tabs li a,.inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:focus, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:hover,.inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs li a,.coming-soon .coming-soon-box .cs-footer .get-email form input, .error-page .er-message form input{
+    width: 100%!important;
+  }
+  .team-object .media-body {
+    float: left;
+    width: 100%;
+  }
+  #index2-v2 .carousel-content-box2{
+    padding: 20px 40px;
+  }
+  #index2-v2 .carousel-content-box2 .text-left{
+    display: none;
+  }
+  #index2-v2 .carousel-content-box2 .name-city h1,#index2-v2 .carousel-content-box2 .name-city h2{
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:focus, .inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs > li.active > a:hover,.inner-body .wrapper-index .wrapper-inner .main-fill .panel .nav-tabs li a{
+    width: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .main-footer .inner-footer1{
+    margin: 15px 0px;
+  }
+  .hurry-up-v1 h2{
+    margin: 0 0 20px;
+  }
+  .carousel-content-box h1{
+    font-size: 30px;
+    margin: 0 0 20px;
+  }
+  .carousel-content-box h1 span{
+    font-size: 32px;
+
+  }
+  .ui-datepicker-trigger{
+    left: 92%;
+  }
+ .index2-fill{
+   .ui-datepicker-trigger{
+     left: 92%;
+   }
+ }
+
+
+
+  .wrapper-v2,.wrapper_inspiration_index2{
+    display: block!important;
+  }
+  .wrapper-v2{
+    padding-top: 100px;
+  }
+
+  .img-box-v2 h2{
+    float: none!important;
+  }
+  .popular_hotel_box .img img{
+    width: 100%;
+  }
+  .seat-price{
+    margin-top: 15px;
+  }
+  .main-fill .panel .panel-body .tab-content ul li{
+    width: 50%!important;
+  }
+  .main_fill_three .panel .panel-body .tab-content ul li,.index2-fill .panel .panel-body .tab-content ul li{
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .main-footer .inner-footer2{
+    display: none;
+  }
+  .main-footer .list-of-nav{
+    display: none;
+  }
+  .find_flight_box a h4{
+    margin-top: 5px;
+  }
+  .find_flight_box a p{
+    display: none;
+  }
+  .find_flight_box a i{
+    display: none;
+  }
+  #index-three .navbar-default .navbar-nav li .dropdown-menu li a{
+    background-color: transparent;
+    border-bottom: none;
+    color: #ffffff;
+    i{
+      color: #ffffff;
+
+    }
+    span{
+      color: #ffffff;
+
+    }
+    &:hover{
+      background-color: transparent;
+      color: #01b7f2;
+      i{
+        color: #01b7f2;
+      }
+      span{
+        color: #01b7f2;
+      }
+    }
+  }
+  #index-three .navbar-default .navbar-nav > .open > a, #index-three .navbar-default .navbar-nav > .open > a:focus, #index-three .navbar-default .navbar-nav > .open > a:hover {
+    background-color: transparent;
+    color: #01b7f2;
+    i{
+      color: #01B7F2;
+    }
+  }
+  #index-three .navbar-default .navbar-nav > li > a:focus, #index-three .navbar-default .navbar-nav > li > a:hover{
+    color: #01B7F2;
+    i{
+      color: #01B7F2;
+    }
+  }
+  #index2-v2 .carousel-content-box2 .name-city h1{
+    font-size: 30px;
+  }
+  #index-two .navbar-default .navbar-nav .dropdown a{
+    background: transparent;
+    box-shadow: none;
+  }
+  #index-two .navbar-default .navbar-nav .dropdown .dropdown-menu .dropdown-submenu a span{
+    color: #ffffff;
+  }
+  #index-two .navbar-default .navbar-nav .dropdown .dropdown-menu .dropdown-submenu a{
+    i{
+      color: #ffffff;
+    }
+  }
+  #index-two .navbar-default .navbar-nav .dropdown .dropdown-menu li a{
+    i{
+      color: #ffffff;
+    }
+  }
+  #index-two .navbar-default .navbar-nav .dropdown .dropdown-menu li a{
+    i{
+      color: #ffffff;
+
+    }
+    span{
+      color: #ffffff;
+
+    }
+    color: #ffffff;
+  }
+
+  #review-carousel #quote-carousel .carousel-indicators,.slick-prev, .slick-next,.mega-dropdown-menu li ul:before,.navbar-inverse .navbar-nav li .dropdown-menu:before,.mega-dropdown-menu li ul .divider{
+    display: none!important;
+  }
+  .navbar-brand {
+    padding: 6px 15px!important;
+  }
+  #index-two .navbar-default .navbar-nav .dropdown .dropdown-menu{
+    border-top: none;
+  }
+  #index-three .navbar-default .navbar-nav li .dropdown-menu,#index-two .navbar-default .navbar-nav .dropdown .dropdown-menu li a:hover,#index-two .navbar-default .navbar-nav .dropdown .dropdown-menu li a,.navbar-inverse .navbar-nav li .dropdown-menu{
+    border-bottom: none;
+  }
+  .clr-selection img {
+    margin-bottom: 20px;
+  }
+  #index-2 .navbar-default .navbar-nav li a{
+    background-color: transparent;
+    i{
+      color: #01B7F2;
+    }
+    .caret{
+      color: #01B7F2;
+    }
+  }
+
+  #index-2 .navbar-default{
+    position: relative;
+  }
+  #index-three .navbar-default{
+    position: relative;
+    background-color: #444444!important;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-nav,.navbar-left, .navbar-right{
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
+  }
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+  }
+  .navbar-inverse .navbar-nav li .dropdown-menu li a,.navbar-inverse .navbar-nav li .dropdown-menu li a{
+    color: #444444!important;
+  }
+
+  .navbar-inverse .navbar-nav li .dropdown-menu li a:hover{
+    background-color: transparent;
+  }
+  .navbar-inverse .navbar-nav li .dropdown-menu li a:focus{
+    background-color: transparent;
+  }
+  .navbar-inverse .navbar-nav li .dropdown-menu li a ,.navbar-inverse .navbar-nav li .dropdown-menu,.navbar-inverse .navbar-nav > li > a:hover,.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:hover,.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover{
+    border-bottom: none!important;
+  }
+  #index-three .navbar-default .navbar-nav li .dropdown-menu li a,#index-two .navbar-default .navbar-nav li .dropdown-menu,.navbar-inverse .navbar-nav li .dropdown-menu{
+    padding-left: 15px!important;
+  }
+  .navbar-inverse .navbar-nav li .dropdown-menu li a:hover,.navbar-inverse .navbar-nav li .dropdown-menu li a:hover i,.navbar-inverse .navbar-nav li a:hover{
+    color: #FF6C26!important;
+  }
+  .index2-search-wrapper{
+    height: 100%;
+  }
+  #index-three .navbar-default .navbar-nav > li > a:focus, #index-three .navbar-default .navbar-nav > li > a:hover{
+    background-color: transparent;
+  }
+}
+

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Travel Web Template">
+    <meta name="keywords" content="Travel Template,Flight Template,Cars Template,Hotels Template,Responsive Template">
+    <meta name="author" content="M.Bilal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gateway - Multiple Purpose Travel Template</title>
+    <!--styles files-->
+    <link href="../../../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../assets/js/jqwidgets/styles/jqx.base.css" rel="stylesheet">
+    <link href="../../../assets/css/slick.css" rel="stylesheet">
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <link href="../../../assets/js/jqwidgets/range/ranger.css" rel="stylesheet">
+    <!--favicon-->
+    <link rel="icon" href="../../../favicon.ico">
+    <!--end here-->
+</head>
+<body>
+<!--start top-bar-->
+<div class="top_bar_travel hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <ul class="list-unstyled list-inline top_contact">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <img src="../../../assets/img/r-flag.png" alt="flag">English
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><img src="../../../assets/img/frence-flag.ico" alt="flag">Fransh</a></li>
+                            <li><a href="#"><img src="../../../assets/img/turkey-flag.ico" alt="flag">Spanish </a></li>
+                            <li><a href="#"><img src="../../../assets/img/russia-flag.ico" alt="flag">Russian</a></li>
+                            <li><a href="#"><img src="../../../assets/img/garmen-flg.png" alt="flag">German</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-usd"></i> USD
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-usd"></i> ERU</a></li>
+                            <li><a href="#"><i class="fa fa-gbp"></i> PR</a></li>
+                            <li><a href="#"><i class="fa fa-eur"></i> ERU</a></li>
+                            <li><a href="#"><i class="fa fa-inr"></i> RS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-5 hidden-sm">
+                <div class="top_search">
+                    <form>
+                        <input type="text" placeholder="Search here...">
+                        <button class="email-btn"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="top_email">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--end top-bar-->
+
+<!--start navigation bar-->
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../../index.html"><img src="../../../assets/img/logo-v2.png" alt="logo"></a>
+        </div>
+        <!--navbar-collapse-->
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--Home-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"> <i class="fa fa-home"></i>Home
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;"> Home
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/home/inner-home/home_flight.html"><i class="fa fa-certificate"></i> Home Flight</a></li>
+                                <li><a href="../../../html/home/inner-home/home_hotel.html"><i class="fa fa-certificate "></i> Home Hotel</a></li>
+                                <li><a href="../../../html/home/inner-home/home-travel.html"><i class="fa fa-certificate"></i> Home Travel</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../../html/home/layout_one.html">  Home version-1</a></li>
+                        <li><a href="../../../html/home/layout_two.html">  Home version-2</a></li>
+                        <li ><a href="../../../html/home/layout_three.html" class="no-border">  Home version-3</a></li>
+                    </ul>
+                </li>
+                <!--Flights-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"><i class="fa fa-plane"></i>Flights
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu mega-dropdown-menu row">
+                        <li class="col-md-3 col-sm-12">
+                            <ul>
+                                <li><a href="../../../html/flight/home-flight.html">Home Flight</a></li>
+                                <!--<li class="divider"></li>-->
+
+                                <li class="dropdown-header">Flights list one</li>
+                                <li><a href="../../../html/flight/flights_list_one/left_sidebar.html">Left Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_list_one/right_sidebar.html">Right Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_list_one/full_width.html">Full Width</a></li>
+                                <!--<li class="divider"></li>-->
+                                <li class="dropdown-header">Flights list Two</li>
+                                <li><a href="../../../html/flight/flights_list_two/left_sidebar.html">Left Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_list_two/right_sidebar.html">Right Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_list_two/full_width.html">Full Width</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="col-md-3 col-sm-12">
+                            <ul>
+                                <!--<li class="divider"></li>-->
+
+                                <li class="dropdown-header">Flights Detail one</li>
+                                <li><a href="../../../html/flight/flights_details_one/left_sidebar.html">Left Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_details_one/right_sidebar.html">Right Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_details_one/full_width.html">Full Width</a></li>
+                                <!--<li class="divider"></li>-->
+
+                                <li class="dropdown-header">Flights Detail Two</li>
+                                <li><a href="../../../html/flight/flights_details_two/left_sidebar.html">Left Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_details_two/right_sidebar.html">Right Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_details_one/full_width.html">Full Width</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="col-md-3 col-sm-12">
+                            <ul>
+                                <!--<li class="divider"></li>-->
+
+                                <li class="dropdown-header">Flights Booking one</li>
+                                <li><a href="../../../html/flight/flights_booking_one/left_sidebar.html">Left Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_booking_one/right_sidebar.html">Right Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_booking_one/full_width.html">Full Width</a></li>
+                                <!--<li class="divider"></li>-->
+
+                                <li class="dropdown-header">Flights Booking Two</li>
+                                <li><a href="../../../html/flight/flights_booking_two/left_sidebar.html">Left Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_booking_two/right_sidebar.html">Right Side bar</a></li>
+                                <li><a href="../../../html/flight/flights_booking_two/full_width.html">Full Width</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="col-md-3 col-sm-12">
+                            <ul>
+                                <!--<li class="divider"></li>-->
+
+                                <li class="dropdown-header">Maps</li>
+                                <li><a href="../../../html/flight/maps/map_style_one.html">Map Style One</a></li>
+                                <li><a href="../../../html/flight/maps/map_style_two.html">Map Style Two</a></li>
+                                <li><a href="../../../html/flight/maps/half_map.html">Half Map</a></li>
+                                <!--<li class="divider"></li>-->
+
+                                <li class="dropdown-header">Confirm Booking</li>
+                                <li><a href="../../../html/flight/confirm_booking/layout_one.html">Layout One</a></li>
+                                <li><a href="../../../html/flight/confirm_booking/layout_two.html">Layout two</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--Hotels-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"><i class="fa fa-hotel"></i>Hotels
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../../html/hotel/home_hotel.html">  Home Hotel</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Hotels Lists One
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/hotels_list_one/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_list_one/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_list_one/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Hotels Lists Two
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/hotels_list_two/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_list_two/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_list_two/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Hotels Details One
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/hotels_details_one/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_details_one/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_details_one/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Hotels Details Two
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/hotels_details_two/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_details_two/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_details_two/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Hotels Booking One
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/hotels_booking_one/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_booking_one/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_booking_one/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Hotels Booking Two
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/hotels_booking_two/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_booking_two/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/hotel/hotels_booking_two/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Maps
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/maps/map_style_one.html"><i class="fa fa-certificate "></i>Map Style One</a></li>
+                                <li><a href="../../../html/hotel/maps/map_style_two.html"><i class="fa fa-certificate "></i>Map Style Two</a></li>
+                                <li><a href="../../../html/hotel/maps/half_map.html"><i class="fa fa-certificate "></i>Half Map</a></li>
+                                <li><a href="../../../html/hotel/maps/full_map.html"><i class="fa fa-certificate "></i>FUll Map</a></li>
+                            </ul>
+                        </li>
+
+                        <li class=" dropdown-submenu">
+                            <a class="test no-border"  data-toggle="dropdown" href="javascript:;" >  Confirm Booking
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/hotel/confirm_booking/layout_one.html"><i class="fa fa-certificate "></i>Layout One</a></li>
+                                <li><a href="../../../html/hotel/confirm_booking/layout_two.html"><i class="fa fa-certificate "></i>Layout Two</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--Travels-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"><i class="fa fa-car"></i>Travels
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../../html/travel/home-travel.html">  Home Travel</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Travels Lists One
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/travels_list_one/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_list_one/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_list_one/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Travels Lists Two
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/travels_list_two/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_list_two/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_list_two/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Travels Details One
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/travels_details_one/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_details_one/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_details_one/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Travels Details Two
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/travels_details_two/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_details_two/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_details_two/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Travels Booking One
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/travels_booking_one/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_booking_one/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_booking_one/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Travels Booking Two
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/travels_booking_two/left_sidebar.html"><i class="fa fa-certificate "></i>Left Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_booking_two/right_sidebar.html"><i class="fa fa-certificate "></i>Right Sidebar</a></li>
+                                <li><a href="../../../html/travel/travels_booking_two/full_width.html"><i class="fa fa-certificate "></i>Full width</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Maps
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/maps/map_style_one.html"><i class="fa fa-certificate "></i>Map Style One</a></li>
+                                <li><a href="../../../html/travel/maps/map_style_two.html"><i class="fa fa-certificate "></i>Map Style Two</a></li>
+                                <li><a href="../../../html/travel/maps/half_map.html"><i class="fa fa-certificate "></i>Half Map</a></li>
+                                <li><a href="../../../html/travel/maps/full_map.html"><i class="fa fa-certificate "></i>FUll Map</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a class="test no-border"  data-toggle="dropdown" href="javascript:;">  Confirm Booking
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop1">
+                                <li><a href="../../../html/travel/confirm_booking/layout_one.html"><i class="fa fa-certificate "></i>Layout One</a></li>
+                                <li><a href="../../../html/travel/confirm_booking/layout_two.html"><i class="fa fa-certificate "></i>Layout Two</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--ShortCodes-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"> <i class="fa fa-th-list"></i>ShortCodes
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../../html/shortcodes/typography.html">  Typography</a></li>
+                        <li><a href="../../../html/shortcodes/forms.html">  Form</a></li>
+                        <li><a href="../../../html/shortcodes/icons.html">  Icons</a></li>
+                        <li><a href="../../../html/shortcodes/buttons.html">  Buttons</a></li>
+                        <li><a href="../../../html/shortcodes/animation.html">  Animation</a></li>
+                        <li><a href="../../../html/shortcodes/toggles.html">  Toggles</a></li>
+                        <li><a href="../../../html/shortcodes/alerts.html">  Alerts</a></li>
+                        <li><a href="../../../html/shortcodes/tabs.html">  Tabs</a></li>
+                        <li><a href="../../../html/shortcodes/tables.html" class="no-border">  tables</a></li>
+                    </ul>
+                </li>
+                <!--Pages-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"> <i class="fa fa-briefcase"></i>Pages
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Headers
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop2">
+                                <li><a href="../../../html/pages/headers/header_one.html"><i class="fa fa-certificate"></i>Header One</a></li>
+                                <li><a href="../../../html/pages/headers/header_two.html"><i class="fa fa-certificate"></i>Header Two</a></li>
+                                <li><a href="../../../html/pages/headers/header_three.html"><i class="fa fa-certificate"></i>Header Three</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Footers
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop2">
+                                <li><a href="../../../html/pages/footers/footer_one.html"><i class="fa fa-certificate "></i>Footers One</a></li>
+                                <li><a href="../../../html/pages/footers/footer_two.html"><i class="fa fa-certificate "></i>Footers Two</a></li>
+                                <li><a href="../../../html/pages/footers/footer_three.html"><i class="fa fa-certificate "></i>Footers Three</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;">  Search Styles
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop2">
+                                <li><a href="../../../html/pages/search-styles/search_one.html"><i class="fa fa-certificate "></i>Search One</a></li>
+                                <li><a href="../../../html/pages/search-styles/search_two.html"><i class="fa fa-certificate "></i>Search Two</a></li>
+                                <li><a href="../../../html/pages/search-styles/search_three.html"><i class="fa fa-certificate "></i>Search Three</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test"  data-toggle="dropdown" href="javascript:;"> Contact Us
+                                <span class="fa fa-caret-right pull-right"></span></a>
+                            <ul class="dropdown-menu drop2">
+                                <li><a href="../../../html/pages/contact_us.html"><i class="fa fa-certificate "></i>Contact One</a></li>
+                                <li><a href="../../../html/pages/contact_us_two.html"><i class="fa fa-certificate "></i>Contact Two</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../../html/pages/log_in.html">  Log In</a></li>
+                        <li><a href="../../../html/pages/sign_up.html">  Sign Up</a></li>
+                        <li><a href="../../../html/pages/about_us.html">  About Us</a></li>
+                        <li><a href="../../../html/pages/coming_soon.html">  Coming Soon</a></li>
+                        <li><a href="../../../html/pages/FAQ.html">  FAQ</a></li>
+                        <li><a href="../../../html/pages/404.html" class="no-border">  404</a></li>
+                    </ul>
+                </li>
+                <!--Find My Flight-->
+                <li class="visible-lg"><span><a href="../../../html/flight/flights_list_two/left_sidebar.html" class="btn btn_order_now">Find My Flight</a></span></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--navigation end here-->
+
+<!--inner body start from here-->
+<div class="inner-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bread-crumb animate-reveal">
+                    <h2>Flights List</h2>
+                    <ol class="breadcrumb pull-right">
+                        <li><a href="../../../index.html">Home</a></li>
+                        <li class="active">Full Width</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form_faq_list box_show_faq">
+                    <form>
+                        <input type="text" placeholder="Type to search...">
+                        <button class="search_faq"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="sort-section white-box animate-reveal">
+                    <h4>Sort results by:</h4>
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="#"><span class="text">Name</span><span class="up"><i class="fa fa-caret-up"></i></span> <span class="down"><i class="fa fa-caret-down"></i></span></a></li>
+                        <li><a href="#"><span class="text">Price</span><span class="up"><i class="fa fa-caret-up"></i></span> <span class="down"><i class="fa fa-caret-down"></i></span></a></li>
+                        <li><a href="#"><span class="active-text">Duration</span><span class="up"><i class="fa fa-caret-up"></i></span> <span class="down"><i class="fa fa-caret-down"></i></span></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="flight_box_detail white-box animate-reveal">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="flight-logo"><img  alt="logo" src="../../../assets/img/flight-logo.png"></div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="details-text">
+                                <h4> Consequat ante <a href="#" class="btn btn-stop">1 stop</a> <br><small>Oneway flight</small></h4>
+                            </div>
+                            <div class="details-feature">
+                                <ul class="list-inline list-unstyled">
+                                    <li><i class="fa fa-wifi"></i></li>
+                                    <li><i class="fa fa-music"></i></li>
+                                    <li><i class="fa fa-briefcase"></i></li>
+                                    <li><i class="fa fa-cutlery"></i></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane"></i> Take off</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane fa-rotate-90"></i> Landing</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT no-border">
+                                        <span class="skin-clr"> <i class="fa fa-clock-o"></i> Time</span><br>
+                                        <span class="time">8 hours, 15 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="select-sec">
+                                <span>AVG/PERSON <br> <span class="pri">$620</span></span>
+                                <a href="../flights_details_one/right_sidebar.html" target="_blank" class="btn btn_select">SELECT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flight_box_detail white-box animate-reveal">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="flight-logo"><img  alt="logo" src="../../../assets/img/flight-logo.png"></div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="details-text">
+                                <h4>Quisque tincidunt Lahore <a href="#" class="btn btn-stop">1 stop</a> <br><small>Oneway flight</small></h4>
+                            </div>
+                            <div class="details-feature">
+                                <ul class="list-inline list-unstyled">
+                                    <li><i class="fa fa-wifi"></i></li>
+                                    <li><i class="fa fa-music"></i></li>
+                                    <li><i class="fa fa-briefcase"></i></li>
+                                    <li><i class="fa fa-cutlery"></i></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane"></i> Take off</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane fa-rotate-90"></i> Landing</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT no-border">
+                                        <span class="skin-clr"> <i class="fa fa-clock-o"></i> Time</span><br>
+                                        <span class="time">8 hours, 15 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="select-sec">
+                                <span>AVG/PERSON <br> <span class="pri">$620</span></span>
+                                <a href="../flights_details_one/right_sidebar.html" target="_blank" class="btn btn_select">SELECT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flight_box_detail white-box animate-reveal">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="flight-logo"><img  alt="logo" src="../../../assets/img/flight-logo.png"></div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="details-text">
+                                <h4>Indianapolis to Paris <a href="#" class="btn btn-stop">1 stop</a> <br><small>Oneway flight</small></h4>
+                            </div>
+                            <div class="details-feature">
+                                <ul class="list-inline list-unstyled">
+                                    <li><i class="fa fa-wifi"></i></li>
+                                    <li><i class="fa fa-music"></i></li>
+                                    <li><i class="fa fa-briefcase"></i></li>
+                                    <li><i class="fa fa-cutlery"></i></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane"></i> Take off</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane fa-rotate-90"></i> Landing</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT no-border">
+                                        <span class="skin-clr"> <i class="fa fa-clock-o"></i> Time</span><br>
+                                        <span class="time">8 hours, 15 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="select-sec">
+                                <span>AVG/PERSON <br> <span class="pri">$620</span></span>
+                                <a href="../flights_details_one/right_sidebar.html" target="_blank" class="btn btn_select">SELECT</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flight_box_detail white-box animate-reveal">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="flight-logo"><img  alt="logo" src="../../../assets/img/flight-logo.png"></div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="details-text">
+                                <h4>Indianapolis to Paris <a href="#" class="btn btn-stop">1 stop</a> <br><small>Oneway flight</small></h4>
+                            </div>
+                            <div class="details-feature">
+                                <ul class="list-inline list-unstyled">
+                                    <li><i class="fa fa-wifi"></i></li>
+                                    <li><i class="fa fa-music"></i></li>
+                                    <li><i class="fa fa-briefcase"></i></li>
+                                    <li><i class="fa fa-cutlery"></i></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane"></i> Take off</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT">
+                                        <span class="skin-clr"> <i class="fa fa-plane fa-rotate-90"></i> Landing</span><br>
+                                        <span class="time">Wed Nov 13, 2013 7:50 Am</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="LTT no-border">
+                                        <span class="skin-clr"> <i class="fa fa-clock-o"></i> Time</span><br>
+                                        <span class="time">8 hours, 15 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="select-sec">
+                                <span>AVG/PERSON <br> <span class="pri">$620</span></span>
+                                <a href="../flights_details_one/right_sidebar.html" target="_blank" class="btn btn_select">SELECT</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-more "> <i class="fa fa-eye"></i>Loading More</a>
+
+            </div>
+            <div class="col-md-12">
+
+                <div class="search-tem white-box animate-reveal">
+                    <span> <i class="fa fa-search"></i>
+                        1,984 results found.</span>
+                </div>
+                <div class="form-detail-sidebar animate-reveal">
+                    <h4>modify search</h4>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Where are You departing from?" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Where would You Like to go?" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control"  placeholder="Check In" id="datepicker-headers2" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control"  placeholder="Check Off" id="datepicker-headers1" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#demo1">Price <span class="pull-right"><i class="fa fa-chevron-down"></i> </span></button>
+                        <div id="demo1" class="collapse">
+                            <p id="amount"></p>
+                            <div id="slider-range"></div>
+                            <input type="hidden" id="amount1" name="amount1">
+                            <input type="hidden" id="amount2" name="amount2">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#demo2">Flight Times <span class="pull-right"><i class="fa fa-chevron-down"></i> </span></button>
+
+                        <div id="demo2" class="collapse">
+                            <p id="time"></p>
+                            <div id="time-range"></div>
+                            <input type="hidden" id="time1" name="amount1">
+                            <input type="hidden" id="time2" name="amount2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#demo3">Stops<span class="pull-right"><i class="fa fa-chevron-down"></i> </span></button>
+
+                        <div id="demo3" class="collapse">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="1"> 1 Stops</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="2"> 2 Stops</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="*"> Multiple Stops</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#demo4">Airlines<span class="pull-right"><i class="fa fa-chevron-down"></i> </span></button>
+
+                        <div id="demo4" class="collapse">
+                            <select class="select-two">
+                                <option selected="selected">PIA</option>
+                                <option>Major Airline</option>
+                                <option>AMIRATES</option>
+                                <option>AIR BLUE</option>
+                                <option>SHAHEEN</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#demo5">Flight Type<span class="pull-right"><i class="fa fa-chevron-down"></i> </span></button>
+                        <div id="demo5" class="collapse">
+                            <select class="select-two">
+                                <option selected="selected">Business</option>
+                                <option>First Class</option>
+                                <option>Economy</option>
+                            </select>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-search-travel btn-block">SEARCH AGAIN</a>
+                </div>
+                <div class="white-box write_review">
+                    <h3>Write a Review</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label >Your Name <span>*</span></label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label >Your Email <span>*</span> </label>
+                                <input type="email" class="form-control"  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label >Review Title <span>*</span></label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label >Reviews <span>*</span></label>
+                                <br>
+                                <span class="rating">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-o"></i></a>
+                                    <a href="#"><i class="fa fa-star-o"></i></a>
+                                    <a href="#"><i class="fa fa-star-o"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label >Review Text <span>*</span></label>
+                                <textarea class="form-control" rows="6" cols="6"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <a href="#" class="btn_book">Leave a review</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--button back to top-->
+<div id="back_to_top">
+    <div class="button">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+</div>
+<!--footer start here-->
+<footer class="main-footer">
+    <!--end button here-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="inner-footer">
+                    <a href="../../../index.html"><img src="../../../assets/img/logo.png" alt="logo" class="img-responsive"></a>
+                    <p class="footer-content">
+                        Lorem ipsum dolor sit amet consadi
+                        Nam at tempus nunc. Integer bib
+                        psum dolor sit amet consadipis
+                        Nam at tempus nunc.
+                    </p>
+                    <br>
+                    <p class="footer-text"><span><a href="#"><i class="fa fa-phone"></i></a></span> Call Us 0191366759  Or 0174912978</p>
+                    <p class="footer-text"><span><a href="#"><i class="fa fa-envelope"></i></a></span>  Email info.madhu786@gmail.com</p>
+                    <p class="footer-text"><span><a href="#"><i class="fa fa-map-marker"></i></a></span> Visit Us -154 Upashor , Sylhet Bangladesh</p>
+                    <ul class="list-unstyled list-inline ">
+                        <li>
+                            <a href="#"> <span class="social-icon"><i class="fa fa-facebook-f"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#"> <span class="social-icon"><i class="fa fa-twitter"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#"> <span class="social-icon"><i class="fa fa-futbol-o"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#"> <span class="social-icon"><i class="fa fa-google-plus-official"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#"> <span class="social-icon"><i class="fa fa-linkedin"></i></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="list-of-nav">
+                    <div class="inner-footer1">
+                        <h4>PAGES</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="../../../index.html"><i class="fa fa-hand-o-right"></i> Home</a></li>
+                            <li><a href="../../../html/pages/about_us.html"><i class="fa fa-hand-o-right"></i> About Us</a></li>
+                            <li><a href="../../../html/pages/contact_us.html"><i class="fa fa-hand-o-right"></i> Contact Us</a></li>
+                            <li><a href="../../../html/pages/log_in.html"><i class="fa fa-hand-o-right"></i> Log In</a></li>
+                            <li><a href="../../../html/pages/sign_up.html"><i class="fa fa-hand-o-right"></i> Sign Up</a></li>
+                            <li><a href="../../../html/pages/coming_soon.html"><i class="fa fa-hand-o-right"></i> Coming Soon</a></li>
+                            <li><a href="../../../html/pages/FAQ.html"><i class="fa fa-hand-o-right"></i> FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="inner-footer1">
+                    <h4>POPULAR TAGS</h4>
+                    <div class="btn-group">
+                        <a href="#" class="btn-tag">design</a>
+                        <a href="#" class="btn-tag">ui/ux</a>
+                        <a href="#" class="btn-tag">Graphic</a>
+                        <a href="#" class="btn-tag">web</a>
+                        <a href="#" class="btn-tag">wordpress</a>
+                        <a href="#" class="btn-tag">seo</a>
+                    </div>
+                    <h3>OUR MAILING LIST</h3>
+                    <p class="footer-content1">
+                        Sign up for our mailing list
+                        for get offers  and uspadates
+                    </p>
+
+                    <form class="search-mail">
+                        <input class="search-input" placeholder="Email Address..">
+                        <input class="search-Button" type="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="inner-footer2">
+                    <h4>AMAZING PLACES</h4>
+                    <ul class="list-inline list-unstyled">
+                        <li>
+                            <div class="img-news">
+                                <img src="../../../assets/img/iso-1.jpg" alt="image" class="img-responsive">
+                            </div>
+                            <div class="content-news">
+                                <p><a href="#">We reading  togather the organaization is good</a></p>
+                                <small>Feb 22-2016</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-news">
+                                <img src="../../../assets/img/new-index3-3.jpg" alt="image" class="img-responsive">
+                            </div>
+                            <div class="content-news">
+                                <p><a href="#">We reading  togather the organaization is good</a></p>
+                                <small>Feb 22-2016</small>
+                            </div>
+                        </li>
+                        <li class="no-border">
+                            <div class="img-news">
+                                <img src="../../../assets/img/iso-3.jpg" alt="image" class="img-responsive">
+                            </div>
+                            <div class="content-news">
+                                <p><a href="#">We reading  togather the organaization is good</a></p>
+                                <small>Feb 22-2016</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <p class="footer-bottom">&copy; copyright 2017 by <a href="http://teamworktec.com/">Teamwork</a></p>
+</footer>
+<!--footer end here-->
+<!--page loader-->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_big">
+                <img src="../../../assets/img/img-loader.png" alt="loader">
+            </div>
+        </div>
+    </div>
+</div>
+<!--end here-->
+
+<!--Start java script files-->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/bootstrap.min.js"></script>
+<script src="../../../assets/js/jqwidgets/scripts/date-picker.js"></script>
+<script src="../../../assets/js/jqwidgets/range/ranger.js"></script>
+<script src="../../../assets/js/scrollreveal.min.js"></script>
+<script src="../../../assets/js/slick.min.js"></script>
+<script src="../../../assets/js/custom.js"></script>
+<!--end files-->
+</body>
+</html>

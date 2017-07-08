@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Gateway - Documentations</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/app.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/zenburn.css">
+
+</head>
+<body data-spy="scroll" data-target="#doc-menu-links" data-offset="300">
+<section class="home-doc">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="img/logo-v2.png" alt="logo" class="img-responsive"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="right-nav">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Home</a> </li>
+                                <li><a href="#installation">Installation</a> </li>
+                                <li><a href="#support">Contact</a> </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="top-cont">
+            <h5>Travel Gateway HTML template BY Teamwork Technologies.</h5>
+            <h3>Travel Gateway HTML template Documentation</h3>
+            <p>Please read through each of the topics sections below. Each topic contains detailed documentation on theme setup and how to use Travel Gateway. Each section also includes information and code snippet, everything you need is right here.</p>
+            <span>
+                Important notes are highlighted in a big red box, pay attention to these.
+            </span>
+            <div class="alert alert-danger">
+                <strong>Alert!</strong> These are important notes, pay attention when you see them. All screenshots used are generic and meant to outline a step,content may differ from your template slightly.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 noPadding">
+                <div class="left-bar clearfix" id="doc-menu-links">
+                    <h3>Start</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#installation">Installation</a> </li>
+                        <li><a href="#structure">Structure</a> </li>
+                        <li><a href="#logo">Logo Settings</a> </li>
+                        <li><a href="#color-scheme">Color Scheme</a> </li>
+                        <li><a href="#fonts">Fonts Settings</a> </li>
+                        <li><a href="#customization">Customizations</a> </li>
+                        <li><a href="#sass">SASS Setup</a> </li>
+                    </ul>
+
+                    <h3>Search</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#search-1">Search Style One</a> </li>
+                        <li><a href="#search-2">Search Style Two</a> </li>
+                        <li><a href="#search-3">Search Style Three</a> </li>
+                    </ul>
+
+                    <h3>Header</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#header-1">Header Types One</a> </li>
+                        <li><a href="#header-3">Header Types Two</a> </li>
+                        <li><a href="#header-3">Header Types Three</a> </li>
+                    </ul>
+
+                    <h3>Footers</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#footer1">Footer One</a> </li>
+                        <li><a href="#footer2">Footer Two</a></li>
+                        <li><a href="#footer3">Footer Three</a></li>
+                    </ul>
+                    <h3>Shortcodes</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#buttons">Buttons</a> </li>
+                        <li><a href="#toggle">Toggles</a></li>
+                        <li><a href="#tabs">Tabs</a></li>
+                        <li><a href="#alerts">Alerts</a></li>
+                    </ul>
+                    <h3>Credits</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#credits">Credits</a> </li>
+                        <li><a href="#support">Support</a> </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="doc-content">
+                <div class="doc-group" id="installation">
+                    <h2 class="heading">Installation</h2>
+                    <p>Follow the following steps to get started with your Travel Gateway Template:</p>
+                    <ol>
+                        <li>Extract the zip Folder to find all the Files</li>
+                        <li>Uplaod these files to your liver server by using FTP or cPanel</li>
+                        <li>Make sure you upload the following files or folders on your live server
+                            <ul>
+                                <li><code>travel/assets</code> - contains all the assets such as js, images, css </li>
+                                <li><code>travel/html</code> -  contain all html pages</li>
+                                <li><code>travel/index.html</code> - homepage</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <br>
+                    <p>The other files or plugins can be used according your requirements and you can find all the 3rd party plugin in <code>assets/lib</code> folder.<br> Now all done you can start creating beautiful pages and widgets</p>
+                </div>
+                <div class="doc-group" id="structure">
+                    <h2 class="heading">File Structure</h2>
+                    <p>We follow a simple and easy to use file structure.</p>
+                    <pre>
+                        <code class="hljs css">
+<span class="hljs-number">Travel Gateway</span>
+
+    <span class="hljs-number">-assets</span>  <span class="hljs-keyword">contain all the css, img and js files</span>
+            <span class="hljs-number">--css</span>     <span class="hljs-keyword">core css files</span>
+            <span class="hljs-number">--fonts</span>  <span class="hljs-keyword">core template fonts files</span>
+            <span class="hljs-number">--img</span>  <span class="hljs-keyword">core template fonts files</span>
+            <span class="hljs-number">--js</span>      <span class="hljs-keyword">core javascript files</span>
+
+    <span class="hljs-number">-html</span>  <span class="hljs-keyword">all html pages</span>
+        <span class="hljs-number">--fight</span>     <span class="hljs-keyword">all flights page</span>
+        <span class="hljs-number">--home</span>  <span class="hljs-keyword">All index and home pages</span>
+        <span class="hljs-number">--hotel</span> <span class="hljs-keyword">all hotels page</span>
+        <span class="hljs-number">--pages</span>     <span class="hljs-keyword">different home styles</span>
+        <span class="hljs-number">--shortcodes</span> <span class="hljs-keyword">template shortcodes</span>
+        <span class="hljs-number">--travel</span>     <span class="hljs-keyword">all travels page</span>
+
+    <span class="hljs-number">-index.html</span>  <span class="hljs-keyword">template homepage</span>
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="logo">
+                    <h2 class="heading">Logo Settings</h2>
+                    <p>Travel Gateway use bootstrap navigation and logo to look better on small screens. So it can be found in <code>navbar-brand</code> anchor</p>
+
+                    <pre>
+                        <code class="hljs css">
+&lt;a class="navbar-brand" href="index.html"&gt;
+    &lt;img class="img-responsive" src="logo-v2.png" alt="Logo"&gt;
+&lt;/a&gt;
+                        </code>
+                    </pre>
+                    <p>Note: current logo height is <code>40px</code> we recommend to use same hegiht if you want to use different size then you have to fix the height of menu links</p>
+                </div>
+                <div class="doc-group" id="color-scheme">
+                    <h2 class="heading">Color Scheme</h2>
+                    <p>We use sass variables for changing template colors. You simply need to change the color values in variables.scss file that can be found in <code>assets/css</code> folder and all changes will be made on live site. Here are the color variables that we use in entire template:</p>
+
+                    <pre>
+                        <code class="hljs css">
+$primary-color: #01b7f2;
+$secondry-color: #ff6c26;
+$red: #d50905;
+$darkish-gray: #444444;
+$darkester-gray: #111111;
+$light-gray: #dddddd;
+$gray: #808080;
+
+
+$green:green;
+$yellow:yellow;
+$black:black;
+$blue:blue;
+$orange:orange;
+                        </code>
+                    </pre>
+                    <p>Note: current logo height is <code>40px</code> we recommend to use same hegiht if you want to use different size then you have to fix the height of menu links</p>
+                </div>
+                <div class="doc-group" id="fonts">
+                    <h2 class="heading">Fonts Settings</h2>
+                    <p>Here is list of fonts variables that we have used in entire template</p>
+
+                    <pre>
+                        <code class="hljs css">
+$raleway-font: 'Raleway', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+$open-sans-font: 'Open Sans', sans-serif;
+$montserrat-font: 'Montserrat', sans-serif;;
+$oswald-font:'Oswald', sans-serif;
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="customization">
+                    <h2 class="heading">Customizations</h2>
+                    <p>You can create a new <code>custom.css</code> file in css folder so that you can write custom styles in that file to implement customization. Simply add all your css files before the <code>custom.css</code> file and link it at the end of document <code><head></code>. Make sure that this is the last linked CSS File in the Document so that your other css styles are Overwritten properly.</p>
+
+                    <pre>
+                        <code class="hljs css">
+&lt;link rel="stylesheet" href="css/style.css" type="text/css" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /&gt;
+
+
+Here goes your custom.css
+=============================================
+&lt;link rel="stylesheet" href="css/custom.css" type="text/css" /&gt;
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="sass">
+                    <h2 class="heading">SASS Setup</h2>
+                    <p>There is a sass folder in <code>assets/css</code>. You can find all the sass files in that folder there are three sass files in sass folder. </p>
+                    <ol>
+                        <li><code>style.scss</code>   main sass file</li>
+                        <li><code>screen.scss</code> contain media quries for changing styles in different screens</li>
+                        <li><code>variable.scss</code> contain template variables for fonts and colors</li>
+                    </ol>
+                    <p>you can use cmd to compile file don't need to watch variables.scss and screen.scss files because these two files are imported in main app.scss file you don't need to include these two files into your project. Only link app.css file to your project</p>
+                </div>
+
+                <div class="doc-group" id="search-1">
+                    <h2 class="heading">Search style One</h2>
+                    <p>You can choose between 3 different types of headers while creating your page. Simply use the relevant search ID to the header tag to activate any search. here is the sample code for search type one:</p>
+
+                    <pre>
+                        <code class="hljs css">
+&lt;div class="main-fill"&gt;
+
+    &lt;div class="panel"&gt;
+
+      &lt;div class="panel-heading"&gt;
+
+        &lt;ul class="nav nav-tabs"&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Travel &lt;/a&gt;&lt;/li&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Flight &lt;/a&gt;&lt;/li&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Hotels &lt;/a&gt;&lt;/li&gt;
+
+        &lt;/ul&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="doc-group" id="search-2">
+                    <h2 class="heading">Search style Two</h2>
+                    <p>You can choose between 3 different types of headers while creating your page. Simply use the relevant search ID to the header tag to activate any search. here is the sample code for search type one:</p>
+
+                    <pre>
+                        <code class="hljs css">
+&lt;div id="index2-fill"&gt;
+
+    &lt;div class="panel"&gt;
+
+      &lt;div class="panel-heading"&gt;
+
+        &lt;ul class="nav nav-tabs"&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Travel &lt;/a&gt;&lt;/li&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Flight &lt;/a&gt;&lt;/li&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Hotels &lt;/a&gt;&lt;/li&gt;
+
+        &lt;/ul&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="doc-group" id="search-3">
+                    <h2 class="heading">Search style Three</h2>
+                    <p>You can choose between 3 different types of headers while creating your page. Simply use the relevant search ID to the header tag to activate any search. here is the sample code for search type one:</p>
+
+                    <pre>
+                        <code class="hljs css">
+&lt;div class="main_fill_three"&gt;
+
+    &lt;div class="panel"&gt;
+
+      &lt;div class="panel-heading"&gt;
+
+        &lt;ul class="nav nav-tabs"&gt;
+
+      &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Travel &lt;/a&gt;&lt;/li&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Flight &lt;/a&gt;&lt;/li&gt;
+
+          &lt;li class="active"&gt;&lt;a href="#tabtravel" data-toggle="tab"> Hotels &lt;/a&gt;&lt;/li&gt;
+
+        &lt;/ul&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="doc-group" id="header-1">
+                    <h2 class="heading">Header One</h2>
+                    <p>You can choose between 3 different types of headers while creating your page. Simply use the relevant header ID to the header tag to activate any header. here is the sample code for header type one:</p>
+
+                    <pre>
+                        <code class="hljs css">
+
+
+&lt;nav class="navbar navbar-inverse"&gt;
+
+     &lt;div class="container"&gt;
+
+         &lt;div class="collapse navbar-collapse"&gt;
+
+            &lt;ul class="nav navbar-nav navbar-right"&gt;
+
+                  &lt;li&gt;&lt;a href="#">Home&lt;/a&gt;&lt;/li&gt;
+
+                  &lt;li&gt;&lt;a href="#">About&lt;/a&gt;&lt;/li&gt;
+
+                  &lt;li&gt;&lt;a href="#">Log in&lt;/a&gt;&lt;/li&gt;
+
+                  &lt;li&gt;&lt;a href="#">Contact&lt;/a&gt;&lt;/li&gt;
+
+                  &lt;li&gt;&lt;a href="#">Services&lt;/a&gt;&lt;/li&gt;
+
+            &lt;/ul&gt;
+
+         &lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/nav&gt;
+
+&lt;/header&gt;
+
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="doc-group" id="header-2">
+                    <h2 class="heading">Header two</h2>
+                    <p>You can choose between 3 different types of headers while creating your page. Simply use the relevant header ID to the header tag to activate any header. here is the sample code for header type one:</p>
+
+                    <pre>
+                        <code class="hljs css">
+
+
+&lt;div id="index-two"&gt;
+
+    &lt;nav class="navbar navbar-default"&gt;
+
+        &lt;div class="container"&gt;
+
+            &lt;div class="collapse navbar-collapse"&gt;
+
+                &lt;ul class="nav navbar-nav navbar-right"&gt;
+
+                    &lt;li&gt;&lt;a href="#">Home&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="#">About&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="#">Log in&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="#">Contact&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="#">Services&lt;/a&gt;&lt;/li&gt;
+
+                &lt;/ul&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/nav&gt;
+
+&lt;/header&gt;
+
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="doc-group" id="header-3">
+                    <h2 class="heading">Header Three</h2>
+                    <p>You can choose between 3 different types of headers while creating your page. Simply use the relevant header ID to the header tag to activate any header. here is the sample code for header type one:</p>
+
+                    <pre>
+                        <code class="hljs css">
+
+&lt;header id="index-three"&gt;
+
+    &lt;nav class="navbar navbar-default"&gt;
+
+        &lt;div class="container"&gt;
+
+            &lt;div class="collapse navbar-collapse"&gt;
+
+                &lt;ul class="nav navbar-nav navbar-right"&gt;
+
+                    &lt;li&gt;&lt;a href="#">Home&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="#">About&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="#">Contact&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="#">Services&lt;/a&gt;&lt;/li&gt;
+
+                &lt;/ul&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/nav&gt;
+
+&lt;/header&gt;
+
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="doc-group" id="footer1">
+                    <h2 class="heading">Footer One</h2>
+                    <p> <p>You can choose between 3 different types of footers while creating your page. Simply use the relevant footer sample code activate any footer. here is the sample code for footer type one:</p></p>
+
+                    <pre>
+                        <code class="hljs css">
+&lt;footer class="footer-one">
+    &lt;div class="container">
+
+        &lt;div class="row">
+            div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+        &lt;/div>
+
+         &lt;div class="copyright-area">&lt;/div>
+    &lt;/div>
+&lt;/footer>
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="footer2">
+                    <h2 class="heading">Footer Two</h2>
+                    <pre>
+                        <code class="hljs css">
+&lt;footer id="footer-two">
+    &lt;div class="container">
+
+        &lt;div class="row">
+            div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+        &lt;/div>
+
+         &lt;div class="copyright">&lt;/div>
+    &lt;/div>
+&lt;/footer>
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="footer3">
+                    <h2 class="heading">Footer Three</h2>
+                    <pre>
+                        <code class="hljs css">
+
+
+&lt;footer id="footer-three">
+    &lt;div class="container">
+
+        &lt;div class="row">
+            div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+
+            &lt;div class="col-md-3">&lt;/div>
+        &lt;/div>
+
+         &lt;div class="copyright">&lt;/div>
+    &lt;/div>
+&lt;/footer>
+
+
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="buttons">
+                    <h2 class="heading">Buttons Styles</h2>
+                    <p>Travel Gateway is full of buttons styles some of them are bootstrap's built-in buttons and some are our custom made buttons styles. Add anyone of following classes to get relevant button.</p>
+
+                    <pre>
+                        <code class="hljs css">
+    &lt;button class="btn-primary"&gt; Button &lt;/button&gt;
+
+    &lt;button class="btn-success rounded"&gt; Button &lt;/button&gt;
+
+    &lt;button class="btn-info outlined"&gt; Button &lt;/button&gt;
+
+    &lt;button class="creative-btn btn-2 btn-2a"&gt; Button &lt;/button&gt;
+
+    &lt;button class="creative-btn btn-6 btn-6e"&gt; Button &lt;/button&gt;
+
+    &lt;button class="creative-btn btn-5 btn-5a icon-cart"&gt; Button &lt;/button&gt;
+
+    &lt;button class="btn-default"&gt; Button &lt;/button&gt;
+
+    &lt;button class="btn-lg"&gt; Button &lt;/button&gt;
+
+    &lt;button class="btn-sm"&gt; Button &lt;/button&gt;
+
+    &lt;button class="btn-xs"&gt; Button &lt;/button&gt;
+
+                        </code>
+                    </pre>
+                    <p>Note: current logo height is <code>40px</code> we recommend to use same hegiht if you want to use different size then you have to fix the height of menu links</p>
+                </div>
+                <div class="doc-group" id="toggle">
+                    <h2 class="heading">Toggle</h2>
+                    <p>Toggle sample code</p>
+
+                    <pre>
+                        <code class="hljs css">
+&lt;div class="panel-group">
+
+ &lt;div class="no-float success-ac">
+
+    &lt;div class="panel panel-default">
+
+        &lt;div class="panel-heading">
+
+            &lt;h4 class="panel-title">
+
+                &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    Collapsible 1
+                &lt;/a>
+
+            &lt;/h4>
+
+        &lt;/div>
+
+        &lt;div id="collapse1" class="panel-collapse collapse">&lt;/div>
+
+    &lt;/div>
+
+   &lt;/div>
+
+&lt;/div>
+
+
+
+&lt;div class="panel-group">
+
+ &lt;div class="no-float primary-ac">
+
+    &lt;div class="panel panel-default">
+
+        &lt;div class="panel-heading">
+
+            &lt;h4 class="panel-title">
+
+                &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    Collapsible 1
+                &lt;/a>
+
+            &lt;/h4>
+
+        &lt;/div>
+
+        &lt;div id="collapse1" class="panel-collapse collapse">&lt;/div>
+
+    &lt;/div>
+
+   &lt;/div>
+
+&lt;/div>
+
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="tabs">
+                    <h2 class="heading">Tabs</h2>
+                    <p>Tabs sample code</p>
+
+                    <pre>
+                        <code class="hljs css">
+
+&lt;div class="tab-box">
+
+    &lt;ul class="nav nav-tabs primary-tab" role="tablist">
+        &lt;li>
+            &lt;a href="#tab1" role="tab" data-toggle="tab">Home&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#tab2" role="tab" data-toggle="tab">Profile&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#tab3" role="tab" data-toggle="tab">Message&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+
+    &lt;div class="tab-content">
+        &lt;div class="tab-pane active" id="tab1">&lt;/div>
+        &lt;div class="tab-pane" id="tab2">&lt;/div>
+        &lt;div class="tab-pane" id="tab3">&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+
+&lt;div class="tab-box">
+
+    &lt;ul class="nav nav-tabs success-tab" role="tablist">
+        &lt;li>
+            &lt;a href="#tab1" role="tab" data-toggle="tab">Home&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#tab2" role="tab" data-toggle="tab">Profile&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#tab3" role="tab" data-toggle="tab">Message&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+
+    &lt;div class="tab-content">
+        &lt;div class="tab-pane active" id="tab1">&lt;/div>
+        &lt;div class="tab-pane" id="tab2">&lt;/div>
+        &lt;div class="tab-pane" id="tab3">&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+
+&lt;div class="tab-box">
+
+    &lt;ul class="nav nav-tabs info-tab" role="tablist">
+        &lt;li>
+            &lt;a href="#tab1" role="tab" data-toggle="tab">Home&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#tab2" role="tab" data-toggle="tab">Profile&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#tab3" role="tab" data-toggle="tab">Message&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+
+    &lt;div class="tab-content">
+        &lt;div class="tab-pane active" id="tab1">&lt;/div>
+        &lt;div class="tab-pane" id="tab2">&lt;/div>
+        &lt;div class="tab-pane" id="tab3">&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="alerts">
+                    <h2 class="heading">Alerts</h2>
+                    <p>Alerts Sample code</p>
+
+                    <pre>
+                        <code class="hljs css">
+
+&lt;div class="alert alert-success">
+    &lt;button type="button" class="close" data-dismiss="alert" aria-hidden="true">×&lt;/button>
+    &lt;span class="glyphicon glyphicon-ok">&lt;/span> &lt;strong>Success Message&lt;/strong>
+    &lt;hr class="message-inner-separator">
+    &lt;p> You successfully read this important alert message.&lt;/p>
+&lt;/div>
+
+&lt;div class="alert alert-info">
+    &lt;button type="button" class="close" data-dismiss="alert" aria-hidden="true">×&lt;/button>
+    &lt;span class="glyphicon glyphicon-ok">&lt;/span> &lt;strong>Success Message&lt;/strong>
+    &lt;hr class="message-inner-separator">
+    &lt;p> You successfully read this important alert message.&lt;/p>
+&lt;/div>
+
+&lt;div class="alert alert-warning">
+    &lt;button type="button" class="close" data-dismiss="alert" aria-hidden="true">×&lt;/button>
+    &lt;span class="glyphicon glyphicon-ok">&lt;/span> &lt;strong>Success Message&lt;/strong>
+    &lt;hr class="message-inner-separator">
+    &lt;p> You successfully read this important alert message.&lt;/p>
+&lt;/div>
+
+&lt;div class="alert alert-danger">
+    &lt;button type="button" class="close" data-dismiss="alert" aria-hidden="true">×&lt;/button>
+    &lt;span class="glyphicon glyphicon-ok">&lt;/span> &lt;strong>Success Message&lt;/strong>
+    &lt;hr class="message-inner-separator">
+    &lt;p> You successfully read this important alert message.&lt;/p>
+&lt;/div>
+
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="doc-group" id="credits">
+                    <h2 class="heading">Credits</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul>
+                                <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+                                <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate</a></li>
+                                <li><a href="https://scrollrevealjs.org/" target="_blank">Animate reveal</a></li>
+                                <li><a href="https://www.amcharts.com/" target="_blank">am charts</a></li>
+                                <li><a href="https://github.com/bfintal/Counter-Up" target="_blank">Counter Up Master</a></li>
+                                <li><a href="http://kenwheeler.github.io/slick/" target="_blank">Slick Slider</a></li>
+                                <li><a href="https://github.com/bfintal/Counter-Up" target="_blank">Counter Up</a></li>
+                                <li><a href="http://fontawesome.io/" target="_blank">font Awesome</a></li>
+                                <li><a href="http://www.jqwidgets.com/" target="_blank">Jq Widgets</a></li>
+                                <li><a href="https://maps.google.com/" target="_blank">Google Maps</a></li>
+                                <li><a href="https://github.com/nathco/jQuery.scrollSpeed" target="_blank">Scroll Speed</a></li>
+
+
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul>
+                                <li><a href="http://vincentgarreau.com/particles.js/" target="_blank">Particles Effect</a></li>
+                                <li><a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a></li>
+                                <li><a href="https://jquery.com/" target="_blank">JQuery</a></li>
+                                <li><a href="https://select2.github.io/examples.html" target="_blank">Select2</a></li>
+                                <li><a href="http://pixelcog.github.io/parallax.js/" target="_blank">Parallax</a></li>
+                                <li><a href="https://github.com/cferdinandi/smooth-scroll" target="_blank">Smooth Scroll</a></li>
+                                <li><a href="https://snazzymaps.com/" target="_blank">Snazzy Map</a></li>
+                                <li><a href="https://github.com/imakewebthings/jquery-waypoints/" target="_blank">Waypoints</a></li>
+                                <li><a href="https://github.com/matthieua/WOW" target="_blank">WOW</a></li>
+                                <li><a href="https://images.google.com/" target="_blank">Google Images</a></li>
+                                <li><a href="https://fonts.google.com//" target="_blank">Google Fonts</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="doc-group" id="support">
+                    <h2 class="heading">Support</h2>
+                    <p>We tried our best to help our customers to learn everything properly. But if you still have question or anything confusing your you can contact us on this email address <a href=":info@teamwork.com.pk">info@teamwork.com.pk</a> </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/highlight.pack.js"></script>
+<script src="js/jquery.smooth-scroll.js"></script>
+<script src="js/jquery.ba-bbq.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

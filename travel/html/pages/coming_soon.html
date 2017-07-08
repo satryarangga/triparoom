@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Travel Web Template">
+    <meta name="keywords" content="Travel Template,Flight Template,Cars Template,Hotels Template,Responsive Template">
+    <meta name="author" content="M.Bilal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gateway - Multiple Purpose Travel Template</title>
+    <!--styles files-->
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/js/jqwidgets/styles/jqx.base.css" rel="stylesheet">
+    <link href="../../assets/css/slick.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="coming-soon">
+    <div class="coming-soon-box">
+        <div class="social-icon">
+            <span>
+                <a href="#"> <i class="facebook fa fa-facebook"></i></a>
+                          <a href="#"> <i class="google fa fa-google-plus"></i></a>
+      <a href="#"> <i class="linkedin fa fa-linkedin"></i></a>
+                <a href="#"> <i class="twitter fa fa-twitter"></i></a>
+            </span>
+        </div>
+        <h1>WE are going To LIVE
+            <i class="fa fa-clock-o fa-spin"></i>
+        </h1>
+        <div id="countdown"></div>
+        <div class="cs-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-4 col-sm-offset-2 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
+                        <div class="get-email text-center">
+                            <form>
+                                <input type="email" placeholder="Enter email here"><span><i class="fa fa-paper-plane"></i></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--start footer-->
+
+<!--end footer-->
+<!--script files-->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/jqwidgets/scripts/date-picker.js"></script>
+<script src="../../assets/js/counter-Up-master/jquery.countdown.js"></script>
+<script src="../../assets/js/slick.min.js"></script>
+<script src="../../assets/js/custom.js"></script>
+<!--end script files-->
+<script>
+    $(function(){
+
+        var note = $('#note'),
+                ts = new Date(2012, 0, 1),
+                newYear = true;
+
+        if((new Date()) > ts){
+            // The new year is here! Count towards something else.
+            // Notice the *1000 at the end - time must be in milliseconds
+            ts = (new Date()).getTime() + 10*24*60*60*1000;
+            newYear = false;
+        }
+
+        $('#countdown').countdown({
+            timestamp	: ts,
+            callback	: function(days, hours, minutes, seconds){
+
+                var message = "";
+
+                message += days + " day" + ( days==1 ? '':'s' ) + ", ";
+                message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
+                message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
+                message += seconds + " second" + ( seconds==1 ? '':'s' ) + " <br />";
+
+                if(newYear){
+                    message += "left until the new year!";
+                }
+                else {
+                    message += "left to 10 days from now!";
+                }
+
+                note.html(message);
+            }
+        });
+
+    });
+</script>
+</body>
+</html>
