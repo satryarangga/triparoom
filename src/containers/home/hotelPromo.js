@@ -7,11 +7,14 @@ import { fetchToken } from '../../actions/actionToken';
 import { fetchHomeHotel } from '../../actions/actionHotel';
 
 class HotelPromo extends Component {
-  componentDidMount() {
-    if(!this.props.token){
-      this.props.fetchToken();
-    }
 
+  constructor(props) {
+    super(props);
+    if(!props.token){
+      props.fetchToken();
+    }
+  }
+  componentDidMount() {
     this.props.fetchHomeHotel();
   }
 
@@ -30,9 +33,10 @@ class HotelPromo extends Component {
             </div>
             <div className="hotel_detail">
               <div className="hotel-name">
-                <h4>{hotel.name}</h4>
+                <h4>{_.take(_.words(hotel.name), 4).join(" ")}</h4>
                 <p><i className="fa fa-map-marker"></i> {hotel.regional}</p>
-                <div className="pull-left">Price per night from: </div> <div className="pull-right">IDR {numeral(hotel.price).format('IDR 0,0')}</div>
+                <div className="pull-left">Price per night from:</div>
+                <div className="pull-right">IDR {numeral(hotel.price).format('IDR 0,0')}</div>
                 <div className="book-now">
                   <a href="#" className="btn btn_book_now">View Room</a>
                 </div>
