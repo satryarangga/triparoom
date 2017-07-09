@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './layout/header';
+import Header from '../layout/header';
+import Footer from '../layout/footer';
 import SearchFlight from './tabs/searchFlight';
 import SearchHotel from './tabs/searchHotel';
+import HotelPromo from '../../containers/home/hotelPromo';
 
 const bannerUrl = '../../assets/img/beach.jpg';
 const mainBanner = {
@@ -67,7 +69,9 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <HotelPromo />
         </div>
+        <Footer />
       </div>
     );
   }

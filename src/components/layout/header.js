@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <nav className="navbar navbar-inverse">
         <div className="container">
-          <div className="navbar-header">
+          <div className= "navbar-header">
             <Link className="navbar-brand" to="/">
                 <img  src={'../../assets/img/logo.png'} />
             </Link>

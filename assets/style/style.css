@@ -158,7 +158,7 @@ body {
     border-radius: 0;
     padding: 0;
     min-width: 210px;
-    border-top: 3px solid #ff6c26; }
+    border-top: 3px solid #388E3C; }
     #index-two .navbar-default .navbar-nav .dropdown .dropdown-menu li {
       position: relative; }
       #index-two .navbar-default .navbar-nav .dropdown .dropdown-menu li a {
@@ -367,7 +367,7 @@ body {
     transition: all .3s;
     margin-top: 8px;
     margin-bottom: 6px;
-    border: 2px solid #ff6c26;
+    border: 2px solid #388E3C;
     padding: 6px;
     background-color: #333; }
     .navbar-inverse .navbar-toggle .icon-bar {
@@ -377,7 +377,7 @@ body {
     .navbar-inverse .navbar-toggle.collapsed {
       background-color: transparent; }
       .navbar-inverse .navbar-toggle.collapsed .icon-bar {
-        background-color: #ff6c26; }
+        background-color: #388E3C; }
     .navbar-inverse .navbar-toggle:hover {
       transition: all .3s;
       background-color: #333; }
@@ -389,13 +389,13 @@ body {
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
   background-color: transparent;
   color: white;
-  border-bottom: 2px solid #ff6c26;
+  border-bottom: 2px solid #388E3C;
   transition: border-bottom .4s ease-in-out; }
 
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
   background-color: transparent;
   color: #444444;
-  border-bottom: 2px solid #ff6c26;
+  border-bottom: 2px solid #388E3C;
   transition: border-bottom .4s ease-in-out; }
 
 .dropdown-toggle:focus {
@@ -422,7 +422,7 @@ ul {
   .navbar-inverse .navbar-nav li .dropdown-menu {
     border-radius: 0;
     padding: 0;
-    border-bottom: 2px solid #ff6c26;
+    border-bottom: 2px solid #388E3C;
     min-width: 210px;
     margin-top: 1px; }
     .navbar-inverse .navbar-nav li .dropdown-menu li {
@@ -434,7 +434,7 @@ ul {
         margin-left: 0;
         transition: .3s; }
         .navbar-inverse .navbar-nav li .dropdown-menu li a:hover {
-          border-bottom: 1px dotted #ff6c26;
+          border-bottom: 1px dotted #388E3C;
           transition: .3s;
           padding: 10px 10px 10px 30px !important; }
         .navbar-inverse .navbar-nav li .dropdown-menu li a span {
@@ -496,7 +496,7 @@ a {
     top: 0px;
     right: 0px;
     font-size: 17px;
-    color: #ff6c26;
+    color: #388E3C;
     height: 32px;
     line-height: 1;
     width: 43px;
@@ -546,7 +546,7 @@ a {
         padding-top: 5px;
         border-radius: 100%; }
         .top_email ul li a:hover {
-          background-color: #ff6c26;
+          background-color: #388E3C;
           transition-duration: .3s; }
           .top_email ul li a:hover i {
             transition: 0.9s;
@@ -635,7 +635,7 @@ a {
   -webkit-font-smoothing: antialiased; }
 
 .btn_order_now {
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #ffffff !important;
   border-radius: 0;
   transition-duration: .3s;
@@ -659,7 +659,7 @@ a {
   .btn_order_now-v2:hover {
     color: #ffffff;
     transition-duration: .4s;
-    background-color: #ff6c26; }
+    background-color: #388E3C; }
 
 .wrapper-inner {
   float: left;
@@ -680,7 +680,7 @@ a {
       text-transform: uppercase;
       text-align: center; }
       .wrapper-inner .text-box h3 span {
-        color: #ff6c26;
+        color: #fff;
         font-weight: 700; }
   .wrapper-inner .main-fill {
     padding: 25px 20px 20px 20px;
@@ -699,7 +699,7 @@ a {
         border: none;
         width: 130px;
         height: 42px;
-        color: #ff6c26;
+        color: #388E3C;
         font-family: "Open Sans", sans-serif;
         font-weight: 600;
         text-transform: uppercase;
@@ -708,7 +708,7 @@ a {
         border: none; }
         .wrapper-inner .main-fill .panel .nav-tabs li a {
           border-radius: 0;
-          background-color: #ff6c26;
+          background-color: #388E3C;
           border: none;
           width: 130px;
           height: 42px;
@@ -744,7 +744,7 @@ a {
               .wrapper-inner .main-fill .panel .panel-body .tab-content ul li .form-group input {
                 border-radius: 0;
                 background-color: transparent;
-                color: #ff6c26;
+                color: #388E3C;
                 font-family: "Raleway", sans-serif;
                 font-size: 12px;
                 position: relative;
@@ -833,7 +833,7 @@ a {
       background-color: transparent;
       border: none;
       width: 164px;
-      color: #ff6c26;
+      color: #388E3C;
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       text-transform: uppercase;
@@ -1080,7 +1080,7 @@ a {
       border: none; }
       .index2-fill .panel .nav-tabs li a {
         border-radius: 5px 5px 0px 0;
-        background-color: #ff6c26;
+        background-color: #388E3C;
         border: none;
         width: 100px;
         height: 62px;
@@ -1171,7 +1171,7 @@ a {
         text-align: center;
         line-height: 1.5; }
         .index-two-scroll .index2_mainScroll .text-box h3 span {
-          color: #ff6c26;
+          color: #388E3C;
           font-weight: 700; }
   .index-two-scroll .slick-list {
     width: 100%; }
@@ -1286,11 +1286,11 @@ a {
   margin-bottom: 25px;
   font-size: 25px;
   font-weight: 600;
-  color: #01b7f2;
+  color: #388E3C;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase; }
   .name_pakg span {
-    color: #ff6c26; }
+    color: #388E3C; }
   .name_pakg p {
     font-size: 14px;
     margin: 8px 0 0px;
@@ -1319,7 +1319,7 @@ a {
     text-transform: uppercase;
     margin: 0; }
     .Index2_pakg_name h2 span {
-      color: #ff6c26; }
+      color: #388E3C; }
   .Index2_pakg_name .line-v2 {
     height: 4px;
     background-color: #01b7f2;
@@ -1392,7 +1392,7 @@ a {
         display: inline-block;
         position: relative;
         transition-duration: 0.5s;
-        color: #ff6c26;
+        color: #388E3C;
         font-size: 16px;
         z-index: 100; }
         .index_tourOne_pack .detail p .pull-left a:hover i:before {
@@ -1408,7 +1408,7 @@ a {
         font-weight: 400;
         color: #9d9d9d; }
         .index_tourOne_pack .detail .feature li i {
-          color: #ff6c26; }
+          color: #388E3C; }
     .index_tourOne_pack .detail .outer-flow {
       background-color: rgba(49, 116, 126, 0.5);
       position: absolute;
@@ -1464,7 +1464,7 @@ a {
       text-transform: uppercase;
       text-align: center; }
       .wrapper_inspiration .div h3 span {
-        color: #ff6c26; }
+        color: #388E3C; }
     .wrapper_inspiration .div p {
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
@@ -1502,7 +1502,7 @@ a {
       text-transform: uppercase;
       text-align: center; }
       .wrapper_inspiration_index2 .div h3 span {
-        color: #ff6c26; }
+        color: #388E3C; }
     .wrapper_inspiration_index2 .div p {
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
@@ -1538,7 +1538,7 @@ a {
       text-transform: uppercase;
       text-align: center; }
       .wrapper_inspiration-flight .div h3 span {
-        color: #ff6c26; }
+        color: #388E3C; }
     .wrapper_inspiration-flight .div p {
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
@@ -1588,7 +1588,7 @@ a {
         .tour_pak .overflow-outer .overflow-inner .pull-left a {
           color: #ffffff; }
           .tour_pak .overflow-outer .overflow-inner .pull-left a:hover {
-            color: #ff6c26; }
+            color: #388E3C; }
       .tour_pak .overflow-outer .overflow-inner .pull-right {
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
@@ -1621,7 +1621,7 @@ a {
       text-transform: uppercase;
       text-align: center; }
       .wrapper_inspiration_hotel .hri h3 span {
-        color: #ff6c26; }
+        color: #388E3C; }
     .wrapper_inspiration_hotel .hri p {
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
@@ -1657,7 +1657,7 @@ a {
       text-transform: uppercase;
       text-align: center; }
       .wrapper_inspiration_travel .hri h3 span {
-        color: #ff6c26; }
+        color: #388E3C; }
     .wrapper_inspiration_travel .hri p {
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
@@ -1676,7 +1676,7 @@ a {
   right: -41px;
   padding: 10px 0;
   min-width: 160px;
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #fff;
   transform: rotate(45deg);
   text-align: center;
@@ -1696,7 +1696,7 @@ a {
   color: #fff;
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  box-shadow: -8px 2px 0px 0px #ff6c26; }
+  box-shadow: -8px 2px 0px 0px #388E3C; }
 
 .pop-feat-two {
   font-weight: 700;
@@ -1722,7 +1722,7 @@ a {
   right: -41px;
   padding: 10px 0;
   min-width: 160px;
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #fff;
   transform: rotate(45deg);
   text-align: center;
@@ -1735,7 +1735,7 @@ a {
   overflow: hidden;
   margin-bottom: 30px;
   border: 1px solid #fff;
-  border-bottom: 4px solid #ff6c26;
+  border-bottom: 4px solid #388E3C;
   border-radius: 3px; }
   .popular_hotel_box .img {
     position: relative;
@@ -1776,7 +1776,7 @@ a {
         font-family: "Raleway", sans-serif;
         font-weight: 600;
         text-transform: capitalize;
-        font-size: 17px;
+        font-size: 16px;
         color: #797979;
         margin: 0 0 5px; }
       .popular_hotel_box .hotel_detail .hotel-name p {
@@ -1786,7 +1786,7 @@ a {
         font-size: 14px;
         margin: 0; }
         .popular_hotel_box .hotel_detail .hotel-name p i {
-          color: #ff6c26; }
+          color: #388E3C; }
     .popular_hotel_box .hotel_detail p {
       color: #868686;
       font-family: "Open Sans", sans-serif;
@@ -1816,7 +1816,7 @@ a {
         transition: .4s;
         padding: 5px 20px; }
         .popular_hotel_box .hotel_detail .book-now .btn_book_now:hover {
-          background-color: #ff6c26;
+          background-color: #388E3C;
           transition: .4s; }
 
 .btn_book_now_v2 {
@@ -1882,7 +1882,7 @@ a {
       font-size: 14px;
       letter-spacing: 1px; }
     .popular_hotel_box-2 .hotel_detail .pull-left .price {
-      color: #ff6c26;
+      color: #388E3C;
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       font-size: 14px; }
@@ -1920,14 +1920,14 @@ button, select {
   margin-top: 10px;
   text-transform: uppercase; }
   .btn-select:hover {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
   .btn-select:focus {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
 
 .btn-layour {
-  background: #ff6c26;
+  background: #388E3C;
   padding: 2px 7px;
   border-radius: 0;
   color: #ffffff;
@@ -1938,10 +1938,10 @@ button, select {
   margin-top: 10px;
   text-transform: uppercase; }
   .btn-layour:hover {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
   .btn-layour:focus {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
 
 .btn-layhour-v2 {
@@ -1988,7 +1988,7 @@ button, select {
     position: relative;
     padding: 10px 15px; }
     .find_flight_box a h4 {
-      color: #ff6c26;
+      color: #388E3C;
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       margin: 0 0 0;
@@ -2019,7 +2019,7 @@ button, select {
       .find_flight_box a:hover p {
         color: #ffffff; }
       .find_flight_box a:hover i {
-        background-color: #ff6c26; }
+        background-color: #388E3C; }
 
 .btn_view_all {
   float: left;
@@ -2187,7 +2187,7 @@ button, select {
   color: #ffffff; }
 
 .line {
-  background: #ff6c26;
+  background: #388E3C;
   height: 5px;
   width: 100px;
   position: absolute;
@@ -2220,7 +2220,7 @@ button, select {
     background-color: transparent;
     border-radius: 50%; }
     .car_boxs .slick-prev:hover, .car_boxs .slick-next:hover {
-      border: 2px solid #ff6c26; }
+      border: 2px solid #388E3C; }
   .car_boxs .car_box {
     float: left;
     border-radius: 0;
@@ -2302,7 +2302,7 @@ button, select {
         transition: .4s;
         padding: 5px 20px; }
         .car_boxs .car_box .book-now .btn-book-now:hover {
-          background-color: #ff6c26;
+          background-color: #388E3C;
           transition: .4s; }
   .car_boxs table {
     margin: 0; }
@@ -2334,7 +2334,7 @@ button, select {
     border-radius: 0;
     border: 1px solid #ddd;
     z-index: 200;
-    background-color: #ff6c26;
+    background-color: #388E3C;
     color: #ffffff;
     transform: rotate(45deg);
     margin-left: -28px; }
@@ -2357,7 +2357,7 @@ button, select {
     width: 55px;
     border-radius: 0;
     border: 1px solid #ddd;
-    background-color: #ff6c26;
+    background-color: #388E3C;
     color: #ffffff;
     margin-right: -28px;
     transform: rotate(45deg); }
@@ -2450,7 +2450,7 @@ button, select {
         margin-bottom: 10px;
         display: block; }
         #index2-v2 .carousel-content-box2 .box-slide-v3 span a {
-          color: #ff6c26; }
+          color: #388E3C; }
       #index2-v2 .carousel-content-box2 .box-slide-v3 p {
         color: #808080;
         font-family: "Open Sans", sans-serif;
@@ -2475,8 +2475,7 @@ button, select {
   float: left;
   position: relative;
   padding: 60px 0 0;
-  display: block;
-  background-color: #111111; }
+  display: block; }
   .main-footer .footer-content {
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
@@ -2589,7 +2588,7 @@ button, select {
     .main-footer .footer-bottom a {
       color: #111111; }
       .main-footer .footer-bottom a:hover {
-        color: #ff6c26; }
+        color: #388E3C; }
   .main-footer .inner-footer1 {
     width: 100%;
     float: left;
@@ -2808,7 +2807,7 @@ button, select {
               top: 8px;
               font-size: 17px; }
             .footer-one .inner-footer ul li a .social-icon:hover {
-              background-color: #ff6c26;
+              background-color: #388E3C;
               transition: all .3s ease-in; }
   .footer-one .list-of-nav {
     float: left;
@@ -3030,7 +3029,7 @@ button, select {
     margin: 0 0 20px;
     font-family: "Raleway", sans-serif; }
     .our-work h4 span {
-      color: #ff6c26; }
+      color: #388E3C; }
 
 #back_to_top {
   float: left;
@@ -3070,7 +3069,7 @@ button, select {
     width: 100%;
     padding: 2px 0 3px; }
     .search-tem span i {
-      color: #ff6c26; }
+      color: #388E3C; }
 
 .navbar-stick-main {
   position: fixed;
@@ -3086,7 +3085,7 @@ button, select {
   .bread-crumb h2 {
     float: left;
     position: relative;
-    color: #ff6c26;
+    color: #388E3C;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     text-transform: capitalize;
@@ -3228,7 +3227,7 @@ button, select {
       text-transform: uppercase;
       font-size: 12px; }
       .flight_box_detail .LTT .skin-clr i {
-        color: #ff6c26;
+        color: #388E3C;
         margin-right: 5px;
         font-size: 14px; }
     .flight_box_detail .LTT .time {
@@ -3260,7 +3259,7 @@ button, select {
       text-align: center;
       margin-bottom: 13px; }
       .flight_box_detail .select-sec span .pri {
-        color: #ff6c26;
+        color: #388E3C;
         font-size: 14px; }
   .flight_box_detail .flight-logo {
     float: left;
@@ -3319,7 +3318,7 @@ button, select {
       .hotels_box_detail .details-feature ul li i {
         border: 1px dotted #efefef;
         border-radius: 50%;
-        color: #ff6c26;
+        color: #388E3C;
         width: 23px;
         height: 23px;
         text-align: center;
@@ -3344,7 +3343,7 @@ button, select {
       .hotels_box_detail .reviews ul li {
         padding: 0; }
         .hotels_box_detail .reviews ul li a i {
-          color: #ff6c26; }
+          color: #388E3C; }
     .hotels_box_detail .reviews span {
       color: #a2a2a2;
       font-family: "Raleway", sans-serif;
@@ -3384,7 +3383,7 @@ button, select {
       float: left;
       width: 100%;
       text-align: center;
-      color: #ff6c26;
+      color: #388E3C;
       margin-bottom: 13px;
       font-size: 14px; }
   .hotels_box_detail .flight-logo {
@@ -3535,7 +3534,7 @@ button, select {
       transition: all linear 0.3s; }
 
 .btn-stop {
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #fff;
   border-radius: 0;
   padding: 0px 5px;
@@ -3551,7 +3550,7 @@ button, select {
 
 .btn-stop-v2 {
   background-color: transparent;
-  color: #ff6c26;
+  color: #388E3C;
   border-radius: 0;
   padding: 0px 5px;
   font-size: 10px;
@@ -3559,7 +3558,7 @@ button, select {
   text-transform: uppercase;
   margin-left: 10px;
   font-weight: 400;
-  border: 1px solid #ff6c26;
+  border: 1px solid #388E3C;
   letter-spacing: 1px; }
   .btn-stop-v2:hover {
     color: #01b7f2; }
@@ -3642,7 +3641,7 @@ button, select {
       background: #01b7f2; }
     .form-detail-sidebar .form-group .ui-widget-header {
       border: none;
-      background: #ff6c26; }
+      background: #388E3C; }
 
 #amount {
   color: #67b168;
@@ -3682,10 +3681,10 @@ button, select {
   text-transform: uppercase;
   border: 1px solid #dddddd; }
   .btn_select-v2:hover {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
   .btn_select-v2:focus {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
 
 .btn_select-v0 {
@@ -3720,11 +3719,11 @@ button, select {
   letter-spacing: 1px;
   text-transform: uppercase; }
   .btn_select:hover {
-    background: #ff6c26;
+    background: #388E3C;
     transition: .3s;
     color: #ffffff; }
   .btn_select:focus {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
 
 .drop1 {
@@ -3752,7 +3751,7 @@ button, select {
   left: -280px !important;
   border-radius: 0;
   padding: 0;
-  border-bottom: 2px solid #ff6c26;
+  border-bottom: 2px solid #388E3C;
   min-width: 210px;
   margin-top: 0; }
   .mega-dropdown-menu li {
@@ -3839,11 +3838,11 @@ button, select {
   transition: .3s;
   text-transform: capitalize; }
   .btn_book:hover {
-    background: #ff6c26;
+    background: #388E3C;
     transition: .3s;
     color: #ffffff; }
   .btn_book:focus {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
 
 .btn_book_v2 {
@@ -3899,10 +3898,10 @@ button, select {
   letter-spacing: 1px;
   text-transform: capitalize; }
   .btn_book_index2:hover {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
   .btn_book_index2:focus {
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff; }
 
 .header_box {
@@ -3925,7 +3924,7 @@ button, select {
     text-align: left;
     margin: 0 0 10px; }
     .header_box .pull-left p i {
-      color: #ff6c26; }
+      color: #388E3C; }
   .header_box .pull-right {
     color: #67b168;
     font-family: "Open Sans", sans-serif;
@@ -4037,7 +4036,7 @@ button, select {
     /* width: 2px; */
     cursor: pointer;
     color: #FFF;
-    border: 2px solid #ff6c26;
+    border: 2px solid #388E3C;
     outline: none;
     border-radius: 50%; }
   .index-two-scroll .slick-prev {
@@ -4148,7 +4147,7 @@ button, select {
   background-color: #ffffff;
   margin-bottom: 10px; }
   .detail_flight_number .pull-left ul li {
-    color: #ff6c26;
+    color: #388E3C;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     text-align: left;
@@ -4164,7 +4163,7 @@ button, select {
     font-size: 13px;
     line-height: 2; }
     .detail_flight_number .pull-right ul li a {
-      color: #ff6c26; }
+      color: #388E3C; }
 
 .review_box {
   float: left;
@@ -4183,7 +4182,7 @@ button, select {
     display: inline-block;
     position: relative;
     transition-duration: 0.5s;
-    color: #ff6c26;
+    color: #388E3C;
     margin-bottom: 20px;
     font-size: 28px; }
   .review_box .rating a:hover i:before {
@@ -4228,7 +4227,7 @@ button, select {
       text-transform: capitalize;
       line-height: 3; }
       .feature-inflight ul li i {
-        color: #ff6c26; }
+        color: #388E3C; }
 
 .feature-inflight-v2 {
   float: left;
@@ -4296,7 +4295,7 @@ button, select {
     text-align: center;
     margin-bottom: 13px; }
     .seat-price span .pri {
-      color: #ff6c26;
+      color: #388E3C;
       font-size: 14px; }
 
 .flight_detail_duration {
@@ -4351,7 +4350,7 @@ button, select {
       text-transform: uppercase;
       font-size: 12px; }
       .flight_detail_duration .LTT .skin-clr i {
-        color: #ff6c26;
+        color: #388E3C;
         margin-right: 5px;
         font-size: 14px; }
     .flight_detail_duration .LTT .time {
@@ -4533,7 +4532,7 @@ button, select {
       text-transform: uppercase;
       font-size: 16px; }
       .help-to-do .LTT .skin-clr i {
-        color: #ff6c26;
+        color: #388E3C;
         margin-right: 5px;
         font-size: 18px; }
 
@@ -4577,7 +4576,7 @@ button, select {
       float: left;
       width: 100%; }
       .help-to-do-v2 .LTT .skin-clr i {
-        color: #ff6c26;
+        color: #388E3C;
         margin-right: 5px;
         font-size: 18px; }
     .help-to-do-v2 .LTT .form-group {
@@ -4625,7 +4624,7 @@ button, select {
         font-family: "Open Sans", sans-serif;
         font-weight: 600; }
         .flight_detail_sidebar .details-text h4 small i {
-          color: #ff6c26; }
+          color: #388E3C; }
   .flight_detail_sidebar .price {
     float: left;
     width: 100%;
@@ -4638,7 +4637,7 @@ button, select {
       font-size: 13px;
       font-weight: 600; }
     .flight_detail_sidebar .price .pull-right {
-      color: #ff6c26;
+      color: #388E3C;
       font-family: "Raleway", sans-serif;
       text-transform: uppercase;
       font-size: 14px;
@@ -4665,7 +4664,7 @@ button, select {
         font-size: 12px;
         font-weight: 600; }
       .flight_detail_sidebar .LTT .skin-clr i {
-        color: #ff6c26;
+        color: #388E3C;
         margin-right: 5px;
         font-size: 17px; }
   .flight_detail_sidebar .flight-logo {
@@ -4713,7 +4712,7 @@ button, select {
         font-family: "Open Sans", sans-serif;
         font-weight: 600; }
         .flight_detail_sidebar_v2 .details-text h4 small i {
-          color: #ff6c26; }
+          color: #388E3C; }
   .flight_detail_sidebar_v2 .price {
     float: left;
     width: 100%;
@@ -4726,7 +4725,7 @@ button, select {
       font-size: 13px;
       font-weight: 600; }
     .flight_detail_sidebar_v2 .price .pull-right {
-      color: #ff6c26;
+      color: #388E3C;
       font-family: "Raleway", sans-serif;
       text-transform: uppercase;
       font-size: 14px;
@@ -4742,7 +4741,7 @@ button, select {
     position: relative;
     margin-bottom: 15px; }
     .flight_detail_sidebar_v2 .LTT .skin-clr {
-      color: #ff6c26;
+      color: #388E3C;
       font-family: "Raleway", sans-serif;
       text-transform: uppercase;
       font-size: 12px;
@@ -4755,7 +4754,7 @@ button, select {
         font-size: 12px;
         font-weight: 600; }
       .flight_detail_sidebar_v2 .LTT .skin-clr i {
-        color: #ff6c26;
+        color: #388E3C;
         margin-right: 5px;
         font-size: 17px;
         float: left; }
@@ -4815,12 +4814,12 @@ button, select {
       font-weight: 400;
       letter-spacing: 1px; }
       .write_review .form-group label span {
-        color: #ff6c26; }
+        color: #388E3C; }
     .write_review .form-group .rating a {
       display: inline-block;
       position: relative;
       transition-duration: 0.5s;
-      color: #ff6c26;
+      color: #388E3C;
       font-size: 28px; }
     .write_review .form-group .rating a:hover i:before {
       content: '\f005'; }
@@ -4859,7 +4858,7 @@ button, select {
       display: inline-block;
       position: relative;
       transition-duration: 0.5s;
-      color: #ff6c26;
+      color: #388E3C;
       font-size: 28px; }
     .write_review_v2 .form-group .rating a:hover i:before {
       content: '\f005'; }
@@ -4898,10 +4897,10 @@ button, select {
       height: 80px;
       background: #ffffff;
       position: relative;
-      color: #ff6c26;
+      color: #388E3C;
       border-radius: 100%;
       line-height: 2.8;
-      border: 2px solid #ff6c26; }
+      border: 2px solid #388E3C; }
     .how_it_works .box h3 {
       color: #3c3c3c;
       font-family: "Montserrat", sans-serif;
@@ -4930,10 +4929,10 @@ button, select {
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-left: 14px solid #ff6c26;
-    border-right: 14px solid #ff6c26;
-    border-top: 2px solid #ff6c26;
-    border-bottom: 2px solid #ff6c26; }
+    border-left: 14px solid #388E3C;
+    border-right: 14px solid #388E3C;
+    border-top: 2px solid #388E3C;
+    border-bottom: 2px solid #388E3C; }
   .crousel-index2 #review-carousel .white-text {
     color: #ffffff;
     font-family: "Raleway", sans-serif;
@@ -5009,13 +5008,13 @@ button, select {
   color: #01b7f2; }
 
 .yellow-text {
-  color: #ff6c26; }
+  color: #388E3C; }
 
 .white-text {
   color: #ffffff; }
 
 #loading {
-  background-color: #ff6c26;
+  background-color: #388E3C;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -5423,7 +5422,7 @@ button, select {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #ff6c26;
+  color: #388E3C;
   margin: 0 0 20px; }
 .tabs-page .primary-tab > li.active > a, .tabs-page .primary-tab > li.active > a:focus, .tabs-page .primary-tab > li.active > a:hover {
   border: none;
@@ -5503,7 +5502,7 @@ button, select {
         background-color: #fff;
         border-radius: 100%; }
         .coming-soon .coming-soon-box .social-icon a i:hover {
-          color: #ff6c26;
+          color: #388E3C;
           transform: scale(1.2) rotate(5deg);
           transition: .4s; }
     .coming-soon .coming-soon-box h1 {
@@ -5735,7 +5734,7 @@ button, select {
       line-height: 155px;
       font-size: 26px; }
     .C_social_v2 .pull-left .secondry {
-      background: #ff6c26; }
+      background: #388E3C; }
     .C_social_v2 .pull-left .primary {
       background: #01b7f2; }
   .C_social_v2 .pull-right {
@@ -5782,7 +5781,7 @@ button, select {
       line-height: 3.5;
       border-radius: 100%; }
     .C_social_v1 .touch-v1 .double-border {
-      background: #ff6c26;
+      background: #388E3C;
       border: 5px solid #444444;
       box-shadow: 0px 0px 1px 1px #cf6c7e; }
     .C_social_v1 .touch-v1 .brown {
@@ -5826,7 +5825,7 @@ button, select {
       .A_social_v1 .media .media-left a i {
         line-height: 3.5; }
     .A_social_v1 .media .media-left .secondry {
-      background: #ff6c26;
+      background: #388E3C;
       color: #ffffff; }
     .A_social_v1 .media .media-body h4 {
       margin: 0 0 20px;
@@ -5867,7 +5866,7 @@ button, select {
   overflow: hidden; }
 
 .btn_Contact_v1 {
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #ffffff;
   padding: 10px 27px;
   font-family: "Open Sans", sans-serif;
@@ -5886,7 +5885,7 @@ button, select {
     color: #ffffff; }
 
 .btn_Contact_v2 {
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #ffffff;
   padding: 10px 27px;
   font-family: "Open Sans", sans-serif;
@@ -6115,7 +6114,7 @@ button, select {
       float: left;
       margin-bottom: 20px; }
       .contact-sidebar .contact-info .info h5 {
-        color: #ff6c26;
+        color: #388E3C;
         margin: 0px 0 10px;
         font-size: 14px;
         text-transform: uppercase;
@@ -6246,7 +6245,7 @@ button, select {
       color: #ffffff;
       margin-bottom: 20px; }
     .our_achivement .box .secondry {
-      background: #ff6c26; }
+      background: #388E3C; }
     .our_achivement .box .brown {
       background: #595959; }
     .our_achivement .box .pink {
@@ -6356,7 +6355,7 @@ section {
           border-radius: 0;
           display: block; }
           .Signup_wrapper .login-widget .login-box-v2 form .form-actions .submit-form .submit-btn:hover {
-            background: #ff6c26;
+            background: #388E3C;
             transition: .3s;
             color: #fff; }
       .Signup_wrapper .login-widget .login-box-v2 form .user-social-links {
@@ -6377,7 +6376,7 @@ section {
             transform: scale(1);
             border-radius: 50%; }
             .Signup_wrapper .login-widget .login-box-v2 form .user-social-links li a:hover {
-              background-color: #ff6c26;
+              background-color: #388E3C;
               color: #ffffff;
               transition: .4s;
               transform: scale(1.2); }
@@ -6419,7 +6418,7 @@ section {
         margin: 15px 0;
         font-family: "Raleway", sans-serif; }
         .Signup_wrapper .login-widget .register p a {
-          color: #ff6c26; }
+          color: #388E3C; }
           .Signup_wrapper .login-widget .register p a:hover {
             color: #01b7f2; }
 
@@ -6480,7 +6479,7 @@ section {
           margin-bottom: 10px;
           border-radius: 0; }
           .login_wrapper .login-widget .login-box form .submit-form .submit-btn:hover {
-            background: #ff6c26;
+            background: #388E3C;
             transition: .3s;
             color: #fff; }
       .login_wrapper .login-widget .login-box form .form-actions {
@@ -6511,7 +6510,7 @@ section {
             border-radius: 50%;
             color: #fff; }
             .login_wrapper .login-widget .login-box form .user-social-links li a:hover {
-              background-color: #ff6c26;
+              background-color: #388E3C;
               transition: .4s;
               transform: scale(1.2); }
       .login_wrapper .login-widget .login-box form .form-group {
@@ -6552,7 +6551,7 @@ section {
         margin: 15px 0;
         font-family: "Raleway", sans-serif; }
         .login_wrapper .login-widget .register p a {
-          color: #ff6c26; }
+          color: #388E3C; }
           .login_wrapper .login-widget .register p a:hover {
             color: #01b7f2; }
 
@@ -6589,7 +6588,7 @@ section {
       font-size: 52px;
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      color: #ff6c26;
+      color: #388E3C;
       position: absolute;
       right: -92px;
       top: 73%; }
@@ -6597,7 +6596,7 @@ section {
       font-size: 52px;
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      color: #ff6c26;
+      color: #388E3C;
       position: relative;
       margin: 0 0 10px; }
   .error-page .er-message p {
@@ -6615,7 +6614,7 @@ section {
       transition-duration: .4s; }
       .error-page .er-message p .btn-go-back:hover {
         transition-duration: .4s;
-        background: #ff6c26;
+        background: #388E3C;
         color: #ffffff; }
   .error-page .er-message h5 {
     color: #01b7f2;
@@ -6651,7 +6650,7 @@ section {
     letter-spacing: .5px;
     display: block; }
     #footer-two .footer-3 li a:hover {
-      color: #ff6c26;
+      color: #388E3C;
       transition: .4s; }
   #footer-two .footer-2 li a {
     display: block;
@@ -6661,7 +6660,7 @@ section {
       transition: .4s;
       font-size: 30px; }
       #footer-two .footer-2 li a i:hover {
-        color: #ff6c26;
+        color: #388E3C;
         transition: .4s; }
   #footer-two .footer-logo {
     float: none;
@@ -6699,7 +6698,7 @@ section {
       color: #ffffff; }
       #footer-three .text-about span a i:hover {
         color: #ffffff;
-        background: #ff6c26; }
+        background: #388E3C; }
     #footer-three .text-about img {
       margin-bottom: 20px; }
     #footer-three .text-about p {
@@ -6735,7 +6734,7 @@ section {
       display: block;
       transform: scale(1); }
       #footer-three .list-footer ul li a:hover {
-        color: #ff6c26;
+        color: #388E3C;
         transform: scale(1.02);
         transition: .2s; }
     #footer-three .list-footer ul li .search textarea {
@@ -6763,7 +6762,7 @@ section {
     #footer-three .list-footer ul .heading-li {
       margin-bottom: 20px; }
       #footer-three .list-footer ul .heading-li a {
-        color: #ff6c26;
+        color: #388E3C;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         letter-spacing: 1px;
@@ -6790,7 +6789,7 @@ section {
         /* margin-top: 10px; */
         text-align: center; }
         #footer-three .send-here-sec .btn-for-send a:hover {
-          background-color: #ff6c26;
+          background-color: #388E3C;
           color: #fff;
           transition: .4s; }
     #footer-three .send-here-sec ul li .search textarea {
@@ -6822,7 +6821,7 @@ section {
     #footer-three .send-here-sec ul .heading-li {
       margin-bottom: 20px; }
       #footer-three .send-here-sec ul .heading-li a {
-        color: #ff6c26;
+        color: #388E3C;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         letter-spacing: 1px;
@@ -6840,7 +6839,7 @@ section {
     #footer-three .bottom a {
       color: #01b7f2; }
       #footer-three .bottom a:hover {
-        color: #ff6c26; }
+        color: #388E3C; }
 
 .layout_two {
   float: left;
@@ -6886,7 +6885,7 @@ section {
   position: relative; }
   .sort-section-v2 .select_sorting {
     border-radius: 0;
-    border: 2px solid #ff6c26;
+    border: 2px solid #388E3C;
     float: left;
     width: 100%;
     margin-bottom: 15px;
@@ -7012,13 +7011,13 @@ section {
       background: #01b7f2; }
   .detail-sidebar-two .btn_search {
     background: transparent;
-    color: #ff6c26;
+    color: #388E3C;
     padding: 0;
     height: 34px;
     width: 100%;
     line-height: 2.8;
     border-radius: 0;
-    border: 1px solid #ff6c26;
+    border: 1px solid #388E3C;
     font-family: "Raleway", sans-serif;
     font-size: 12px;
     font-weight: 600;
@@ -7179,38 +7178,38 @@ section {
   text-align: center; }
 
 .btn_isotops.active {
-  color: #ff6c26;
+  color: #388E3C;
   box-shadow: none;
   outline: none; }
 
 .btn_isotops:active {
-  color: #ff6c26;
+  color: #388E3C;
   box-shadow: none;
   outline: none; }
 
 .btn_isotops:focus {
-  color: #ff6c26;
+  color: #388E3C;
   box-shadow: none;
   outline: none; }
 
 .btn_isotops-v2.active {
-  border: 1px solid #ff6c26;
+  border: 1px solid #388E3C;
   box-shadow: none;
   outline: none;
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #ffffff; }
 
 .btn_isotops-v2:active {
-  border: 1px solid #ff6c26;
+  border: 1px solid #388E3C;
   box-shadow: none;
   outline: none;
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #ffffff; }
 
 .btn_isotops-v2:focus {
-  border: 1px solid #ff6c26;
+  border: 1px solid #388E3C;
   box-shadow: none;
-  background-color: #ff6c26;
+  background-color: #388E3C;
   color: #ffffff;
   outline: none; }
 
@@ -7229,7 +7228,7 @@ section {
   margin-bottom: 8px;
   font-weight: 600; }
   .btn_isotops:hover {
-    color: #ff6c26;
+    color: #388E3C;
     transition: .3s; }
 
 .btn_isotops-v2 {
@@ -7245,8 +7244,8 @@ section {
   padding: 6px 22px;
   border-radius: 1px; }
   .btn_isotops-v2:hover {
-    border: 1px solid #ff6c26;
-    background-color: #ff6c26;
+    border: 1px solid #388E3C;
+    background-color: #388E3C;
     color: #ffffff;
     transition: .3s; }
 
@@ -7299,7 +7298,7 @@ section {
         text-align: center; }
         .grid-view .img-box .pro-img .overflow-outer .overflow-inner h3 {
           font-family: "Montserrat", sans-serif;
-          color: #ff6c26;
+          color: #388E3C;
           font-weight: 600;
           transition: .7s ease-in;
           text-transform: uppercase; }
@@ -8932,7 +8931,7 @@ canvas {
       padding: 0 10px;
       border-left: 1px solid #ddd; }
       .top_bar_ticker ul li i {
-        color: #ff6c26;
+        color: #388E3C;
         margin-right: 8px; }
   .top_bar_ticker .search-input {
     position: relative; }
@@ -8979,7 +8978,7 @@ canvas {
     bottom: 0;
     padding: 7px;
     opacity: 0;
-    background: #ff6c26;
+    background: #388E3C;
     color: #ffffff;
     transition-duration: 0.5s;
     z-index: 100; }
@@ -9109,7 +9108,7 @@ canvas {
   transform: rotate(-45deg); }
 
 .carousel-control.left:hover {
-  background-color: #ff6c26;
+  background-color: #388E3C;
   transition: background-color .4s ease-out; }
 
 .carousel-control.right {
@@ -9136,7 +9135,7 @@ canvas {
   transition: background-color .4s ease-out; }
 
 .carousel-control.right:hover {
-  background-color: #ff6c26;
+  background-color: #388E3C;
   transition: background-color .4s ease-out; }
 
 .carousel {
@@ -9193,7 +9192,7 @@ canvas {
     .carousel-content-box h1 span {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
-      color: #ff6c26;
+      color: #388E3C;
       font-size: 54px; }
   .carousel-content-box h2 {
     font-family: "Raleway", sans-serif;
@@ -9212,7 +9211,7 @@ canvas {
     margin: 0 100px 10px 100px;
     line-height: 1.7; }
   .carousel-content-box .slider-btn .btn_1 {
-    background-color: #ff6c26;
+    background-color: #388E3C;
     border-radius: 2px;
     padding: 12px 22px;
     color: #fff;
@@ -9221,7 +9220,7 @@ canvas {
     font-weight: 600;
     font-size: 15px; }
     .carousel-content-box .slider-btn .btn_1:hover {
-      color: #ff6c26;
+      color: #388E3C;
       background-color: #ffffff;
       transition: .4s; }
   .carousel-content-box .slider-btn .btn_2 {
@@ -9252,7 +9251,7 @@ canvas {
   background-attachment: fixed; }
   .pricing_table_v3 .orange-top {
     top: -60px;
-    background-color: #ff6c26;
+    background-color: #388E3C;
     z-index: 100;
     box-shadow: 1px 1px 3px 1px #757575; }
   .pricing_table_v3 .blue-right {
@@ -9334,7 +9333,7 @@ canvas {
         height: 50px;
         transition: .4s;
         display: block;
-        border: 2px #ff6c26 dotted;
+        border: 2px #388E3C dotted;
         border-radius: 100%;
         text-align: center;
         line-height: 2.2; }
@@ -9595,7 +9594,7 @@ canvas {
       .faq_section .faq_tabs .panel .nav-tabs > li.active > a, .faq_section .faq_tabs .panel .nav-tabs > li.active > a:focus, .faq_section .faq_tabs .panel .nav-tabs > li.active > a:hover {
         border-radius: 0;
         border: none;
-        color: #ff6c26;
+        color: #388E3C;
         font-family: "Open Sans", sans-serif;
         font-weight: 600;
         text-transform: uppercase;
@@ -9658,7 +9657,7 @@ canvas {
             color: #ffffff;
             transition: .4s; }
           .faq_section .faq_tabs .panel .panel-body .tab-content .tab-pane .accordion-heading:hover a h5 {
-            color: #ff6c26; }
+            color: #388E3C; }
   .faq_section .faq_widget_detail {
     float: left;
     padding: 25px 25px;
@@ -9738,7 +9737,7 @@ canvas {
       font-size: 13px; }
       .faq_widget .faq_widget_detail a:hover {
         transition: .3s;
-        background-color: #ff6c26;
+        background-color: #388E3C;
         color: #ffffff; }
 
 .cars-travel-v2-img {
@@ -9776,7 +9775,7 @@ canvas {
     transition: .4s;
     padding: 10px 18px; }
     .btn-div-cars-v2 a:hover {
-      background-color: #ff6c26;
+      background-color: #388E3C;
       transition: .4s;
       color: #ffffff; }
 
@@ -9827,7 +9826,7 @@ canvas {
       font-family: "Open Sans", sans-serif;
       margin-bottom: 10px;
       font-weight: 400;
-      color: #ff6c26; }
+      color: #388E3C; }
     .cars-travel-v2 .detail .table tr td {
       font-family: "Open Sans", sans-serif;
       font-weight: 400; }
@@ -10102,7 +10101,7 @@ canvas {
     padding-left: 15px !important; }
 
   .navbar-inverse .navbar-nav li .dropdown-menu li a:hover, .navbar-inverse .navbar-nav li .dropdown-menu li a:hover i, .navbar-inverse .navbar-nav li a:hover {
-    color: #FF6C26 !important; }
+    color: #388E3C !important; }
 
   .index2-search-wrapper {
     height: 100%; }
