@@ -3,24 +3,16 @@ import _ from 'lodash';
 import numeral from 'numeral';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchToken } from '../../actions/actionToken';
 import { fetchHomeHotel } from '../../actions/actionHotel';
 
 class HotelPromo extends Component {
-
-  constructor(props) {
-    super(props);
-    if(!props.token){
-      props.fetchToken();
-    }
-  }
   componentDidMount() {
     this.props.fetchHomeHotel();
   }
 
   renderHomeHotel () {
     if(_.size(this.props.hotel) == 0){
-      return <div className="loaderReact col-md-offset-6 col-md-6"></div>
+      return <div className="cp-pinwheel"></div>
     }
     return _.map(_.sample(this.props.hotel, 6), hotel => {
       return (
@@ -53,7 +45,7 @@ class HotelPromo extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <div className="name_pakg text-center ">Popular Hotel</div>
+            <div className="name_pakg text-center ">Popular Hotel </div>
             {this.renderHomeHotel()}
           </div>
         </div>
@@ -63,7 +55,7 @@ class HotelPromo extends Component {
 }
 
 function mapStateToProps (state) {
-  return { token: state.token, hotel: state.hotel }
+  return { hotel: state.hotel }
 }
 
-export default connect(mapStateToProps, { fetchToken, fetchHomeHotel })(HotelPromo);
+export default connect(mapStateToProps, { fetchHomeHotel })(HotelPromo);

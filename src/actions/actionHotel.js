@@ -1,10 +1,11 @@
 import axios from 'axios';
+import { fetchToken } from './actionToken';
 import { ROOT_URL } from '../../config/api';
 
 export const FETCH_HOME_HOTEL = 'fetch_home_hotel';
 
 export function fetchHomeHotel () {
-  const token = '27b6e87a1f4207a2fc035673cf21e19f79548299';
+  const token = localStorage.tiketToken;
   const keyword = 'bali';
   const request = axios.get(`${ROOT_URL}/api/promo?token=${token}&keyword=${keyword}`);
 
