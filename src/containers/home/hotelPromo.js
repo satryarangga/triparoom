@@ -45,7 +45,7 @@ class HotelPromo extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <div className="name_pakg text-center ">Popular Hotel </div>
+            <div className="name_pakg text-center ">Popular Hotel in Bali</div>
             {this.renderHomeHotel()}
           </div>
         </div>
