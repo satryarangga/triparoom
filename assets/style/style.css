@@ -1194,12 +1194,12 @@ a {
   font-weight: 600;
   transition-duration: .4s; }
   .btn-search-travel:hover {
-    background: #ffffff;
-    color: #01b7f2;
+    background: #388E3C;
+    color: #fff;
     transition-duration: .4s; }
   .btn-search-travel:focus {
-    background: #ffffff;
-    color: #01b7f2; }
+    background: #388E3C;
+    color: #fff; }
 
 .index2-grid-info {
   padding: 20px;

@@ -17,9 +17,3 @@ fetchToken(() => {
     </Provider>
     , document.querySelector('.fullContainer'));
 });
-
-// ReactDOM.render(
-//   <Provider store={createStoreWithMiddleware(reducers)}>
-//     <Routes />
-//   </Provider>
-//   , document.querySelector('.fullContainer'));

@@ -4,7 +4,12 @@
 a {
   cursor: pointer;
 }
-
+.searchResultText{
+  margin-left: 10px;
+}
+i.gold{
+  color: #FFAB00;
+}
 .cp-pinwheel{
   margin: 50px auto;
   border-radius:50%;

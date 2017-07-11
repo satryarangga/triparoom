@@ -30,13 +30,14 @@
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
     "numeral": "^2.0.6",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
+    "react": "^15.6.1",
+    "react-day-picker": "^6.1.0",
+    "react-dom": "^15.6.1",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "react-router-dom": "^4.1.1",
     "redux": "^3.0.4",
-    "redux-promise": "^0.5.3",
-    "superagent": "^3.5.2"
+    "redux-form": "^6.8.0",
+    "redux-promise": "^0.5.3"
   }
 }
