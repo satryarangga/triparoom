@@ -3,10 +3,10 @@ import { fetchToken } from './actionToken';
 import { ROOT_URL } from '../../config/api';
 
 export const FETCH_HOME_HOTEL = 'fetch_home_hotel';
-export const FETCH_HOTEL_LIST = 'fetch_hotel_list';
-const token = localStorage.tiketToken;
+export const FETCH_HOTEL_LIST = 'fetch_hotel_list';\
 
 export function fetchHomeHotel () {
+  const token = localStorage.tiketToken;
   const keyword = 'bali';
   const request = axios.get(`${ROOT_URL}/api/promo?token=${token}&keyword=${keyword}`);
 
@@ -17,6 +17,7 @@ export function fetchHomeHotel () {
 }
 
 export function fetchHotelList () {
+  const token = localStorage.tiketToken;
   const keyword = 'bali';
   const request = axios.get(`${ROOT_URL}/api/promo?token=${token}&keyword=${keyword}`);
 
