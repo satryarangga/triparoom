@@ -18,10 +18,10 @@ class Home extends Component {
     this.state = {
         hotelActive: 'active',
         flightActive: '',
-      }
+    }
 
-      this.changeToHotel = this.changeToHotel.bind(this);
-      this.changeToFlight = this.changeToFlight.bind(this);
+    this.changeToHotel = this.changeToHotel.bind(this);
+    this.changeToFlight = this.changeToFlight.bind(this);
   }
 
   render() {

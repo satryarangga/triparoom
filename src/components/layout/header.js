@@ -8,7 +8,7 @@ class Header extends Component {
         <div className="container">
           <div className= "navbar-header">
             <Link className="navbar-brand" to="/">
-                <img  src={'../../assets/img/logo.png'} />
+                <img  src={'/assets/img/logo.png'} />
             </Link>
           </div>
         </div>

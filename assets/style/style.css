@@ -2090,7 +2090,7 @@ button, select {
 
 .btn-more {
   position: relative;
-  background: #9ca1a2;
+  background: #388E3C;
   color: #fff;
   border-radius: 0;
   border: none;
@@ -4220,12 +4220,13 @@ button, select {
     background-color: #ffffff; }
     .feature-inflight ul li {
       color: #888;
-      width: 193px;
+      padding: 0 20px;
+      width: 31%;
       font-family: "Raleway", sans-serif;
       font-weight: 600;
       text-align: left;
       text-transform: capitalize;
-      line-height: 3; }
+      line-height: 2; }
       .feature-inflight ul li i {
         color: #388E3C; }
 

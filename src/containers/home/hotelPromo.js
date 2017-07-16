@@ -11,10 +11,10 @@ class HotelPromo extends Component {
   }
 
   renderHomeHotel () {
-    if(_.size(this.props.hotel) == 0){
+    if(_.size(this.props.hotel.result) == 0){
       return <div className="cp-pinwheel"></div>
     }
-    return _.map(_.sample(this.props.hotel, 6), hotel => {
+    return _.map(_.sample(this.props.hotel.result, 6), hotel => {
       return (
         <div className="col-md-4 col-sm-6 col-xs-12" key={hotel.id}>
           <div className="popular_hotel_box ">
@@ -30,7 +30,7 @@ class HotelPromo extends Component {
                 <div className="pull-left">Price per night from:</div>
                 <div className="pull-right">IDR {numeral(hotel.price).format('IDR 0,0')}</div>
                 <div className="book-now">
-                  <a href="#" className="btn btn_book_now">View Room</a>
+                  <Link to={`/${hotel.province_name.replace(/\s/g, "-")}/${hotel.name.replace(/\s/g, "-")}/${hotel.hotel_id}`} className="btn btn_book_now">View Room</Link>
                 </div>
               </div>
             </div>

@@ -1,35 +1,42 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { sortHotelList } from '../../../actions/actionHotel';
+import _ from 'lodash';
 
 class HotelSortField extends Component {
+  clickSort (field, type) {
+    this.props.sortHotelList(field, type, this.props.hotel);
+  }
+
   render() {
     return (
       <div className="sort-section white-box animate-reveal">
         <h4>Sort results by:</h4>
         <ul className="list-inline list-unstyled">
           <li>
-              <a>
+              <a onClick={this.clickSort.bind(this, 'name', 'asc')}>
                 <span className="text">Name</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
           </li>
           <li>
-              <a>
-                <span className="text">Price</span>
+              <a onClick={this.clickSort.bind(this, 'total_price', 'asc')}>
+                <span className="text">Cheapest</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
           </li>
           <li>
-              <a>
-                <span className="text">Popular</span>
+              <a onClick={this.clickSort.bind(this, 'id', 'asc')}>
+                <span className="text">Most Popular</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
           </li>
           <li>
-              <a>
-                <span className="text">Rating</span>
+              <a onClick={this.clickSort.bind(this, 'rating', 'desc')}>
+                <span className="text">Best Rating</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
@@ -40,4 +47,8 @@ class HotelSortField extends Component {
   }
 }
 
-export default HotelSortField;
+function mapStateToProps (state) {
+  return { hotel: state.hotel }
+}
+
+export default connect(mapStateToProps, { sortHotelList })(HotelSortField);

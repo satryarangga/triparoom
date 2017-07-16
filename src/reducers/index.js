@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import tokenReducer from './reducerToken';
+import { reducer as formReducer } from 'redux-form';
 import hotelReducer from './reducerHotel';
 
 const rootReducer = combineReducers({
   hotel: hotelReducer,
+  form: formReducer
 });
 
 export default rootReducer;

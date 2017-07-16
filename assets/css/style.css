@@ -23,6 +23,14 @@ i.gold{
   border-left:solid 24px #f3d53f;
   animation:cp-pinwheel-animate 1s linear infinite
 }
+.DayPickerInput{
+  display: block;
+  position: relative;
+}
+
+.DayPickerInput-OverlayWrapper {
+  z-index: 9999;
+}
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 780px) {
