@@ -11,7 +11,7 @@ i.gold{
   color: #FFAB00;
 }
 .cp-pinwheel{
-  margin: 50px auto;
+  margin: 20% auto;
   border-radius:50%;
   width:80px;
   height:80px;
@@ -30,6 +30,25 @@ i.gold{
 
 .DayPickerInput-OverlayWrapper {
   z-index: 9999;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20% 0;
+  line-height: 40px;
+}
+
+.no-data p{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.padding-bottom-15 {
+  padding-bottom: 15px;
+}
+
+.padding-right-10 {
+  padding-right: 10px;
 }
 
 /* Smartphones (portrait) ----------- */

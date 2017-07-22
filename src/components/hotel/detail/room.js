@@ -1,14 +1,38 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addOrder, fetchOrder } from '../../../actions/actionOrderHotel';
+import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 import numeral from 'numeral';
 import striptags from 'striptags';
+import { Redirect } from 'react-router-dom';
 
 class Description extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      redirectToHotel: false,
+      onLoading: false,
+    }
+
+    this.bookRoom = this.bookRoom.bind(this);
+
+    this.props.fetchOrder();
+  }
+
+  bookRoom(bookUri) {
+    this.setState({ onLoading: true });
+    this.props.addOrder(bookUri, this.props.orderHotel.order_detail_id, () => {
+      this.setState({ redirectToHotel: true });
+    });
   }
 
   renderRoomList () {
+    if(this.state.onLoading) {
+      return <div className="cp-pinwheel"></div>
+    }
+
     return _.map(this.props.detail.rooms, room => {
       return (
         <div key={room.id}>
@@ -30,9 +54,9 @@ class Description extends Component {
                   <span className="no-margin">
                     PRICE / NIGHT <br /> <span className="pri no-margin">{room.currency} {numeral(room.price).format('IDR 0,0')}</span>
                   </span>
-                  <a href="right_sidebar.html" target="_blank" className="btn btn_select">
+                  <button onClick={this.bookRoom.bind(this, room.bookUri)} className="btn btn_select">
                     BOOK
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -44,6 +68,12 @@ class Description extends Component {
   }
 
   render() {
+    if(this.state.redirectToHotel) {
+      return (
+        <Redirect to="/order" />
+     );
+    }
+
     return (
       <div>
         <div className="row">
@@ -58,4 +88,14 @@ class Description extends Component {
   }
 }
 
-export default Description;
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({ addOrder, fetchOrder }, dispatch);
+}
+
+function mapStateToProps(state) {
+  return {
+    orderHotel: state.orderHotel
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (Description);

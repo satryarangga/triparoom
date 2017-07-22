@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { fetchToken } from './actionToken';
 import { ROOT_URL } from '../../config/api';
 
 export const FETCH_HOTEL_LIST = 'fetch_hotel_list';
@@ -62,7 +61,7 @@ export function sortHotelList (sortField, sortType, data) {
 
 export function fetchDetailHotel (url) {
   const token = localStorage.tiketToken;
-  const request = axios.get(`${ROOT_URL}/api/detailhotel?uri=${url}&token=${token}`);
+  const request = axios.get(`${ROOT_URL}/api/detailhotel?uri=${encodeURIComponent(url)}&token=${token}`);
 
   return {
     type: FETCH_DETAIL_HOTEL,

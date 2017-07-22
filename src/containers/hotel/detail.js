@@ -3,13 +3,13 @@ import _ from 'lodash';
 import Header from '../../components/layout/header';
 import Footer from '../../components/layout/footer';
 import DetailHead from '../../components/hotel/detail/head';
-import DetailLeft from '../../components/hotel/detail/left';
 import DetailRooms from '../../components/hotel/detail/room';
 import DetailFacilities from '../../components/hotel/detail/facility';
-import DetailReview from '../../components/hotel/detail/review';
+import DetailSlider from '../../components/hotel/detail/slider';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchDetailHotel } from '../../actions/actionHotel';
+import NoData from '../../utils/nodata';
 
 class HotelDetail extends Component {
   constructor (props) {
@@ -32,6 +32,49 @@ class HotelDetail extends Component {
     this.props.fetchDetailHotel(detail.business_uri);
   }
 
+  renderRooms() {
+    if(this.props.hotel.detail.rooms == null) {
+      return (
+        <NoData label="No room available for this hotel" type="hotel" />
+      );
+    }
+
+    return (
+      <div>
+        <DetailSlider
+          photos={this.props.hotel.detail.photos}
+          primary={this.props.hotel.detail.large_photo}
+        />
+        <div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="detail-panel  animate-reveal">
+                <div className="panel">
+                  <div className="panel-heading">
+                    <ul className="nav nav-tabs">
+                      <li className={this.state.descActive}><a onClick={this.changeToDesc}>Rooms</a></li>
+                      <li className={this.state.reviewActive}><a onClick={this.changeToReview}>Facilities</a></li>
+                    </ul>
+                  </div>
+                  <div className="panel-body">
+                    <div className="tab-content">
+                      <div className={`tab-pane fade in ${this.state.descActive}`}>
+                        <DetailRooms detail={this.props.hotel.detail} />
+                      </div>
+                      <div className={`tab-pane fade in ${this.state.reviewActive}`}>
+                        <DetailFacilities detail={this.props.hotel.detail} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     if(_.size(this.props.hotel.detail) == 0) {
       return (
@@ -52,47 +95,12 @@ class HotelDetail extends Component {
                 <DetailHead detail={this.props.hotel.detail} />
               </div>
               <div className="col-md-12">
-                <div className="scroll-image">
-                  <div className="col-sm-12 no-padding">
-                    <div className="related-images">
-                      <img src={this.props.hotel.detail.large_photo} alt="plane" className="img-responsive" />
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="detail-panel  animate-reveal">
-                        <div className="panel">
-                          <div className="panel-heading">
-                            <ul className="nav nav-tabs">
-                              <li className={this.state.descActive}><a onClick={this.changeToDesc}>Rooms</a></li>
-                              <li className={this.state.reviewActive}><a onClick={this.changeToReview}>Facilities</a></li>
-                              {/* <li className={this.state.ratingActive}><a onClick={this.changeToRating}>Reviews</a></li> */}
-                            </ul>
-                          </div>
-                          <div className="panel-body">
-                            <div className="tab-content">
-                              <div className={`tab-pane fade in ${this.state.descActive}`}>
-                                <DetailRooms detail={this.props.hotel.detail} />
-                              </div>
-                              <div className={`tab-pane fade in ${this.state.reviewActive}`}>
-                                <DetailFacilities detail={this.props.hotel.detail} />
-                              </div>
-                              {/* <div className={`tab-pane fade in ${this.state.ratingActive}`}>
-                                <DetailReview />
-                              </div> */}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {this.renderRooms()}
               </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

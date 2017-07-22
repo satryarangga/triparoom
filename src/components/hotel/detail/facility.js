@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 const Review = ({ detail }) => {
-
+  let x = 0;
   const renderFacilities = _.map(detail.facilities, fac => {
+    x++;
     return (
-      <li><i className="fa fa-check-square-o"></i> {fac.facility_name}</li>
+      <li key={x}><i className="fa fa-check-square-o"></i> {fac.facility_name}</li>
     );
   });
 

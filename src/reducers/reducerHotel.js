@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { FETCH_HOTEL_LIST, SORT_HOTEL_LIST, CLEAR_HOTEL_PAGINATION, CLEAR_HOTEL_SEARCH, FETCH_DETAIL_HOTEL } from '../actions/actionHotel';
+import { formatDetailState } from '../utils/formatter';
 
 export default function (state = {result:{}, pagination:{}, queries:{}, detail:{}}, action) {
   switch (action.type) {
@@ -40,28 +41,9 @@ export default function (state = {result:{}, pagination:{}, queries:{}, detail:{
     case FETCH_DETAIL_HOTEL:
       return {
         ...state,
-          detail: formatDetail(action.payload.data)
+          detail: formatDetailState(action.payload.data)
       }
     default:
       return state;
-  }
-}
-
-const formatDetail = (data) => {
-  return {
-    'name': data.breadcrumb.business_name,
-    'id': data.breadcrumb.business_id,
-    'city': data.breadcrumb.city_name,
-    'province': data.breadcrumb.province_name,
-    'country': data.breadcrumb.country_name,
-    'area': data.breadcrumb.area_name,
-    'address': data.general.address,
-    'star': data.breadcrumb.star_rating,
-    'avg_review': data.summary_internal_review.average,
-    'max_review': data.summary_internal_review.max_rating,
-    'large_photo': data.primaryPhotos_large,
-    'rooms': _.mapKeys(data.results.result, 'room_id'),
-    'desc': data.general.description,
-    'facilities': _.mapKeys(data.avail_facilities.avail_facilitiy, 'facility_name'),
   }
 }
