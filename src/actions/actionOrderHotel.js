@@ -26,7 +26,7 @@ export function addOrder(url, currentCartId, callback) {
   }
 }
 
-export function checkoutOrder(field, detail_id, callback) {
+export function checkoutOrder(field, detail_id, order_id, callback) {
   const token = localStorage.tiketToken;
   const salute = field.salute;
   const first_name = field.first_name;
@@ -34,7 +34,7 @@ export function checkoutOrder(field, detail_id, callback) {
   const email = field.email;
   const phone = field.phone;
 
-  const request = axios.get(`${ROOT_URL}/api/checkout?token=${token}&first_name=${first_name}&last_name=${last_name}&salute=${salute}&phone=${phone}&email=${email}&order_detail_id=${detail_id}`)
+  const request = axios.get(`${ROOT_URL}/api/checkout?token=${token}&first_name=${first_name}&last_name=${last_name}&salute=${salute}&phone=${phone}&email=${email}&order_detail_id=${detail_id}&order_id=${order_id}`)
                   .then(() => callback());
 
   return {

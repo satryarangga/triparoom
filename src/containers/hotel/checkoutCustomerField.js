@@ -31,9 +31,11 @@ class CheckoutCustomerField extends Component {
 
   onSubmitCheckout(values) {
     const token = localStorage.tiketToken;
+
     const url = `${TIKET_ROOT_URL}/checkout/checkout_payment?checkouttoken=${token}`;
     const order_detail_id = this.props.order.order_detail_id;
-    this.props.checkoutOrder(values, order_detail_id, () => {
+    const order_id = this.props.order.order_id;
+    this.props.checkoutOrder(values, order_detail_id, order_id, () => {
       window.location.href = url;
     });
   }
