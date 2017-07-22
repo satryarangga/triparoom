@@ -4,7 +4,6 @@ import {Field, reduxForm, formValueSelector } from 'redux-form';
 import { checkoutOrder } from '../../actions/actionOrderHotel';
 import { bindActionCreators } from 'redux';
 import { TIKET_ROOT_URL } from '../../../config/api';
-import ReactRedirect from 'react-redirect';
 
 class CheckoutCustomerField extends Component {
   constructor(props) {
@@ -31,24 +30,15 @@ class CheckoutCustomerField extends Component {
   }
 
   onSubmitCheckout(values) {
+    const token = localStorage.tiketToken;
+    const url = `${TIKET_ROOT_URL}/checkout/checkout_payment?checkouttoken=${token}`;
     const order_detail_id = this.props.order.order_detail_id;
     this.props.checkoutOrder(values, order_detail_id, () => {
-      this.setState({ redirectToHotel: true });
+      window.location.href = url;
     });
   }
 
   render() {
-    if(this.state.redirectToHotel) {
-      const token = localStorage.tiketToken;
-      return (
-        <div>
-          <ReactRedirect
-            location={`${TIKET_ROOT_URL}/checkout/checkout_payment?checkouttoken=${token}`} >
-          </ReactRedirect>
-        </div>
-     );
-    }
-
     const { handleSubmit } = this.props;
 
     return (
