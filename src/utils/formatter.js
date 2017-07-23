@@ -29,13 +29,15 @@ export const formatOrderState = (data) => {
       'checkout_date': data.myorder.data[0].detail.enddate,
       'nights': data.myorder.data[0].detail.nights,
       'total_price': data.myorder.total,
-      'payment_method_options': _.mapValues(data.payment_method)
+      'payment_method_options': _.mapValues(data.payment_method),
+      'login_email' : (data.login_email) ? data.login_email : null
     }
   }
 
   return {
     'order_id': null,
     'order_detail_id': null,
-    'total_price': 0
+    'total_price': 0,
+    'login_email' : (data.login_email) ? data.login_email : null
   }
 }

@@ -32,9 +32,10 @@ export function checkoutOrder(field, detail_id, order_id, callback) {
   const first_name = field.first_name;
   const last_name = field.last_name;
   const email = field.email;
+  const payment_method_url = field.payment_method;
   const phone = field.phone;
 
-  const request = axios.get(`${ROOT_URL}/api/checkout?token=${token}&first_name=${first_name}&last_name=${last_name}&salute=${salute}&phone=${phone}&email=${email}&order_detail_id=${detail_id}&order_id=${order_id}`)
+  const request = axios.get(`${ROOT_URL}/api/checkout?token=${token}&first_name=${first_name}&last_name=${last_name}&salute=${salute}&phone=${phone}&email=${email}&order_detail_id=${detail_id}&order_id=${order_id}&uri=${encodeURIComponent(payment_method_url)}`)
                   .then(() => callback());
 
   return {
