@@ -32,7 +32,7 @@ class FlightSearchField extends Component {
     const initData = {
       "depart_date": this.props.params.ddate,
       "type": (this.props.params.rdate == 0) ? 1 : 2,
-      "return_date": this.props.params.rdate,
+      "return_date": (this.props.params.rdate == 0) ? null : this.props.params.rdate,
       "adult": this.props.params.adult,
       "child": this.props.params.child,
       "infant": this.props.params.infant,
