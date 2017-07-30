@@ -10,7 +10,6 @@ class HotelOrderConfirmation extends Component {
     this.props.fetchOrder();
   }
   render() {
-    console.log(this.props);
     return (
       <div>
         <Header />

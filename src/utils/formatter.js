@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 export const formatDetailState = (data) => {
   return {
     'name': data.breadcrumb.business_name,
@@ -40,4 +42,21 @@ export const formatOrderState = (data) => {
     'total_price': 0,
     'login_email' : (data.login_email) ? data.login_email : null
   }
+}
+
+export const formatAirportList = (data) => {
+  let air = [];
+  _.transform(data, function(result, n, key) {
+    air.push({'label': n.location_name, 'value': n.airport_code});
+  });
+
+  return air;
+}
+
+export const formatDurationMinutes = (duration) => {
+  let trip = duration.split(" ");
+  let hour = _.parseInt(trip[0]) * 60;
+  let minutes = _.parseInt(trip[2]);
+
+  return hour + minutes;
 }

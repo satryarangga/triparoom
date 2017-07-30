@@ -13,9 +13,22 @@ class HotelSearchField extends Component {
     super(props);
 
     this.state = {
-      redirectToHotel: false,
       star: null
     }
+  }
+
+  componentDidMount() {
+    this.handleInitialize();
+  }
+
+  handleInitialize() {
+    const initData = {
+      "keyword": this.props.keyword,
+      "checkin_date": this.props.start,
+      "checkout_date": this.props.end,
+    };
+
+    this.props.initialize(initData);
   }
 
   renderTextField(field) {
@@ -25,7 +38,7 @@ class HotelSearchField extends Component {
           required
           type="text"
           name={field.name}
-          className="form-control"
+          className="form-control flight-input"
           placeholder={field.placeholder}
           {...field.input}
         />
@@ -39,7 +52,7 @@ class HotelSearchField extends Component {
         <DayPickerInput
           required
           placeholder={field.placeholder}
-          className="form-control"
+          className="form-control flight-input"
           format={DAY_FORMAT}
           name={field.name}
           {...field.input}
@@ -49,11 +62,7 @@ class HotelSearchField extends Component {
   }
 
   onSubmitSearch(values) {
-    console.log(values);
     this.props.clearHotelSearch();
-    this.setState({
-                  redirectToHotel: true
-                });
     let star = (values.star) ? values.star : 0
     let price = getPriceRange(values.price);
     this.props.fetchHotelList(values.keyword, values.checkin_date, values.checkout_date, star, price.min, price.max);

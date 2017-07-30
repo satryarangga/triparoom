@@ -44,12 +44,6 @@ export function clearHotelSearch () {
   }
 }
 
-export function maintainResultState () {
-  return {
-    type: MAINTAIN_STATE
-  }
-}
-
 export function sortHotelList (sortField, sortType, data) {
   return {
     type: SORT_HOTEL_LIST,
