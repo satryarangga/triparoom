@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { ADDITIONAL_FIELD } from '../../config/flightField';
 
 export const formatDetailState = (data) => {
   return {
@@ -59,4 +60,32 @@ export const formatDurationMinutes = (duration) => {
   let minutes = _.parseInt(trip[2]);
 
   return hour + minutes;
+}
+
+export const formatOrderFlightState = (order) => {
+  if(order.myorder && order.myorder.data[0]){
+    return {
+      order_id: order.myorder.order_id,
+      order_detail: _.mapValues(order.myorder.data),
+      total: order.myorder.total,
+      payment_method_options: _.mapValues(order.payment_method),
+    }
+  }
+
+  return {
+    order_id: null,
+    order_detail: {},
+    total: 0,
+    payment_method_values: {}
+  }
+}
+
+export const formatMandatoryField = (field) => {
+  let fields = [];
+
+  _.transform(field, function(result, n, key) {
+    fields[key] = n;
+  });
+
+  return fields;
 }

@@ -15,7 +15,6 @@ class Departures extends Component {
     }
 
     const flight = this.props.flight.goDetail;
-    console.log(flight);
     return (
       <div>
         <div className="flight_detail_sidebar white-box animate-reveal">

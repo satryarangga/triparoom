@@ -6,6 +6,7 @@ export const FETCH_FLIGHT = 'fetch_flight';
 export const SORT_FLIGHT = 'sort_flight';
 export const CLEAR_FLIGHT_SEARCH = 'clear_flight_search';
 export const SET_DEPARTURE_FLIGHT = 'set_departure_flight';
+export const SET_ORDER_FLIGHT = 'set_order_flight';
 export const CLEAR_DEPARTURE_FLIGHT = 'clear_departure_flight';
 
 export const getAirport = () => {
@@ -45,6 +46,14 @@ export const setDepartureFlight = (depDetail) => {
   return {
     type: SET_DEPARTURE_FLIGHT,
     payload: depDetail
+  }
+}
+
+export const setOrderFlight = (depDetail, retDetail) => {
+  return {
+    type: SET_ORDER_FLIGHT,
+    departure: depDetail,
+    return: retDetail,
   }
 }
 

@@ -9,10 +9,6 @@ import { ALLOWED_PAYMENT_TYPE, ONSITE_PAYMENT_PROCESS } from '../../../config/pa
 class CheckoutCustomerField extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      paymentError: false
-    }
   }
 
   renderPaymentOptions() {

@@ -1,4 +1,4 @@
-import { GET_AIRPORT, FETCH_FLIGHT, SORT_FLIGHT, CLEAR_FLIGHT_SEARCH, SET_DEPARTURE_FLIGHT, CLEAR_DEPARTURE_FLIGHT } from '../actions/actionFlight';
+import { GET_AIRPORT, FETCH_FLIGHT, SORT_FLIGHT, CLEAR_FLIGHT_SEARCH, SET_DEPARTURE_FLIGHT, CLEAR_DEPARTURE_FLIGHT, SET_ORDER_FLIGHT } from '../actions/actionFlight';
 import { formatAirportList, formatDurationMinutes } from '../utils/formatter';
 import _ from 'lodash';
 
@@ -51,6 +51,12 @@ export default function (state = { airport:[], queries:{}, depResult:[], retResu
       return {
         ...state,
           goDetail: action.payload
+      }
+    case SET_ORDER_FLIGHT:
+      return {
+        ...state,
+          retDetail: action.return,
+          goDetail: action.departure
       }
     case CLEAR_DEPARTURE_FLIGHT:
       return {

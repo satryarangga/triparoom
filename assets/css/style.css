@@ -69,6 +69,10 @@ i.gold{
   margin-left: -7px;
 }
 
+.big-font b{
+  font-size: 16px;
+}
+
 .Select-input,.has-value.Select--single > .Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
   color: #388E3C;
 }
@@ -109,6 +113,28 @@ i.gold{
   -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s !important;
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
+}
+
+.YearNavigation {
+  background-color: #fff;
+}
+
+.DayPicker {
+  width: 100%;
+}
+
+.passenger-head {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.margin-bottom-10 {
+  margin-bottom:10px;
+}
+
+.list-passenger {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* Smartphones (portrait) ----------- */

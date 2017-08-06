@@ -87,6 +87,7 @@ class SearchFlight extends Component {
 
     const { handleSubmit } = this.props;
 
+    console.log(this.props.flight.airport);
     return (
       <div>
         <h3>Search Flight</h3>

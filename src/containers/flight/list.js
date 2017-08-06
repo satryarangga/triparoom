@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import _ from 'lodash';
-import { fetchFlight, setDepartureFlight } from '../../actions/actionFlight';
+import { fetchFlight, setDepartureFlight, fetchFlightData, setOrderFlight } from '../../actions/actionFlight';
 import numeral from 'numeral';
 
 class ListDataFlight extends Component {
@@ -9,14 +10,18 @@ class ListDataFlight extends Component {
     super(props);
 
     this.state = {
-      departure: {}
+      depFlightId: null,
+      retFlightId: null,
+      depDate: null,
+      retDate: null,
+      redirectOrder: false
     }
 
     this.addFlightToOrder = this.addFlightToOrder.bind(this);
   }
 
   selectDepartureFlight(flight) {
-    let roundTrip = (_.size(this.props.flight.retResult) == 0) ? false : true;
+    let roundTrip = this.props.flight.queries.ret_date;
 
     if(roundTrip) {
       this.props.setDepartureFlight(flight);
@@ -26,8 +31,25 @@ class ListDataFlight extends Component {
   }
 
   addFlightToOrder(flight) { // ADD TO ORDER
-    console.log('ler');
-    console.log(flight);
+    let roundTrip = (_.size(this.props.flight.retResult) == 0) ? false : true;
+
+    if(roundTrip) {
+      this.setState({
+        depFlightId: this.props.flight.goDetail.flight_id,
+        retFlightId: flight.flight_id,
+        depDate: this.props.flight.queries.date,
+        retDate: this.props.flight.queries.ret_date,
+        redirectOrder: true
+      });
+    } else {
+      this.setState({
+        depFlightId: flight.flight_id,
+        retFlightId: 0,
+        depDate: this.props.flight.queries.date,
+        retDate: 0,
+        redirectOrder: true
+      });
+    }
   }
 
   componentDidMount() {
@@ -111,6 +133,12 @@ class ListDataFlight extends Component {
   }
 
   render() {
+    if(this.state.redirectOrder) {
+      return(
+        <Redirect to={`/flight-booking/${this.state.depFlightId}/${this.state.retFlightId}/${this.state.depDate}/${this.state.retDate}`}/>
+      );
+    }
+
     if(_.size(this.props.flight.goDetail) == 0) {
       return (
         <div>
@@ -134,4 +162,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { fetchFlight, setDepartureFlight }) (ListDataFlight);
+export default connect(mapStateToProps, { fetchFlight, setDepartureFlight, setOrderFlight }) (ListDataFlight);

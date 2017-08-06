@@ -14,7 +14,7 @@ class FlightSearchField extends Component {
     super(props);
 
     this.state = {
-      tripType: 1,
+      tripType: (this.props.params.rdate == 0) ? 1 : 2,
     }
   }
 
@@ -87,15 +87,16 @@ class FlightSearchField extends Component {
 
   onSubmitSearch(values) {
     this.props.clearFlightSearch();
-    this.props.fetchFlight(
-                          (values.from) ? values.from : 'CGK',
-                          (values.to) ? values.to : 'DPS',
-                          values.depart_date,
-                          (values.return_date && this.state.tripType == 2) ? values.return_date : 0,
-                          (values.adult) ? values.adult : 1,
-                          (values.child) ? values.child : 0,
-                          (values.infant) ? values.infant : 0,
-                        );
+    this.props.fetchFlight
+    (
+      (values.from) ? values.from : 'CGK',
+      (values.to) ? values.to : 'DPS',
+      values.depart_date,
+      (values.return_date && this.state.tripType == 2) ? values.return_date : 0,
+      (values.adult) ? values.adult : 1,
+      (values.child) ? values.child : 0,
+      (values.infant) ? values.infant : 0,
+    );
   }
 
   render() {
@@ -112,8 +113,8 @@ class FlightSearchField extends Component {
               <Field name="from"
                 component={props =>
                   <Select
-                    value={this.props.params.dcode}
-                    onChange={props.input.onChange}
+                    value={(props.input.value) ? props.input.value : this.props.params.dcode}
+                    onChange={value => props.input.onChange(value)}
                     onBlur={() => props.input.onBlur(props.input.value)}
                     options={this.props.flight.airport}
                     placeholder="From"
@@ -126,8 +127,8 @@ class FlightSearchField extends Component {
               <Field name="to"
                 component={props =>
                   <Select
-                    value={this.props.params.acode}
-                    onChange={props.input.onChange}
+                    value={(props.input.value) ? props.input.value : this.props.params.acode}
+                    onChange={value => props.input.onChange(value)}
                     onBlur={() => props.input.onBlur(props.input.value)}
                     options={this.props.flight.airport}
                     placeholder="Destination"
