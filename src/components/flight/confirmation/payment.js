@@ -85,13 +85,12 @@ class FlightPayment extends Component {
 
     const url = (values.payment_method.indexOf("?") != -1) ? `${values.payment_method}&checkouttoken=${token}` : '/process-payment';
 
-      this.props.checkoutFlight(values, () => {
-        window.location.href = url;
-      });
+    this.props.checkoutFlight(values, () => {
+      window.location.href = url;
+    });
   }
 
   render() {
-    console.log(this.props.order.order_detail[0].detail.passengers);
     if(this.state.onLoading) {
       return(
         <Loader text="Please wait while your booking is processed by Tiket.com" />

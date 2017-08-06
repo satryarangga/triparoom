@@ -4,11 +4,16 @@ import { Field, reduxForm, formValueSelector } from 'redux-form';
 import { checkoutOrder } from '../../actions/actionOrderHotel';
 import { bindActionCreators } from 'redux';
 import { TIKET_ROOT_URL } from '../../../config/api';
+import Loader from '../../utils/loader.js';
 import { ALLOWED_PAYMENT_TYPE, ONSITE_PAYMENT_PROCESS } from '../../../config/payment';
 
 class CheckoutCustomerField extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      onLoading: false
+    }
   }
 
   renderPaymentOptions() {
@@ -42,6 +47,10 @@ class CheckoutCustomerField extends Component {
   }
 
   onSubmitCheckout(values) {
+    this.setState({
+      onLoading: true
+    });
+
     const token = localStorage.tiketToken;
 
     const url = (values.payment_method.indexOf("?") != -1) ? `${values.payment_method}&checkouttoken=${token}` : '/process-payment';
@@ -54,6 +63,11 @@ class CheckoutCustomerField extends Component {
   }
 
   render() {
+    if(this.state.onLoading) {
+      return(
+        <Loader text="Please wait while your booking is processed by Tiket.com" />
+      );
+    }
     const { handleSubmit } = this.props;
 
     return (
@@ -112,7 +126,7 @@ class CheckoutCustomerField extends Component {
                 {this.renderPaymentOptions()}
               </div>
               <div className="col-md-12">
-                <label>You will be redirected to Tiket.com payment page</label>
+                <label>Payment will be processed by Tiket.com</label>
               </div>
               <div className="col-md-12">
                 <p><button className="btn_book" type="submit">Confirm Booking</button></p>
