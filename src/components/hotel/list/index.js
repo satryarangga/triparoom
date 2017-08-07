@@ -33,17 +33,13 @@ class ListHotel extends Component {
                     </span>
                   </div>
                   <SearchField
-                    keyword={this.props.match.params.keyword}
-                    start={this.props.match.params.start}
-                    end={this.props.match.params.end}
+                    params={this.props.match.params}
                   />
                 </div>
                 <div className="col-md-9 col-xs-12">
                   <SortField />
                   <ListDataHotel
-                    keyword={this.props.match.params.keyword}
-                    start={this.props.match.params.start}
-                    end={this.props.match.params.end}
+                    params={this.props.match.params}
                   />
                 </div>
               </div>

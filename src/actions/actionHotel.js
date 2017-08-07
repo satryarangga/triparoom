@@ -10,7 +10,7 @@ export const FETCH_DETAIL_HOTEL = 'fetch_detail_hotel';
 export function fetchHomeHotel () {
   const token = localStorage.tiketToken;
   const keyword = 'bali';
-  const request = axios.get(`${ROOT_URL}/api/promo?token=${token}&keyword=${keyword}`);
+  const request = axios.get(`${ROOT_URL}/api/promo?token=${token}&keyword=${keyword}&adult=2`);
 
   return {
     type: FETCH_HOTEL_LIST,
@@ -18,13 +18,13 @@ export function fetchHomeHotel () {
   }
 }
 
-export function fetchHotelList (keyword, start_date, end_date, star, min_price, max_price, page) {
+export function fetchHotelList (param, star, min_price, max_price, page) {
   star = (star) ? star : 0;
   page = (page) ? page : 1;
   min_price = (min_price) ? min_price : 0;
   max_price = (max_price) ? max_price : 20000000;
   const token = localStorage.tiketToken;
-  const request = axios.get(`${ROOT_URL}/api/promo?token=${token}&keyword=${keyword}&startdate=${start_date}&enddate=${end_date}&star=${star}&minprice=${min_price}&maxprice=${max_price}&page=${page}`);
+  const request = axios.get(`${ROOT_URL}/api/promo?token=${token}&keyword=${param.keyword}&startdate=${param.start}&night=${param.night}&room=${param.room}&adult=${param.adult}&star=${star}&minprice=${min_price}&maxprice=${max_price}&page=${page}`);
 
   return {
     type: FETCH_HOTEL_LIST,
@@ -53,9 +53,9 @@ export function sortHotelList (sortField, sortType, data) {
   }
 }
 
-export function fetchDetailHotel (url) {
+export function fetchDetailHotel (param) {
   const token = localStorage.tiketToken;
-  const request = axios.get(`${ROOT_URL}/api/detailhotel?uri=${encodeURIComponent(url)}&token=${token}`);
+  const request = axios.get(`${ROOT_URL}/api/detailhotel?uri=${param.uri}&startdate=${param.startdate}&night=${param.night}&room=${param.room}&adult=${param.adult}&token=${token}`);
 
   return {
     type: FETCH_DETAIL_HOTEL,

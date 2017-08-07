@@ -7,7 +7,8 @@ import numeral from 'numeral';
 
 class ListDataHotel extends Component {
   componentDidMount() {
-    this.props.fetchHotelList(this.props.keyword, this.props.start, this.props.end);
+    let params = this.props.params;
+    this.props.fetchHotelList(params);
   }
 
   showLoader() {
@@ -16,7 +17,14 @@ class ListDataHotel extends Component {
   }
 
   paginationReload(page) {
-    this.props.fetchHotelList(this.props.hotel.queries.q, this.props.hotel.queries.startdate, this.props.hotel.queries.enddate, this.props.hotel.queries.minstar, this.props.hotel.queries.minprice, this.props.hotel.queries.maxprice, page);
+    let params = {
+      keyword:this.props.hotel.queries.q,
+      startdate:this.props.hotel.queries.startdate,
+      night:this.props.hotel.queries.night,
+      room:this.props.hotel.queries.room,
+      adult:this.props.hotel.queries.adult,
+    }
+    this.props.fetchHotelList(params, this.props.hotel.queries.minstar, this.props.hotel.queries.minprice, this.props.hotel.queries.maxprice, page);
 
     return this.showLoader();
   }
@@ -57,6 +65,10 @@ class ListDataHotel extends Component {
       }
 
       return _.map(this.props.hotel.result, hotel => {
+        let splitUri = hotel.business_uri.split('?');
+        let noRootUri = splitUri[0].split('tiket.com/');
+        let validUri = noRootUri[1].replace(/\//g, "_");
+
         return (
           <div className="hotels_box_detail white-box animate-reveal" key={hotel.id}>
             <div className="row">
@@ -79,7 +91,12 @@ class ListDataHotel extends Component {
                 <div className="select-sec">
                   <span>AVG/NIGHT</span>
                   <span className="pri"><label>IDR {numeral(hotel.total_price).format('IDR 0,0')}</label></span>
-                  <Link to={`/${hotel.province_name.replace(/\s/g, "-")}/${hotel.name.replace(/\s/g, "-")}/${hotel.hotel_id}`} className="btn btn_select">VIEW</Link>
+                  <Link
+                    to={`/${validUri}/${this.props.hotel.queries.startdate}/${this.props.hotel.queries.night}/${this.props.hotel.queries.room}/${this.props.hotel.queries.adult}`}
+                    className="btn btn_select"
+                  >
+                    VIEW
+                  </Link>
                 </div>
               </div>
             </div>

@@ -19,8 +19,8 @@ const Routes = () => {
         <Route path="/flight-booking/:depFlightId/:retFlightId/:depDate/:retDate" component={FlightOrder} />
         <Route path="/flight/:dcode/:acode/:ddate/:rdate/:adult/:child/:infant" component={FlightList} />
         <Route path="/process-payment" component={HotelOrderConfirmation} />
-        <Route path="/hotel/:keyword/:start/:end" component={HotelList} />
-        <Route path="/:regional/:hotelname/:id" component={HotelDetail} />
+        <Route path="/hotel/:keyword/:start/:night/:room/:adult" component={HotelList} />
+        <Route path="/:uri/:startdate/:night/:room/:adult/" component={HotelDetail} />
         <Route path="/" component={Home} />
       </Switch>
     </BrowserRouter>

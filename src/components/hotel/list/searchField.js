@@ -22,10 +22,14 @@ class HotelSearchField extends Component {
   }
 
   handleInitialize() {
+    let params = this.props.params;
+
     const initData = {
-      "keyword": this.props.keyword,
-      "checkin_date": this.props.start,
-      "checkout_date": this.props.end,
+      "keyword": params.keyword,
+      "checkin_date": params.start,
+      "night": params.night,
+      "room": params.room,
+      "adult": params.adult
     };
 
     this.props.initialize(initData);
@@ -65,7 +69,14 @@ class HotelSearchField extends Component {
     this.props.clearHotelSearch();
     let star = (values.star) ? values.star : 0
     let price = getPriceRange(values.price);
-    this.props.fetchHotelList(values.keyword, values.checkin_date, values.checkout_date, star, price.min, price.max);
+    let params = {
+      keyword: values.keyword,
+      start: values.checkin_date,
+      night: values.night,
+      room: values.room,
+      adult: values.adult,
+    }
+    this.props.fetchHotelList(params, star, price.min, price.max);
   }
 
   render() {
@@ -77,24 +88,71 @@ class HotelSearchField extends Component {
           <form onSubmit={handleSubmit(this.onSubmitSearch.bind(this))}>
             <Field
               name="keyword"
-              placeholder="Enter Hotel or Location Name"
+              placeholder="Masukkan nama hotel atau lokasi tujuan"
               values={this.props.hotel.queries.q}
               component={this.renderTextField}
             />
 
             <Field
               name="checkin_date"
-              placeholder="Check In Date"
+              placeholder="Tanggal Check In"
               values={moment(this.props.hotel.queries.startdate).format(DAY_FORMAT)}
               component={this.renderDateField}
             />
 
-            <Field
-              name="checkout_date"
-              placeholder="Check Out Date"
-              values={moment(this.props.hotel.queries.enddate).format(DAY_FORMAT)}
-              component={this.renderDateField}
-            />
+            <div className="form-group">
+              <Field
+                name="night"
+                required
+                className="form-control"
+                component="select"
+              >
+                <option value="1">1 Malam</option>
+                <option value="2">2 Malam</option>
+                <option value="3">3 Malam</option>
+                <option value="4">4 Malam</option>
+                <option value="5">5 Malam</option>
+                <option value="6">6 Malam</option>
+                <option value="7">7 Malam</option>
+                <option value="8">8 Malam</option>
+              </Field>
+            </div>
+
+            <div className="form-group">
+              <Field
+                name="room"
+                required
+                className="form-control"
+                component="select"
+              >
+                <option value="1">1 Kamar</option>
+                <option value="2">2 Kamar</option>
+                <option value="3">3 Kamar</option>
+                <option value="4">4 Kamar</option>
+                <option value="5">5 Kamar</option>
+                <option value="6">6 Kamar</option>
+                <option value="7">7 Kamar</option>
+                <option value="8">8 Kamar</option>
+              </Field>
+            </div>
+
+            <div className="form-group">
+              <Field
+                name="adult"
+                required
+                className="form-control"
+                component="select"
+              >
+                <option value="1">1 Dewasa</option>
+                <option value="2">2 Dewasa</option>
+                <option value="3">3 Dewasa</option>
+                <option value="4">4 Dewasa</option>
+                <option value="5">5 Dewasa</option>
+                <option value="6">6 Dewasa</option>
+                <option value="7">7 Dewasa</option>
+                <option value="8">8 Dewasa</option>
+              </Field>
+            </div>
 
             <div className="form-group">
               <Field name="star" className="form-control" component="select">

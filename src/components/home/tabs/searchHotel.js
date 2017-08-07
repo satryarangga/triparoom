@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, formValueSelector } from 'redux-form';
 import { connect } from 'react-redux';
 import { fetchHotelList, clearHotelSearch } from '../../../actions/actionHotel';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
@@ -16,7 +16,8 @@ class SearchHotel extends Component {
       redirectToHotel: false,
       keyword: '',
       startDate: '',
-      endDate: '',
+      night: '',
+      adult: '',
     }
   }
 
@@ -55,14 +56,15 @@ class SearchHotel extends Component {
                   redirectToHotel: true,
                   keyword: values.keyword,
                   startDate: (values.checkin_date) ? values.checkin_date : moment().format(DAY_FORMAT),
-                  endDate: (values.checkout_date) ? values.checkout_date : moment().add(1, 'days').format(DAY_FORMAT)
+                  night: (values.night) ? values.night : 1,
+                  adult: (values.adult) ? values.adult : 1,
                 });
   }
 
   render () {
     if(this.state.redirectToHotel) {
       return (
-        <Redirect to={`/hotel/${this.state.keyword}/${this.state.startDate}/${this.state.endDate}`}/>
+        <Redirect to={`/hotel/${this.state.keyword}/${this.state.startDate}/${this.state.night}/1/${this.state.adult}`}/>
      );
     }
 
@@ -88,18 +90,37 @@ class SearchHotel extends Component {
             </li>
             <li>
               <Field
-                name="checkout_date"
-                placeholder="Check Out Date"
-                component={this.renderDateField}
-              />
+                name="night"
+                required
+                className="select-one"
+                component="select"
+              >
+                <option value="1">1 Malam</option>
+                <option value="2">2 Malam</option>
+                <option value="3">3 Malam</option>
+                <option value="4">4 Malam</option>
+                <option value="5">5 Malam</option>
+                <option value="6">6 Malam</option>
+                <option value="7">7 Malam</option>
+                <option value="8">8 Malam</option>
+              </Field>
             </li>
             <li>
-              <select className="select-one">
-                <option>1 Adult</option>
-                <option>2 Adult</option>
-                <option>3 Adult</option>
-                <option>4 Adult</option>
-              </select>
+              <Field
+                name="adult"
+                required
+                className="select-one"
+                component="select"
+              >
+                <option value="1">1 Dewasa</option>
+                <option value="2">2 Dewasa</option>
+                <option value="3">3 Dewasa</option>
+                <option value="4">4 Dewasa</option>
+                <option value="5">5 Dewasa</option>
+                <option value="6">6 Dewasa</option>
+                <option value="7">7 Dewasa</option>
+                <option value="8">8 Dewasa</option>
+              </Field>
             </li>
             <li>
               <button type="submit" className="btn btn-search-travel">Search Now</button>

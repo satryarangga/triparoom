@@ -27,9 +27,8 @@ class HotelDetail extends Component {
   }
 
   componentDidMount() {
-    let id = this.props.match.params.id;
-    let detail = _.find(_.pick(this.props.hotel.result, id), 'id');
-    this.props.fetchDetailHotel(detail.business_uri);
+    let param = this.props.match.params;
+    this.props.fetchDetailHotel(param);
   }
 
   renderRooms() {

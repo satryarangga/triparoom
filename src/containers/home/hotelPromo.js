@@ -4,6 +4,8 @@ import numeral from 'numeral';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchHomeHotel } from '../../actions/actionHotel';
+import moment from 'moment';
+
 
 class HotelPromo extends Component {
   componentDidMount() {
@@ -15,13 +17,17 @@ class HotelPromo extends Component {
       return <div className="cp-pinwheel"></div>
     }
     return _.map(_.sample(this.props.hotel.result, 6), hotel => {
+      let splitUri = hotel.business_uri.split('?');
+      let noRootUri = splitUri[0].split('tiket.com/');
+      let validUri = noRootUri[1].replace(/\//g, "_");
       return (
         <div className="col-md-4 col-sm-6 col-xs-12" key={hotel.id}>
           <div className="popular_hotel_box ">
             <div className="img">
-              <a href="#">
+              <Link
+                to={`/${validUri}/${moment().format('YYYY-MM-DD')}/1/1/2`}>
                 <img src={`${hotel.photo_primary}`} alt="place" className="img-responsive" />
-              </a>
+              </Link>
             </div>
             <div className="hotel_detail">
               <div className="hotel-name">
@@ -30,7 +36,12 @@ class HotelPromo extends Component {
                 <div className="pull-left">Price per night from:</div>
                 <div className="pull-right">IDR {numeral(hotel.price).format('IDR 0,0')}</div>
                 <div className="book-now">
-                  <Link to={`/${hotel.province_name.replace(/\s/g, "-")}/${hotel.name.replace(/\s/g, "-")}/${hotel.hotel_id}`} className="btn btn_book_now">View Room</Link>
+                  <Link
+                    to={`/${validUri}/${moment().format('YYYY-MM-DD')}/1/1/2`}
+                    className="btn btn_book_now"
+                  >
+                    View Room
+                  </Link>
                 </div>
               </div>
             </div>
