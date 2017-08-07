@@ -40,7 +40,7 @@ class FlightOrderField extends Component {
   showError() {
     if(this.state.error) {
       return(
-        <ErrorMessage message="Invalid request. Please check your data again" />
+        <ErrorMessage message={this.state.error} />
       );
     }
     return;
@@ -56,11 +56,14 @@ class FlightOrderField extends Component {
     let adult = this.props.order.departure.count_adult;
     let child = this.props.order.departure.count_child;
     let infant = this.props.order.departure.count_infant;
-    this.props.addFlightOrder(values, depFlightId, retFlightId, adult, child, infant, (status) => {
+    let depFlightName = this.props.order.departure.airlines_name;
+    let retFlightName = this.props.order.return.airlines_name;
+
+    this.props.addFlightOrder(values, depFlightId, retFlightId, adult, child, infant, depFlightName, retFlightName, (response) => {
       this.setState({
         onLoading: false
       });
-      if(status == 200) {
+      if(response.status == 200) {
         this.setState({
           redirectToOrder: true,
           email: values.conEmailAddress,
@@ -68,7 +71,7 @@ class FlightOrderField extends Component {
         });
       } else {
         this.setState({
-          error: true
+          error: response.error_msgs
         });
       }
     });
@@ -77,7 +80,7 @@ class FlightOrderField extends Component {
   render() {
     if(this.state.onLoading) {
       return(
-        <Loader text="Please wait while we are processing your booking" />
+        <Loader text="Mohon tunggu. Pemesanan sedang dilakukan." />
       );
     }
 
@@ -100,7 +103,7 @@ class FlightOrderField extends Component {
                 <Field
                   name="conEmailAddress"
                   type="text"
-                  placeholder="Enter Contact Email..."
+                  placeholder="Masukkan Email Kontak"
                   component={this.renderTextField}
                 />
               </div>
@@ -108,7 +111,7 @@ class FlightOrderField extends Component {
                 <Field
                   name="conPhone"
                   type="text"
-                  placeholder="Enter Contact Phone..."
+                  placeholder="Enter Nomor Telepon"
                   component={this.renderTextField}
                 />
               </div>
@@ -125,7 +128,7 @@ class FlightOrderField extends Component {
               {infantPassenger(this.props.order.required, this.props.order.departure.count_infant)}
 
               <div className="col-md-12">
-                <p><button className="btn_book" type="submit">Confirm Passenger</button></p>
+                <p><button className="btn_book" type="submit">Konfirmasi Penumpang</button></p>
               </div>
             </div>
           </div>

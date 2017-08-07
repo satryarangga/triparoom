@@ -31,7 +31,6 @@ class SearchFlight extends Component {
   }
 
   onSubmitSearch(values) {
-    console.log(values);
     this.setState({
       redirectToFlight: true,
       dcode: values.from,
@@ -86,8 +85,6 @@ class SearchFlight extends Component {
     }
 
     const { handleSubmit } = this.props;
-
-    console.log(this.props.flight.airport);
     return (
       <div>
         <h3>Search Flight</h3>

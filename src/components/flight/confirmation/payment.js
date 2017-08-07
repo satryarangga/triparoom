@@ -22,19 +22,29 @@ class FlightPayment extends Component {
     let allP = [];
     let passengers = this.props.order.order_detail[0].detail.passengers;
     let adult = passengers.adult;
-    allP.push(adult);
+
+    _.map(adult, (adult) => {
+      allP.push(adult);
+    });
+
     if(passengers.child) {
-      allP.push(passengers.child);
+      let child = passengers.child;
+      _.map(child, (child) => {
+        allP.push(child);
+      });
     }
 
     if(passengers.infant) {
-      allP.push(passengers.infant);
+      let infant = passengers.infant;
+      _.map(infant, (infant) => {
+        allP.push(infant);
+      });
     }
 
     let x = 0;
-    return _.map(allP, p => {
+    return _.map(allP, (p) => {
       return(
-        <li key={p}>{p[x].first_name} {p[x].last_name} ({_.capitalize(p[x].type)})</li>
+        <li key={p.order_passenger_id}>{p.first_name} {p.last_name} ({_.capitalize(p.type)})</li>
       );
       x++;
     });

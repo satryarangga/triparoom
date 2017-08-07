@@ -16,7 +16,7 @@ export const fetchFlightData = (depFlightId, retFlightId, depDate, retDate) => {
   }
 }
 
-export const addFlightOrder = (param, depFlightId, retFlightId, adult, child, infant, callback) => {
+export const addFlightOrder = (param, depFlightId, retFlightId, adult, child, infant, depFlightName, retFlightName, callback) => {
   const token = localStorage.tiketToken;
 
   param.conSalutation = param.titlea1;
@@ -27,12 +27,14 @@ export const addFlightOrder = (param, depFlightId, retFlightId, adult, child, in
       token,
       flight_id: depFlightId,
       ret_flight_id: retFlightId,
+      flight_name: depFlightName,
+      ret_flight_name: retFlightName,
       adult: adult,
       child: child,
       infant: infant,
       params: encodeURIComponent(JSON.stringify(param))
     }
-  }).then( (response) => callback(response.data.diagnostic.status));
+  }).then( (response) => callback(response.data.diagnostic));
 
   return {
     type: ADD_FLIGHT_ORDER,
@@ -61,9 +63,6 @@ export function checkoutFlight(field, callback) {
 
   const request = axios.get(`${ROOT_URL}/api/checkout?token=${token}&first_name=${first_name}&last_name=${last_name}&salute=${salute}&phone=${phone}&email=${email}&uri=${encodeURIComponent(payment_method_url)}`)
                   .then(() => callback());
-
-  // const request = axios.get(`${ROOT_URL}/api/checkout-flight?token=${token}&uri=${encodeURIComponent(payment_method_url)}`)
-  //                 .then(() => callback());
 
   return {
     type: CHECKOUT_FLIGHT,
