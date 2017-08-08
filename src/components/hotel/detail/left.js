@@ -8,15 +8,17 @@ import moment from 'moment';
 
 const DAY_FORMAT = 'YYYY-MM-DD';
 
-class HotelSearchField extends Component {
+class DetailLeft extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      star: null,
-      checkout_date: moment(props.params.start).add(props.params.night, 'days').format(DAY_FORMAT),
+      redirect: false,
+      checkout_date: moment(props.params.startdate).add(props.params.night, 'days').format(DAY_FORMAT),
       night: 0,
-      startdate: ''
+      startdate: '',
+      room: 0,
+      adult: 0
     }
 
     this.renderDateField = this.renderDateField.bind(this);
@@ -30,31 +32,14 @@ class HotelSearchField extends Component {
     let params = this.props.params;
 
     const initData = {
-      "keyword": params.keyword,
-      "checkin_date": params.start,
-      "checkout_date": moment(params.start).add(params.night, 'days').format(DAY_FORMAT),
+      "checkin_date": params.startdate,
+      "checkout_date": moment(params.startdate).add(params.night, 'days').format(DAY_FORMAT),
       "night": params.night,
       "room": params.room,
       "adult": params.adult
     };
 
     this.props.initialize(initData);
-  }
-
-  renderTextField(field) {
-    return (
-      <div className="form-group">
-        <label>{field.label}</label>
-        <input
-          required
-          type="text"
-          name={field.name}
-          className="form-control flight-input"
-          placeholder={field.placeholder}
-          {...field.input}
-        />
-      </div>
-    );
   }
 
   renderDateField(field) {
@@ -65,7 +50,7 @@ class HotelSearchField extends Component {
         after: new Date( now.getTime() + 24 * 60 * 60 * 1000 * 547)  //547 is maximum date
       },
       onDayClick: (field) => {
-        let night = (this.state.night == 0) ? this.props.queries.night : this.state.night;
+        let night = (this.state.night == 0) ? this.props.params.night : this.state.night;
         this.setState({
           startdate: moment(field).format(DAY_FORMAT),
           checkout_date: moment(field).add(night, 'days').format(DAY_FORMAT)
@@ -90,21 +75,19 @@ class HotelSearchField extends Component {
   }
 
   onSubmitSearch(values) {
-    this.props.clearHotelSearch();
-    let star = (values.star) ? values.star : 0
-    let price = getPriceRange(values.price);
-    let params = {
-      keyword: values.keyword,
-      start: values.checkin_date,
-      night: values.night,
-      room: values.room,
-      adult: values.adult,
-    }
-    this.props.fetchHotelList(params, star, price.min, price.max);
+    let params = this.props.params;
+
+    let night = (values.night) ? values.night : params.night;
+    let startdate = (values.checkin_date) ? values.checkin_date : params.startdate;
+    let room = (values.room) ? values.room : params.room;
+    let adult = (values.adult) ? values.adult : params.adult;
+
+    const url = `/${this.props.params.uri}/${startdate}/${night}/${room}/${adult}`;
+    window.location.href = url;
   }
 
   handleChangeNight(event) {
-    let startdate = (this.state.startdate == '') ? this.props.queries.startdate : this.state.startdate;
+    let startdate = (this.state.startdate == '') ? this.props.params.startdate : this.state.startdate;
     this.setState({
       night: event.target.value,
       checkout_date: moment(startdate).add(event.target.value, 'days').format(DAY_FORMAT)
@@ -116,15 +99,8 @@ class HotelSearchField extends Component {
 
     return (
       <div className="form-detail-sidebar  animate-reveal">
-        <h4>Pencarian Hotel</h4>
+        <h4>Pencarian Kamar</h4>
           <form onSubmit={handleSubmit(this.onSubmitSearch.bind(this))}>
-            <Field
-              label="Kata Pencarian"
-              name="keyword"
-              placeholder="Masukkan nama hotel atau lokasi tujuan"
-              component={this.renderTextField}
-            />
-
             <Field
               label="Tanggal Checkin"
               name="checkin_date"
@@ -207,30 +183,6 @@ class HotelSearchField extends Component {
                 <option value="8">8 Dewasa</option>
               </Field>
             </div>
-
-            <div className="form-group">
-              <label>Bintang Hotel</label>
-              <Field name="star" className="form-control" component="select">
-                <option value="0">Semua Bintang</option>
-                <option value="1">1 Star</option>
-                <option value="2">2 Stars</option>
-                <option value="3">3 Stars</option>
-                <option value="4">4 Stars</option>
-                <option value="5">5 Stars</option>
-              </Field>
-            </div>
-
-            <div className="form-group">
-              <label>Harga</label>
-              <Field name="price" className="form-control" component="select">
-                <option value="0">Semua Harga</option>
-                <option value="1"> 0 - 500,000</option>
-                <option value="2">500,000 - 1,000,000</option>
-                <option value="3">1,000,000 - 1,500,000</option>
-                <option value="4">1,500,000 - 2,000,000</option>
-                <option value="5">> 2,000,000</option>
-              </Field>
-            </div>
             <button type="submit" className="btn btn-search-travel btn-block">CARI</button>
           </form>
       </div>
@@ -242,25 +194,8 @@ function mapStateToProps (state) {
   return { hotel: state.hotel }
 }
 
-function getPriceRange (price){
-  switch(price) {
-    case '1':
-      return {min:0, max:500000};
-    case '2':
-      return {min:500000, max:1000000};
-    case '3':
-      return {min:1000000, max:1500000};
-    case '4':
-      return {min:1500000, max:2000000};
-    case '5':
-      return {min:2000000, max:20000000};
-    default:
-      return {min:0, max:20000000};
-  }
-}
-
 export default reduxForm({
   form: 'SearchHotel'
 }) (
-    connect(mapStateToProps, { sortHotelList, clearHotelSearch, fetchHotelList }) (HotelSearchField)
+    connect(mapStateToProps, { sortHotelList, clearHotelSearch, fetchHotelList }) (DetailLeft)
 );

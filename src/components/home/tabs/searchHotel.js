@@ -37,6 +37,13 @@ class SearchHotel extends Component {
   }
 
   renderDateField(field) {
+    let now = new Date();
+    let props = {
+      disabledDays: {
+        before: now,
+        after: new Date( now.getTime() + 24 * 60 * 60 * 1000 * 547)  //547 is maximum date
+      }
+    }
     return (
       <div className="form-group">
         <DayPickerInput
@@ -44,6 +51,7 @@ class SearchHotel extends Component {
           className="form-control"
           format={DAY_FORMAT}
           name={field.name}
+          dayPickerProps={props}
           {...field.input}
         />
       </div>
@@ -103,6 +111,13 @@ class SearchHotel extends Component {
                 <option value="6">6 Malam</option>
                 <option value="7">7 Malam</option>
                 <option value="8">8 Malam</option>
+                <option value="9">9 Malam</option>
+                <option value="10">10 Malam</option>
+                <option value="11">11 Malam</option>
+                <option value="12">12 Malam</option>
+                <option value="13">13 Malam</option>
+                <option value="14">14 Malam</option>
+                <option value="15">15 Malam</option>
               </Field>
             </li>
             <li>

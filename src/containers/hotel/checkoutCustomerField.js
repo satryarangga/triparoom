@@ -65,7 +65,7 @@ class CheckoutCustomerField extends Component {
   render() {
     if(this.state.onLoading) {
       return(
-        <Loader text="Please wait while your booking is processed by Tiket.com" />
+        <Loader text="Mohon tunggu. Pemesanan sedang diproses oleh tiket.com" />
       );
     }
     const { handleSubmit } = this.props;
@@ -74,7 +74,7 @@ class CheckoutCustomerField extends Component {
       <div>
         <form onSubmit={handleSubmit(this.onSubmitCheckout.bind(this))}>
           <div className="booking_detail white-box animate-reveal">
-            <h4>Personal information</h4>
+            <h4>Informasi Tamu</h4>
             <div className="row">
                 <div className="col-md-6">
                   <Field name="salute" className="select_booking" component="select">
@@ -87,7 +87,7 @@ class CheckoutCustomerField extends Component {
                   <Field
                     name="first_name"
                     type="text"
-                    placeholder="Enter Guest First Name..."
+                    placeholder="Masukkan Nama Depan"
                     component={this.renderTextField}
                   />
                 </div>
@@ -95,7 +95,7 @@ class CheckoutCustomerField extends Component {
                   <Field
                     name="last_name"
                     type="text"
-                    placeholder="Enter Guest Last Name..."
+                    placeholder="Masukkan Nama Belakang"
                     component={this.renderTextField}
                   />
                 </div>
@@ -103,7 +103,7 @@ class CheckoutCustomerField extends Component {
                   <Field
                     name="email"
                     type="email"
-                    placeholder="Enter Guest Email Address..."
+                    placeholder="Masukkan Email"
                     component={this.renderTextField}
                   />
                 </div>
@@ -111,14 +111,14 @@ class CheckoutCustomerField extends Component {
                   <Field
                     name="phone"
                     type="text"
-                    placeholder="Enter Guest Phone Number..."
+                    placeholder="Masukkan Nomor Telepon"
                     component={this.renderTextField}
                   />
                 </div>
             </div>
           </div>
           <div className="booking_detail white-box animate-reveal">
-            <h4>Payment Information</h4>
+            <h4>Informasi Pembayaran</h4>
             <div className="col-md-12">
             </div>
             <div className="row">
@@ -126,10 +126,10 @@ class CheckoutCustomerField extends Component {
                 {this.renderPaymentOptions()}
               </div>
               <div className="col-md-12">
-                <label>Payment will be processed by Tiket.com</label>
+                <label>Pembayaran akan diproses oleh tiket.com</label>
               </div>
               <div className="col-md-12">
-                <p><button className="btn_book" type="submit">Confirm Booking</button></p>
+                <p><button className="btn_book" type="submit">Konfirmasi Pemesanan</button></p>
               </div>
             </div>
           </div>

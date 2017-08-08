@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchDetailHotel } from '../../actions/actionHotel';
 import NoData from '../../utils/nodata';
+import DetailLeft from '../../components/hotel/detail/left';
 
 class HotelDetail extends Component {
   constructor (props) {
@@ -23,7 +24,6 @@ class HotelDetail extends Component {
 
     this.changeToDesc = this.changeToDesc.bind(this);
     this.changeToReview = this.changeToReview.bind(this);
-    this.changeToRating = this.changeToRating.bind(this);
   }
 
   componentDidMount() {
@@ -34,7 +34,7 @@ class HotelDetail extends Component {
   renderRooms() {
     if(this.props.hotel.detail.rooms == null) {
       return (
-        <NoData label="No room available for this hotel" type="hotel" />
+        <NoData label="Tidak ada kamar tersedia pada tanggal ini. Silahkan cari tanggal lain" type="hotel" />
       );
     }
 
@@ -51,14 +51,16 @@ class HotelDetail extends Component {
                 <div className="panel">
                   <div className="panel-heading">
                     <ul className="nav nav-tabs">
-                      <li className={this.state.descActive}><a onClick={this.changeToDesc}>Rooms</a></li>
-                      <li className={this.state.reviewActive}><a onClick={this.changeToReview}>Facilities</a></li>
+                      <li className={this.state.descActive}><a onClick={this.changeToDesc}>Kamar</a></li>
+                      <li className={this.state.reviewActive}><a onClick={this.changeToReview}>Fasilitas</a></li>
                     </ul>
                   </div>
                   <div className="panel-body">
                     <div className="tab-content">
                       <div className={`tab-pane fade in ${this.state.descActive}`}>
-                        <DetailRooms detail={this.props.hotel.detail} />
+                        <DetailRooms
+                          detail={this.props.hotel.detail}
+                        />
                       </div>
                       <div className={`tab-pane fade in ${this.state.reviewActive}`}>
                         <DetailFacilities detail={this.props.hotel.detail} />
@@ -93,7 +95,13 @@ class HotelDetail extends Component {
               <div className="col-md-12">
                 <DetailHead detail={this.props.hotel.detail} />
               </div>
-              <div className="col-md-12">
+              <div className="col-md-3">
+                <DetailLeft
+                  params={this.props.match.params}
+                  queries={this.props.hotel.queries}
+                />
+              </div>
+              <div className="col-md-9">
                 {this.renderRooms()}
               </div>
             </div>
@@ -117,14 +125,6 @@ class HotelDetail extends Component {
       descActive: '',
       reviewActive: 'active',
       ratingActive: '',
-    });
-  }
-
-  changeToRating () {
-    this.setState({
-      descActive: '',
-      reviewActive: '',
-      ratingActive: 'active',
     });
   }
 }

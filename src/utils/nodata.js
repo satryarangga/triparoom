@@ -7,7 +7,7 @@ const NoData = ({ label, type }) => {
     <div>
       <div className="no-data">
         <p>{label}</p>
-        <Link to="/" className="btn btn-primary">Search {_.capitalize(type)}</Link>
+        <Link to="/" className="btn btn-primary">Cari {_.capitalize(type)}</Link>
       </div>
     </div>
   )

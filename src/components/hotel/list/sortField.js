@@ -5,38 +5,39 @@ import _ from 'lodash';
 
 class HotelSortField extends Component {
   clickSort (field, type) {
-    this.props.sortHotelList(field, type, this.props.hotel);
+    this.props.sortHotelList(field, type, this.props.list);
   }
 
   render() {
+    console.log(this.props.list);
     return (
       <div className="sort-section white-box animate-reveal">
-        <h4>Sort results by:</h4>
+        <h4>Urutkan Data:</h4>
         <ul className="list-inline list-unstyled">
           <li>
               <a onClick={this.clickSort.bind(this, 'name', 'asc')}>
-                <span className="text">Name</span>
+                <span className="text">Nama</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
           </li>
           <li>
               <a onClick={this.clickSort.bind(this, 'total_price', 'asc')}>
-                <span className="text">Cheapest</span>
+                <span className="text">Termurah</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
           </li>
           <li>
               <a onClick={this.clickSort.bind(this, 'id', 'asc')}>
-                <span className="text">Most Popular</span>
+                <span className="text">Terpopuler</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
           </li>
           <li>
               <a onClick={this.clickSort.bind(this, 'rating', 'desc')}>
-                <span className="text">Best Rating</span>
+                <span className="text">Rating Terbaik</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>

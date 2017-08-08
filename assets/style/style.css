@@ -4220,10 +4220,11 @@ button, select {
     background-color: #ffffff; }
     .feature-inflight ul li {
       color: #888;
-      padding: 0 20px;
+      padding: 3px 0;
       width: 31%;
       font-family: "Raleway", sans-serif;
       font-weight: 600;
+      font-size: 12px;
       text-align: left;
       text-transform: capitalize;
       line-height: 2; }

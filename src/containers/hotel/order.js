@@ -20,22 +20,20 @@ class OrderHotel extends Component {
     }
     if(this.props.orderHotel.total_price == 0) {
       return (
-        <NoData label="No order has been created. Please book a room first" type="hotel" />
+        <NoData label="Belum ada pemesanan. Silahkan melakukan pemesanan hotel terlebih dahulu" type="hotel" />
       );
     }
 
     return (
       <div>
         <div className="col-md-12">
-          <Breadcrumb label="Booking Confirmation" />
+          <Breadcrumb label="Konfirmasi Booking" />
         </div>
         <div className="col-md-3">
           <OrderLeft detail={this.props.orderHotel} />
         </div>
         <div className="col-md-9">
           <CheckoutCustomerField order={this.props.orderHotel} />
-
-          {/* <PaymentOption order={this.props.orderHotel} /> */}
         </div>
       </div>
     );

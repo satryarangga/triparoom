@@ -19,10 +19,10 @@ const Left = ({ detail }) => {
           <span className="skin-clr">Check Out  <span className="pull-right">{detail.checkout_date}</span> </span><br />
         </div>
         <div className="LTT">
-          <span className="skin-clr">Stay Duration  <span className="pull-right">{detail.nights} Nights</span> </span><br />
+          <span className="skin-clr">Lama Menginap  <span className="pull-right">{detail.nights} Malam</span> </span><br />
         </div>
         <div className="price">
-          <span className="pull-left">Total Price </span>
+          <span className="pull-left">Total Biaya </span>
           <span className="pull-right">IDR {numeral(detail.total_price).format('IDR 0,0')}</span>
         </div>
       </div>

@@ -28,10 +28,10 @@ export default function (state = {result:{}, pagination:{}, queries:{}, detail:{
     case SORT_HOTEL_LIST:
       _.mapKeys(state.result, res => {
         if(!_.isNumber(res.total_price)){
-          state.result[res.id].total_price = _.parseInt(res.total_price);
+          state.result[res.hotel_id].total_price = _.parseInt(res.total_price);
         }
         if(!_.isNumber(res.rating)){
-          state.result[res.id].rating = _.parseInt(_.round(res.rating));
+          state.result[res.hotel_id].rating = _.parseInt(_.round(res.rating));
         }
       },'id');
         return {

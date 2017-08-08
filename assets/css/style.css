@@ -137,6 +137,22 @@ i.gold{
   font-weight: 600;
 }
 
+.policy {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.policy ol {
+  text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.policy h5 {
+  font-size: 15px;
+  font-weight: 600
+}
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 780px) {
   .cp-pinwheel{

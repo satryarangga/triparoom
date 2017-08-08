@@ -28,6 +28,22 @@ class Description extends Component {
     });
   }
 
+  showRoomPolicy(key) {
+    let policy = this.props.detail.policies;
+    if(policy !== null && policy[key] !== undefined) {
+      return(
+        <div className="policy">
+          <h5>Ketentuan Pemesanan Kamar</h5>
+          <ol>
+            <li>{policy[key].tier_one}</li>
+            <li>{policy[key].tier_two}</li>
+          </ol>
+        </div>
+      );
+    }
+    return;
+  }
+
   renderRoomList () {
     if(this.state.onLoading) {
       return <div className="cp-pinwheel"></div>
@@ -44,18 +60,19 @@ class Description extends Component {
               <div className="col-md-6  col-sm-3 col-xs-6">
                 <div className="dw">
                   <h4>
-                    {room.room_name} <br /> <small>{room.room_available} Rooms Available</small>
+                    {room.room_name} <br /> <small>{room.room_available} Kamar Tersedia</small>
                   </h4>
                 </div>
                 <p>{striptags(room.room_description)}</p>
+                <div>{this.showRoomPolicy(room.room_name)}</div>
               </div>
               <div className="col-md-3 col-sm-3">
                 <div className="seat-price">
                   <span className="no-margin">
-                    PRICE / NIGHT <br /> <span className="pri no-margin">{room.currency} {numeral(room.price).format('IDR 0,0')}</span>
+                    HARGA / MALAM <br /> <span className="pri no-margin">{room.currency} {numeral(room.price).format('IDR 0,0')}</span>
                   </span>
                   <button onClick={this.bookRoom.bind(this, room.bookUri)} className="btn btn_select">
-                    BOOK
+                    PESAN
                   </button>
                 </div>
               </div>

@@ -10,6 +10,7 @@ export const formatDetailState = (data) => {
     'country': data.breadcrumb.country_name,
     'area': data.breadcrumb.area_name,
     'address': data.general.address,
+    'policies': (data.policy) ? _.mapKeys(data.policy, 'name') : null,
     'star': data.breadcrumb.star_rating,
     'avg_review': data.summary_internal_review.average,
     'max_review': data.summary_internal_review.max_rating,
