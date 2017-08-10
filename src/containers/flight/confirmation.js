@@ -24,14 +24,14 @@ class FlightConfirmation extends Component {
 
     if(this.props.orderFlight.order.order_id == null) {
       return (
-        <NoData label="No order has been created. Please book a flight first" type="flight" />
+        <NoData label="Belum ada pemesanan. Silahkan melakukan pemesanan pesawat terlebih dahulu" type="penerbangan" />
       );
     }
 
     return(
       <div>
         <div className="col-md-12">
-          <Breadcrumb label="Flight Confirmation" />
+          <Breadcrumb label="Konfirmasi Penerbangan" />
         </div>
         <div className="col-md-3">
           <OrderLeft order={this.props.orderFlight.order} />

@@ -11,18 +11,18 @@ class FlightSortField extends Component {
   render() {
     return (
       <div className="sort-section white-box animate-reveal">
-        <h4>Sort results by:</h4>
+        <h4>Urutkan Data:</h4>
         <ul className="list-inline list-unstyled">
           <li>
               <a onClick={this.clickSort.bind(this, 'price_value')}>
-                <span className="text">Cheapest</span>
+                <span className="text">Termurah</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>
           </li>
           <li>
               <a onClick={this.clickSort.bind(this, 'duration_minutes')}>
-                <span className="text">Shortest Duration</span>
+                <span className="text">Durasi Terpendek</span>
                 <span className="up"><i className="fa fa-caret-up"></i></span>
                 <span className="down"><i className="fa fa-caret-down"></i></span>
               </a>

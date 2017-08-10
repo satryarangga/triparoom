@@ -16,7 +16,7 @@ export const fetchFlightData = (depFlightId, retFlightId, depDate, retDate) => {
   }
 }
 
-export const addFlightOrder = (param, depFlightId, retFlightId, adult, child, infant, depFlightName, retFlightName, callback) => {
+export const addFlightOrder = (param, depFlightId, retFlightId, adult, child, infant, depFlightName, retFlightName, currentdetail, callback) => {
   const token = localStorage.tiketToken;
 
   param.conSalutation = param.titlea1;
@@ -25,6 +25,7 @@ export const addFlightOrder = (param, depFlightId, retFlightId, adult, child, in
   const request = axios.get(`${ROOT_URL}/api/addFlightOrder`, {
     params: {
       token,
+      cart: currentdetail,
       flight_id: depFlightId,
       ret_flight_id: retFlightId,
       flight_name: depFlightName,

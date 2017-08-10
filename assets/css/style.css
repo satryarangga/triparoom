@@ -126,6 +126,7 @@ i.gold{
 .passenger-head {
   font-weight: 600;
   font-size: 16px;
+  color: #388E3C
 }
 
 .margin-bottom-10 {
@@ -151,6 +152,10 @@ i.gold{
 .policy h5 {
   font-size: 15px;
   font-weight: 600
+}
+
+.modal{
+  display: block;
 }
 
 /* Smartphones (portrait) ----------- */

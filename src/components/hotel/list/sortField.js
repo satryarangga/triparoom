@@ -9,7 +9,6 @@ class HotelSortField extends Component {
   }
 
   render() {
-    console.log(this.props.list);
     return (
       <div className="sort-section white-box animate-reveal">
         <h4>Urutkan Data:</h4>

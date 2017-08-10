@@ -40,7 +40,7 @@ class SearchHotel extends Component {
     let now = new Date();
     let props = {
       disabledDays: {
-        before: now,
+        before: "now",
         after: new Date( now.getTime() + 24 * 60 * 60 * 1000 * 547)  //547 is maximum date
       }
     }

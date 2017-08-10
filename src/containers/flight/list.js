@@ -14,7 +14,8 @@ class ListDataFlight extends Component {
       retFlightId: null,
       depDate: null,
       retDate: null,
-      redirectOrder: false
+      redirectOrder: false,
+      error: false
     }
 
     this.addFlightToOrder = this.addFlightToOrder.bind(this);
@@ -24,23 +25,57 @@ class ListDataFlight extends Component {
     let roundTrip = this.props.flight.queries.ret_date;
 
     if(roundTrip) {
+      window.scrollTo(0, 0);
       this.props.setDepartureFlight(flight);
     } else {
       this.addFlightToOrder(flight);
     }
   }
 
+  compareReturnFlightTime(departDate, returnDate, departTime, returnTime) {
+    if(departDate != returnDate) {
+      return true;
+    }
+    let depSplit = departTime.split(":");
+    let retSplit = returnTime.split(":");
+    let depHour = _.parseInt(depSplit[0]);
+    let retHour = _.parseInt(retSplit[0]);
+    let depMin = _.parseInt(depSplit[1]);
+    let retMin = _.parseInt(retSplit[1]);
+    let timeDep = (depHour * 60) + depMin;
+    let timeRet = (retHour * 60) + retMin;
+
+    if(timeDep > timeRet) {
+      return false;
+    }
+
+    return true;
+  }
+
   addFlightToOrder(flight) { // ADD TO ORDER
     let roundTrip = (_.size(this.props.flight.retResult) == 0) ? false : true;
 
     if(roundTrip) {
-      this.setState({
-        depFlightId: this.props.flight.goDetail.flight_id,
-        retFlightId: flight.flight_id,
-        depDate: this.props.flight.queries.date,
-        retDate: this.props.flight.queries.ret_date,
-        redirectOrder: true
-      });
+      let departDate = this.props.flight.goDetail.departure_flight_date_str;
+      let returnDate = flight.departure_flight_date_str;
+      let departTime = this.props.flight.goDetail.simple_departure_time;
+      let returnTime = flight.simple_departure_time;
+
+      // CHECK IF TIME DEPARTURE IS MORE THAN RETURN DEPARTURE ON SAME DAY
+      if(this.compareReturnFlightTime(departDate, returnDate, departTime, returnTime)) {
+        this.setState({
+          depFlightId: this.props.flight.goDetail.flight_id,
+          retFlightId: flight.flight_id,
+          depDate: this.props.flight.queries.date,
+          retDate: this.props.flight.queries.ret_date,
+          redirectOrder: true
+        });
+      } else {
+        window.scrollTo(0, 0);
+        this.setState({
+          error: true
+        });
+      }
     } else {
       this.setState({
         depFlightId: flight.flight_id,
@@ -104,7 +139,7 @@ class ListDataFlight extends Component {
                 </div>
                 <div className="col-md-4">
                   <div className="LTT no-border">
-                    <span className="skin-clr"> <i className="fa fa-clock-o"></i> Time</span><br />
+                    <span className="skin-clr"> <i className="fa fa-clock-o"></i> Durasi</span><br />
                     <span className="time">{flight.duration}</span>
                   </div>
                 </div>
@@ -112,7 +147,7 @@ class ListDataFlight extends Component {
             </div>
             <div className="col-md-2">
               <div className="select-sec">
-                <span>TOTAL PRICE <br />
+                <span>TOTAL BIAYA <br />
                   <span className="pri">
                     IDR {numeral(flight.price_value).format('IDR 0,0')}
                   </span>
@@ -122,7 +157,7 @@ class ListDataFlight extends Component {
                   target="_blank"
                   className="btn btn_select"
                   >
-                  SELECT
+                  PILIH
                 </a>
               </div>
             </div>
@@ -130,6 +165,18 @@ class ListDataFlight extends Component {
         </div>
       );
     });
+  }
+
+  showError() {
+    if(this.state.error) {
+      return(
+        <div className="alert alert-danger">
+          <p>Waktu pulang harus lebih besar dari waktu pergi</p>
+        </div>
+      );
+    }
+
+    return;
   }
 
   render() {
@@ -142,14 +189,15 @@ class ListDataFlight extends Component {
     if(_.size(this.props.flight.goDetail) == 0) {
       return (
         <div>
-          <h4>Departure Flight</h4>
+          <h4>Penerbangan Pergi</h4>
           {this.renderListFlight('departure')}
         </div>
       )
     }
     return (
       <div>
-        <h4>Return Flight</h4>
+        {this.showError()}
+        <h4>Penerbangan Pulang</h4>
         {this.renderListFlight('return')}
       </div>
     )

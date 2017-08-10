@@ -11,7 +11,7 @@ class FlightOrderLeft extends Component {
     if(_.size(this.props.order.return) > 0) {
       return (
         <div>
-          {this.renderData('return', this.props.order.return)}
+          {this.renderData('pulang', this.props.order.return)}
       </div>
       )
     }
@@ -22,7 +22,7 @@ class FlightOrderLeft extends Component {
     return(
       <div>
         <div className="flight_detail_sidebar white-box animate-reveal">
-          <h4>{_.capitalize(type)} Flight</h4>
+          <h4>Penerbangan {_.capitalize(type)}</h4>
           <div className="flight-logo">
             <img alt="logo" src={data.image} />
           </div>
@@ -36,21 +36,21 @@ class FlightOrderLeft extends Component {
           <hr />
           <div className="LTT">
             <span className="skin-clr">
-              <i className="fa fa-clock-o"></i>Total Time
+              <i className="fa fa-clock-o"></i>Total Durasi
               <span className="pull-right">{data.duration}</span>
             </span>
             <br />
           </div>
           <div className="LTT">
-            <span className="skin-clr"><i className="fa fa-user"></i>Seats
-            <span className="pull-right">{data.count_adult} Adult, {data.count_child} Child, {data.count_infant} Infant</span> </span><br />
+            <span className="skin-clr"><i className="fa fa-user"></i>Kursi
+            <span className="pull-right">{data.count_adult} Dewasa, {data.count_child} Anak, {data.count_infant} Bayi</span> </span><br />
           </div>
           <div className="LTT">
-            <span className="skin-clr"><i className="fa fa-suitcase"></i>Baggage
+            <span className="skin-clr"><i className="fa fa-suitcase"></i>Bagasi
             <span className="pull-right">{data.check_in_baggage} {data.check_in_baggage_unit}</span> </span><br />
           </div>
           <div className="LTT">
-            <span className="skin-clr"><i className="fa fa-money"></i><b>Total Price:</b>
+            <span className="skin-clr"><i className="fa fa-money"></i><b>Total Biaya:</b>
             <span className="pull-right"><b>IDR {numeral(data.price_value).format('IDR 0,0')}</b></span> </span><br />
           </div>
         </div>
@@ -61,7 +61,7 @@ class FlightOrderLeft extends Component {
   render() {
     return (
       <div>
-        {this.renderData('departure', this.props.order.departure)}
+        {this.renderData('pergi', this.props.order.departure)}
 
         {this.renderReturn()}
       </div>

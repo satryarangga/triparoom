@@ -8,10 +8,6 @@ import Departures from './departure';
 import ListDataFlight from '../../../containers/flight/list';
 
 class FlightList extends Component {
-  showDepartureFlight() {
-
-  }
-
   render() {
     return (
       <div>
@@ -21,10 +17,10 @@ class FlightList extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="bread-crumb animate-reveal">
-                  <h2>Flight List</h2>
+                  <h2>Daftar Penerbangan</h2>
                   <ol className="breadcrumb pull-right">
                     <li><Link to="/">Home</Link></li>
-                    <li className="active">Flight List</li>
+                    <li className="active">Daftar Penerbangan</li>
                   </ol>
                 </div>
                 <div className="col-md-3">

@@ -8,11 +8,22 @@ const fromMonth = new Date(currentYear - 70, 0);
 const toMonth = new Date(currentYear, 0);
 
 // Component will receive date, locale and localeUtils props
-function YearMonthForm({ date, localeUtils, onChange }) {
+function YearMonthForm({ date, localeUtils, onChange, type }) {
   const months = localeUtils.getMonths();
+  const currentYear = new Date().getFullYear();
+  let minYear = 70;
+  let maxYear = 0;
+
+  if(type == 'expired') {
+    minYear = 0;
+    maxYear = 5;
+  } else if(type == 'issued') {
+    minYear = 5;
+    maxYear = 0;
+  }
 
   const years = [];
-  for (let i = fromMonth.getFullYear(); i <= toMonth.getFullYear(); i += 1) {
+  for (let i = currentYear - minYear; i <= currentYear + maxYear; i += 1) {
     years.push(i);
   }
 
@@ -89,7 +100,7 @@ export default class Example extends React.Component {
             fromMonth={fromMonth}
             toMonth={toMonth}
             captionElement={
-              <YearMonthForm onChange={this.handleYearMonthChange} />
+              <YearMonthForm onChange={this.handleYearMonthChange} type={this.props.minmax} />
             }
             onDayClick={this.handleDayClick}
           />
@@ -103,8 +114,8 @@ export default class Example extends React.Component {
     return (
       <div>
         <div className="form-group">
+          <label>{this.props.field.label}</label>
           <input
-            required
             name={this.props.field.name}
             placeholder={this.props.field.placeholder}
             {...this.props.field.input}

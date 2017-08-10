@@ -14,8 +14,8 @@ class AdditionalField extends Component {
   renderTextField(field) {
     return (
       <div className="form-group">
+        <label>{field.label}</label>
         <input
-          required
           type={field.type}
           name={field.name}
           className="form-control"
@@ -30,6 +30,7 @@ class AdditionalField extends Component {
     return (
       <MonthYearPicker
         field={field}
+        minmax={field.minmax}
         {...field.input}
        />
     );
@@ -50,10 +51,11 @@ class AdditionalField extends Component {
       let placeHolder = (field.charAt(0) == 'r') ? 'Pulang' : 'Pergi'
       return (
         <div className="col-md-6">
-          <Field name={`${fieldName}${typeKey}${transitNum}${count}`} required className="select_booking" component="select">
-            <option value="">Pilih Bagasi Penerbangan {placeHolder}</option>
-            {this.comboboxResource(payload.resource)}
-          </Field>
+            <label>Bagasi {placeHolder}</label>
+            <Field name={`${fieldName}${typeKey}${transitNum}${count}`} required className="select_booking" component="select">
+              <option value="">Pilih Bagasi Penerbangan {placeHolder}</option>
+              {this.comboboxResource(payload.resource)}
+            </Field>
         </div>
       );
     }
@@ -61,23 +63,25 @@ class AdditionalField extends Component {
     if(field.indexOf("passportnationality") !== -1 || field.indexOf("passportissuing") !== -1) {
       let name = (field == 'passportnationalitya1') ? 'passportnationality' : 'passportissuing';
       let placeholder = (field == 'passportnationalitya1') ? 'Pilih Kewarganegaraan' : 'Pilih Negara Penerbit Passport';
+      let label = (field == 'passportnationalitya1') ? 'Kewarganegaraan' : 'Negara Penerbit Passport';
       return(
         <div className="col-md-6">
-          <Field
-            name={`${name}${typeKey}${count}`}
-            value="id"
-            component={props =>
-              <Select
-                value={props.input.value}
-                onChange={value => props.input.onChange(value)}
-                onBlur={() => props.input.onBlur(props.input.value)}
-                options={Country}
-                placeholder={placeholder}
-                className="select_booking"
-                simpleValue
-              />
-            }
-          />
+            <label>{label}</label>
+            <Field
+              name={`${name}${typeKey}${count}`}
+              value="id"
+              component={props =>
+                <Select
+                  value={props.input.value}
+                  onChange={value => props.input.onChange(value)}
+                  onBlur={() => props.input.onBlur(props.input.value)}
+                  options={Country}
+                  placeholder={placeholder}
+                  className="select_booking"
+                  simpleValue
+                />
+              }
+            />
         </div>
       );
     }
@@ -85,41 +89,46 @@ class AdditionalField extends Component {
     if(field.indexOf("passportno") !== -1) {
       return(
         <div className="col-md-6">
-          <Field
-            required
-            name={`passportno${typeKey}${count}`}
-            type="text"
-            placeholder="Masukkan Nomor Passport"
-            component={this.renderTextField}
-          />
+            <Field
+              required
+              name={`passportno${typeKey}${count}`}
+              type="text"
+              label="Nomor Passport"
+              placeholder="Masukkan Nomor Passport"
+              component={this.renderTextField}
+            />
         </div>
       );
     }
 
-    if(field.indexOf("birthdate") !== -1 || field.indexOf("passportExpiryDatea1") !== -1 || field.indexOf("passportissueddatea1") !== -1) {
+    if(field.indexOf("passportExpiryDate") !== -1 || field.indexOf("passportissueddate") !== -1) {
       let placeHolder = '';
+      let label = '';
       let nameField = '';
+      let type = '';
 
-      if(field == 'birthdatea1') {
-        placeHolder = 'Masukkan Tanggal Lahir';
-        nameField = 'birthdate'
-      } else if(field == 'passportExpiryDatea1') {
-        placeHolder = 'Masukkan Tanggal Kadaluarsa Passport';
-        nameField = 'passportExpiryDate';
-      } else {
+      if(field == 'passportissueddatea1') {
         placeHolder = 'Masukkan Tanggal Terbit Passport';
+        label = 'Tanggal Terbit Passport';
         nameField = 'passportissueddate';
+        type = 'issued';
+      } else {
+        placeHolder = 'Masukkan Tanggal Kadaluarsa Passport';
+        label = 'Tanggal Kadaluarsa Passport';
+        nameField = 'passportExpiryDate';
+        type = 'expired';
       }
 
       return(
         <div className="col-md-6">
-          <Field
-            required
-            name={`${nameField}${typeKey}${count}`}
-            type="text"
-            placeholder={placeHolder}
-            component={this.showBirthField}
-          />
+            <Field
+              label={label}
+              name={`${nameField}${typeKey}${count}`}
+              minmax={type}
+              type="text"
+              placeholder={placeHolder}
+              component={this.showBirthField}
+            />
         </div>
       );
     }

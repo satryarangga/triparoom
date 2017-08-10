@@ -5,7 +5,7 @@ import Footer from '../../components/layout/footer';
 import Breadcrumb from '../../utils/breadcrumb';
 import OrderLeft from '../../components/flight/order/left';
 import FlightOrderField from '../../components/flight/order/field';
-import { fetchFlightData } from '../../actions/actionOrderFlight';
+import { fetchFlightData, fetchFlightOrder } from '../../actions/actionOrderFlight';
 import _ from 'lodash';
 
 class FlightOrder extends Component {
@@ -16,6 +16,17 @@ class FlightOrder extends Component {
   componentDidMount() {
     let param = this.props.match.params;
     this.props.fetchFlightData(param.depFlightId, param.retFlightId, param.depDate, param.retDate);
+    this.props.fetchFlightOrder();
+  }
+
+  formatCurrentOrderDetail() {
+    let details = [];
+
+    _.map(this.props.orderFlight.order.order_detail, (detail) => {
+      details.push(detail.order_detail_id);
+    });
+
+    return details.join(",");
   }
 
   renderData() {
@@ -26,19 +37,23 @@ class FlightOrder extends Component {
     return (
       <div>
         <div className="col-md-12">
-          <Breadcrumb label="Flight Booking" />
+          <Breadcrumb label="Rincian Penerbangan" />
         </div>
         <div className="col-md-3">
           <OrderLeft order={this.props.orderFlight} />
         </div>
         <div className="col-md-9">
-          <FlightOrderField order={this.props.orderFlight} />
+          <FlightOrderField
+            order={this.props.orderFlight}
+            currentdetail={this.formatCurrentOrderDetail()}
+          />
         </div>
       </div>
     )
   }
 
   render() {
+    {this.formatCurrentOrderDetail()}
     return (
       <div>
         <Header />
@@ -61,4 +76,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { fetchFlightData }) (FlightOrder);
+export default connect(mapStateToProps, { fetchFlightData, fetchFlightOrder }) (FlightOrder);

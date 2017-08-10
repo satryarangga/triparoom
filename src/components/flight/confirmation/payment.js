@@ -103,7 +103,7 @@ class FlightPayment extends Component {
   render() {
     if(this.state.onLoading) {
       return(
-        <Loader text="Please wait while your booking is processed by Tiket.com" />
+        <Loader text="Mohon tunggu, pemesanan anda sedang diproses tiket.com" />
       );
     }
 
@@ -113,7 +113,7 @@ class FlightPayment extends Component {
       <div>
         <form onSubmit={handleSubmit(this.onSubmitCheckout.bind(this))}>
           <div className="booking_detail white-box animate-reveal">
-            <h4>Passenger Information</h4>
+            <h4>Informasi Penumpang</h4>
             <div className="col-md-12">
               <ol className="list-group list-passenger">
                 {this.showPassengers()}
@@ -121,7 +121,7 @@ class FlightPayment extends Component {
             </div>
           </div>
           <div className="booking_detail white-box animate-reveal">
-            <h4>Payment Information</h4>
+            <h4>Informasi Pembayaran</h4>
             <div className="col-md-12">
             </div>
             <div className="row">
@@ -129,10 +129,10 @@ class FlightPayment extends Component {
                 {this.renderPaymentOptions()}
               </div>
               <div className="col-md-12">
-                <label>Payment will be processed by Tiket.com</label>
+                <label>Pembayaran akan diproses tiket.com</label>
               </div>
               <div className="col-md-12">
-                <p><button className="btn_book" type="submit">Confirm Booking</button></p>
+                <p><button className="btn_book" type="submit">Konfirmasi Pemesanan</button></p>
               </div>
             </div>
           </div>
