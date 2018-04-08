@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _ from 'lodash'; 
 import { FETCH_HOTEL_LIST, SORT_HOTEL_LIST, CLEAR_HOTEL_PAGINATION, CLEAR_HOTEL_SEARCH, FETCH_DETAIL_HOTEL } from '../actions/actionHotel';
 import { formatDetailState } from '../utils/formatter';
 

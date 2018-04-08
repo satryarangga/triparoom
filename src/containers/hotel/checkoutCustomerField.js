@@ -144,7 +144,7 @@ function mapDispatchToProps (dispatch) {
 }
 
 export default reduxForm({
-  form: 'Checkout'
+  form: 'Reserve'
 }) (
     connect(null, mapDispatchToProps) (CheckoutCustomerField)
 );
